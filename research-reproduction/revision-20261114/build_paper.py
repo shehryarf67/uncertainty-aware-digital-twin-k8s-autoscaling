@@ -49,7 +49,7 @@ def main():
     sim_groups=defaultdict(list)
     for x in sim:sim_groups[x['regime'],x['controller']].append(x)
     def sm(regime,mode,key):return statistics.mean(float(x[key]) for x in sim_groups[regime,mode])
-    with zipfile.ZipFile(ROOT/'overleaf-before.zip') as z:before=z.read('main_article_v1a_change_this.tex').decode()
+    before=(ROOT/'paper/archive_20261114/main_article_before_20261114.tex').read_text(encoding='utf8')
     bibliography=before[before.index(r'\begin{thebibliography}'):before.index(r'\end{thebibliography}')]
     bibliography=bibliography.replace(r'{thebibliography}{11}',r'{thebibliography}{13}').replace('accessed 28 October 2026','accessed 14 November 2026')
     body=[r'''\documentclass[10pt,twocolumn,a4paper]{article}
