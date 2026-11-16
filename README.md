@@ -32,3 +32,6 @@ The LaTeX file can be compiled using a TeX distribution with `pgfplots`, `tikz`,
 
 The historical draft generator build_paper.py is retained for provenance and writes an earlier article draft; do not run it over the current main_article.tex. Run it in a disposable copy if needed. The upstream baseline is a source snapshot; embedded Git metadata is intentionally omitted.
 
+
+The earlier KEDA/HPA integration code, manifests, and measured request traces are in research-reproduction/kubernetes-autoscaling/. Build outputs and environment secrets are excluded; see source-provenance.json for the original scaler and application repositories.
+

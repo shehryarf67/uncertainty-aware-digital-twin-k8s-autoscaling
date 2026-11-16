@@ -1,0 +1,10 @@
+{
+  "scaler_code_unchanged": true,
+  "scaler_sha256": "a06fbf3eafa122514d19c8dd62bbfc53f38237f18904d61ffb2f233183eb191f",
+  "compatibility_change": "Regenerated stubs with grpcio-tools 1.62.3 / protobuf 4.25.8; original stubs require newer grpc/protobuf conflicting with TensorFlow 2.17 protobuf<5",
+  "models": "Official released NASA 20240911 checkpoints, not corrected models",
+  "source_repositories": [
+    "https://github.com/PasanBhanu/proactive-autoscaler-for-keda-kubernetes",
+    "https://github.com/PasanBhanu/springboot-sample-api-with-prometheus"
+  ]
+}

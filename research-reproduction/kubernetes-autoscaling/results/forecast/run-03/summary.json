@@ -1,0 +1,168 @@
+{
+  "status": "completed",
+  "phase_seconds": 30,
+  "warmup_seconds": 60,
+  "elapsed_seconds": 486.2302280999993,
+  "protocol_valid": true,
+  "phase_durations": [
+    30.00444779999998,
+    30.00966739999967,
+    30.00504760000149,
+    30.01285729999836,
+    30.015420700001414,
+    30.013290699998834,
+    30.00403080000069,
+    29.998152199999822,
+    30.020187800000713,
+    29.995229799998924,
+    29.99403960000018,
+    30.01666529999966,
+    30.020349200000055,
+    29.993985900000553,
+    30.0221705999993
+  ],
+  "maximum_schedule_delay_ms": 59.32829999983369,
+  "scenarios": [
+    {
+      "scenario": "spike",
+      "controller": "forecast",
+      "requests": 1950,
+      "failed": 0,
+      "p95_ms": 27.790135000032016,
+      "p99_ms": 53.93320299981497,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 5.6646035599999776,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    },
+    {
+      "scenario": "stable",
+      "controller": "forecast",
+      "requests": 600,
+      "failed": 0,
+      "p95_ms": 16.42847000111942,
+      "p99_ms": 63.32314499984932,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 6.000953085000037,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    },
+    {
+      "scenario": "increasing",
+      "controller": "forecast",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 17.910534998918592,
+      "p99_ms": 30.633635000485793,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 5.779146444999969,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    },
+    {
+      "scenario": "decreasing",
+      "controller": "forecast",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 23.877700000957695,
+      "p99_ms": 56.90078399937188,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 5.8413456799999945,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    }
+  ],
+  "scope": "consecutive short integration scenarios, no per-scenario reset; no repeated statistical comparison; five minute downscale window can censor short phases"
+}

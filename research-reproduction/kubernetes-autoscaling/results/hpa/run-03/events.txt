@@ -1,0 +1,138 @@
+LAST SEEN   TYPE      REASON                         OBJECT                                             MESSAGE
+3h52m       Normal    Scheduled                      pod/prometheus-555455955b-gfgqd                    Successfully assigned guruge-repro/prometheus-555455955b-gfgqd to guruge-local
+3h39m       Normal    Scheduled                      pod/sample-api-76ccff4dd-vxsln                     Successfully assigned guruge-repro/sample-api-76ccff4dd-vxsln to guruge-local
+3h52m       Normal    Scheduled                      pod/sample-api-5b9786f77d-76bbn                    Successfully assigned guruge-repro/sample-api-5b9786f77d-76bbn to guruge-local
+18m         Normal    Scheduled                      pod/sample-api-76ccff4dd-24bjb                     Successfully assigned guruge-repro/sample-api-76ccff4dd-24bjb to guruge-local
+3m56s       Normal    Scheduled                      pod/sample-api-76ccff4dd-5wdhf                     Successfully assigned guruge-repro/sample-api-76ccff4dd-5wdhf to guruge-local
+3h39m       Normal    Scheduled                      pod/sample-api-76ccff4dd-r5wg8                     Successfully assigned guruge-repro/sample-api-76ccff4dd-r5wg8 to guruge-local
+2m25s       Normal    Scheduled                      pod/sample-api-76ccff4dd-txt87                     Successfully assigned guruge-repro/sample-api-76ccff4dd-txt87 to guruge-local
+18m         Normal    Scheduled                      pod/sample-api-76ccff4dd-tnhfx                     Successfully assigned guruge-repro/sample-api-76ccff4dd-tnhfx to guruge-local
+3h44m       Normal    Scheduled                      pod/sample-api-76ccff4dd-ttxzq                     Successfully assigned guruge-repro/sample-api-76ccff4dd-ttxzq to guruge-local
+3h52m       Normal    ScalingReplicaSet              deployment/prometheus                              Scaled up replica set prometheus-555455955b from 0 to 1
+3h52m       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled up replica set sample-api-5b9786f77d from 0 to 1
+3h52m       Normal    SuccessfulCreate               replicaset/prometheus-555455955b                   Created pod: prometheus-555455955b-gfgqd
+3h52m       Normal    SuccessfulCreate               replicaset/sample-api-5b9786f77d                   Created pod: sample-api-5b9786f77d-76bbn
+3h52m       Normal    Pulling                        pod/prometheus-555455955b-gfgqd                    Pulling image "prom/prometheus:v2.55.1"
+3h52m       Normal    Created                        pod/prometheus-555455955b-gfgqd                    Created container: prometheus
+3h52m       Normal    Pulled                         pod/prometheus-555455955b-gfgqd                    Successfully pulled image "prom/prometheus:v2.55.1" in 36.452s (36.452s including waiting). Image size: 114286128 bytes.
+3h52m       Normal    Started                        pod/prometheus-555455955b-gfgqd                    Started container prometheus
+3h49m       Normal    Pulling                        pod/sample-api-5b9786f77d-76bbn                    Pulling image "pasanbhanu/springboot-sample-api-with-prometheus:latest"
+3h49m       Warning   Failed                         pod/sample-api-5b9786f77d-76bbn                    Error: ErrImagePull
+3h49m       Warning   Failed                         pod/sample-api-5b9786f77d-76bbn                    Failed to pull image "pasanbhanu/springboot-sample-api-with-prometheus:latest": failed to pull and unpack image "docker.io/pasanbhanu/springboot-sample-api-with-prometheus:latest": failed to resolve reference "docker.io/pasanbhanu/springboot-sample-api-with-prometheus:latest": pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+3h47m       Warning   Failed                         pod/sample-api-5b9786f77d-76bbn                    Error: ImagePullBackOff
+3h47m       Normal    BackOff                        pod/sample-api-5b9786f77d-76bbn                    Back-off pulling image "pasanbhanu/springboot-sample-api-with-prometheus:latest"
+3h44m       Normal    SuccessfulCreate               replicaset/sample-api-76ccff4dd                    Created pod: sample-api-76ccff4dd-ttxzq
+3h44m       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled up replica set sample-api-76ccff4dd from 0 to 1
+3h44m       Normal    Pulling                        pod/sample-api-76ccff4dd-ttxzq                     Pulling image "eclipse-temurin:21-jre-alpine"
+3h44m       Normal    Created                        pod/sample-api-76ccff4dd-ttxzq                     Created container: api
+3h44m       Normal    Pulled                         pod/sample-api-76ccff4dd-ttxzq                     Successfully pulled image "eclipse-temurin:21-jre-alpine" in 21.223s (21.223s including waiting). Image size: 74089951 bytes.
+3h44m       Normal    Started                        pod/sample-api-76ccff4dd-ttxzq                     Started container api
+3h43m       Warning   Unhealthy                      pod/sample-api-76ccff4dd-ttxzq                     Readiness probe failed: Get "http://10.42.0.13:8080/actuator/health": dial tcp 10.42.0.13:8080: connect: connection refused
+3h43m       Warning   Unhealthy                      pod/sample-api-76ccff4dd-ttxzq                     Readiness probe failed: Get "http://10.42.0.13:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+3h43m       Normal    SuccessfulDelete               replicaset/sample-api-5b9786f77d                   Deleted pod: sample-api-5b9786f77d-76bbn
+3h43m       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled down replica set sample-api-5b9786f77d from 1 to 0
+3h42m       Normal    KEDAScalersStarted             scaledobject/author-forecast                       Started scalers watch
+3h42m       Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property query in scaler ScaledObject
+3h42m       Normal    ScaledObjectReady              scaledobject/author-forecast                       ScaledObject is ready for scaling
+3h42m       Normal    KEDAScalersStarted             scaledobject/author-forecast                       Scaler external is built
+3h42m       Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property podLimit in scaler ScaledObject
+3h42m       Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property activationValue in scaler ScaledObject
+3h42m       Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property serverAddress in scaler ScaledObject
+3h42m       Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property scaleFactor in scaler ScaledObject
+3h39m       Normal    SuccessfulRescale              horizontalpodautoscaler/keda-hpa-author-forecast   New size: 3; reason: external metric s0-custom_metric(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: author-forecast,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+3h39m       Normal    SuccessfulCreate               replicaset/sample-api-76ccff4dd                    Created pod: sample-api-76ccff4dd-vxsln
+3h39m       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled up replica set sample-api-76ccff4dd from 1 to 3
+3h39m       Normal    SuccessfulCreate               replicaset/sample-api-76ccff4dd                    Created pod: sample-api-76ccff4dd-r5wg8
+3h39m       Normal    Pulled                         pod/sample-api-76ccff4dd-r5wg8                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+3h39m       Normal    Created                        pod/sample-api-76ccff4dd-vxsln                     Created container: api
+3h39m       Normal    Started                        pod/sample-api-76ccff4dd-r5wg8                     Started container api
+3h39m       Normal    Created                        pod/sample-api-76ccff4dd-r5wg8                     Created container: api
+3h39m       Normal    Pulled                         pod/sample-api-76ccff4dd-vxsln                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+3h39m       Normal    Started                        pod/sample-api-76ccff4dd-vxsln                     Started container api
+3h38m       Warning   Unhealthy                      pod/sample-api-76ccff4dd-vxsln                     Readiness probe failed: Get "http://10.42.0.14:8080/actuator/health": dial tcp 10.42.0.14:8080: connect: connection refused
+3h38m       Warning   Unhealthy                      pod/sample-api-76ccff4dd-r5wg8                     Readiness probe failed: Get "http://10.42.0.15:8080/actuator/health": dial tcp 10.42.0.15:8080: connect: connection refused
+3h38m       Warning   Unhealthy                      pod/sample-api-76ccff4dd-vxsln                     Readiness probe failed: Get "http://10.42.0.14:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+3h38m       Warning   Unhealthy                      pod/sample-api-76ccff4dd-r5wg8                     Readiness probe failed: Get "http://10.42.0.15:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+3h31m       Warning   ScaledObjectDeleted            scaledobject/author-forecast                       ScaledObject was deleted
+3h31m       Normal    KEDAScalersStopped             scaledobject/author-forecast                       Stopped scalers watch
+3h31m       Normal    Killing                        pod/sample-api-76ccff4dd-vxsln                     Stopping container api
+3h31m       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled down replica set sample-api-76ccff4dd from 3 to 1
+3h31m       Normal    Killing                        pod/sample-api-76ccff4dd-r5wg8                     Stopping container api
+3h31m       Normal    SuccessfulDelete               replicaset/sample-api-76ccff4dd                    Deleted pod: sample-api-76ccff4dd-r5wg8
+3h31m       Normal    SuccessfulDelete               replicaset/sample-api-76ccff4dd                    Deleted pod: sample-api-76ccff4dd-vxsln
+24m         Normal    SandboxChanged                 pod/sample-api-76ccff4dd-ttxzq                     Pod sandbox changed, it will be killed and re-created.
+24m         Normal    SandboxChanged                 pod/prometheus-555455955b-gfgqd                    Pod sandbox changed, it will be killed and re-created.
+24m         Normal    Pulled                         pod/sample-api-76ccff4dd-ttxzq                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+24m         Normal    Created                        pod/sample-api-76ccff4dd-ttxzq                     Created container: api
+24m         Normal    Started                        pod/sample-api-76ccff4dd-ttxzq                     Started container api
+24m         Normal    Pulled                         pod/prometheus-555455955b-gfgqd                    Container image "prom/prometheus:v2.55.1" already present on machine
+24m         Normal    Created                        pod/prometheus-555455955b-gfgqd                    Created container: prometheus
+24m         Normal    Started                        pod/prometheus-555455955b-gfgqd                    Started container prometheus
+23m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property serverAddress in scaler ScaledObject
+23m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property activationValue in scaler ScaledObject
+23m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property podLimit in scaler ScaledObject
+23m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property scaleFactor in scaler ScaledObject
+23m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property query in scaler ScaledObject
+23m         Normal    ScaledObjectReady              scaledobject/author-forecast                       ScaledObject is ready for scaling
+23m         Normal    KEDAScalersStarted             scaledobject/author-forecast                       Started scalers watch
+23m         Normal    KEDAScalersStarted             scaledobject/author-forecast                       Scaler external is built
+23m         Warning   Unhealthy                      pod/sample-api-76ccff4dd-ttxzq                     Readiness probe failed: Get "http://10.42.0.19:8080/actuator/health": dial tcp 10.42.0.19:8080: connect: connection refused
+23m         Warning   Unhealthy                      pod/sample-api-76ccff4dd-ttxzq                     Readiness probe failed: Get "http://10.42.0.19:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+20m         Normal    SandboxChanged                 pod/sample-api-76ccff4dd-ttxzq                     Pod sandbox changed, it will be killed and re-created.
+20m         Normal    Pulled                         pod/prometheus-555455955b-gfgqd                    Container image "prom/prometheus:v2.55.1" already present on machine
+20m         Normal    SandboxChanged                 pod/prometheus-555455955b-gfgqd                    Pod sandbox changed, it will be killed and re-created.
+20m         Normal    Created                        pod/sample-api-76ccff4dd-ttxzq                     Created container: api
+20m         Normal    Pulled                         pod/sample-api-76ccff4dd-ttxzq                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+20m         Normal    Created                        pod/prometheus-555455955b-gfgqd                    Created container: prometheus
+20m         Normal    Started                        pod/prometheus-555455955b-gfgqd                    Started container prometheus
+20m         Normal    Started                        pod/sample-api-76ccff4dd-ttxzq                     Started container api
+19m         Warning   FailedGetExternalMetric        horizontalpodautoscaler/keda-hpa-author-forecast   unable to get external metric guruge-repro/s0-custom_metric/&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: author-forecast,},MatchExpressions:[]LabelSelectorRequirement{},}: unable to fetch metrics from external metrics API: the server is currently unable to handle the request (get s0-custom_metric.external.metrics.k8s.io)
+19m         Warning   FailedComputeMetricsReplicas   horizontalpodautoscaler/keda-hpa-author-forecast   invalid metrics (1 invalid out of 1), first error is: failed to get s0-custom_metric external metric value: failed to get s0-custom_metric external metric: unable to get external metric guruge-repro/s0-custom_metric/&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: author-forecast,},MatchExpressions:[]LabelSelectorRequirement{},}: unable to fetch metrics from external metrics API: the server is currently unable to handle the request (get s0-custom_metric.external.metrics.k8s.io)
+19m         Warning   ScaledObjectDeleted            scaledobject/author-forecast                       ScaledObject was deleted
+19m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property query in scaler ScaledObject
+19m         Normal    KEDAScalersStarted             scaledobject/author-forecast                       Scaler external is built
+19m         Normal    KEDAScalersStarted             scaledobject/author-forecast                       Started scalers watch
+19m         Normal    ScaledObjectReady              scaledobject/author-forecast                       ScaledObject is ready for scaling
+19m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property scaleFactor in scaler ScaledObject
+19m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property podLimit in scaler ScaledObject
+19m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property activationValue in scaler ScaledObject
+19m         Warning   KEDAScalerInfo                 scaledobject/author-forecast                       Unmatched input property serverAddress in scaler ScaledObject
+19m         Warning   Unhealthy                      pod/sample-api-76ccff4dd-ttxzq                     Readiness probe failed: Get "http://10.42.0.28:8080/actuator/health": dial tcp 10.42.0.28:8080: connect: connection refused
+19m         Warning   Unhealthy                      pod/sample-api-76ccff4dd-ttxzq                     Readiness probe failed: Get "http://10.42.0.28:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+18m         Normal    SuccessfulCreate               replicaset/sample-api-76ccff4dd                    Created pod: sample-api-76ccff4dd-24bjb
+18m         Normal    SuccessfulCreate               replicaset/sample-api-76ccff4dd                    Created pod: sample-api-76ccff4dd-tnhfx
+18m         Normal    ScalingReplicaSet              deployment/sample-api                              Scaled up replica set sample-api-76ccff4dd from 1 to 3
+18m         Normal    SuccessfulRescale              horizontalpodautoscaler/keda-hpa-author-forecast   New size: 3; reason: external metric s0-custom_metric(&LabelSelector{MatchLabels:map[string]string{scaledobject.keda.sh/name: author-forecast,},MatchExpressions:[]LabelSelectorRequirement{},}) above target
+18m         Normal    Started                        pod/sample-api-76ccff4dd-tnhfx                     Started container api
+18m         Normal    Pulled                         pod/sample-api-76ccff4dd-24bjb                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+18m         Normal    Created                        pod/sample-api-76ccff4dd-tnhfx                     Created container: api
+18m         Normal    Created                        pod/sample-api-76ccff4dd-24bjb                     Created container: api
+18m         Normal    Pulled                         pod/sample-api-76ccff4dd-tnhfx                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+18m         Normal    Started                        pod/sample-api-76ccff4dd-24bjb                     Started container api
+17m         Warning   Unhealthy                      pod/sample-api-76ccff4dd-tnhfx                     Readiness probe failed: Get "http://10.42.0.33:8080/actuator/health": dial tcp 10.42.0.33:8080: connect: connection refused
+17m         Warning   Unhealthy                      pod/sample-api-76ccff4dd-tnhfx                     Readiness probe failed: Get "http://10.42.0.33:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+17m         Warning   Unhealthy                      pod/sample-api-76ccff4dd-24bjb                     Readiness probe failed: Get "http://10.42.0.32:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+9m23s       Warning   ScaledObjectDeleted            scaledobject/author-forecast                       ScaledObject was deleted
+9m23s       Normal    KEDAScalersStopped             scaledobject/author-forecast                       Stopped scalers watch
+9m15s       Normal    Killing                        pod/sample-api-76ccff4dd-tnhfx                     Stopping container api
+9m15s       Normal    Killing                        pod/sample-api-76ccff4dd-24bjb                     Stopping container api
+9m15s       Normal    SuccessfulDelete               replicaset/sample-api-76ccff4dd                    Deleted pod: sample-api-76ccff4dd-tnhfx
+9m15s       Warning   Unhealthy                      pod/sample-api-76ccff4dd-24bjb                     Readiness probe failed: Get "http://10.42.0.32:8080/actuator/health": dial tcp 10.42.0.32:8080: connect: connection refused
+9m15s       Normal    SuccessfulDelete               replicaset/sample-api-76ccff4dd                    Deleted pod: sample-api-76ccff4dd-24bjb
+9m15s       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled down replica set sample-api-76ccff4dd from 3 to 1
+3m56s       Normal    SuccessfulCreate               replicaset/sample-api-76ccff4dd                    Created pod: sample-api-76ccff4dd-5wdhf
+3m56s       Normal    SuccessfulRescale              horizontalpodautoscaler/cpu-hpa                    New size: 2; reason: cpu resource utilization (percentage of request) above target
+3m56s       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled up replica set sample-api-76ccff4dd from 1 to 2
+3m55s       Normal    Created                        pod/sample-api-76ccff4dd-5wdhf                     Created container: api
+3m55s       Normal    Started                        pod/sample-api-76ccff4dd-5wdhf                     Started container api
+3m55s       Normal    Pulled                         pod/sample-api-76ccff4dd-5wdhf                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+3m9s        Warning   Unhealthy                      pod/sample-api-76ccff4dd-5wdhf                     Readiness probe failed: Get "http://10.42.0.34:8080/actuator/health": dial tcp 10.42.0.34:8080: connect: connection refused
+3m3s        Warning   Unhealthy                      pod/sample-api-76ccff4dd-5wdhf                     Readiness probe failed: Get "http://10.42.0.34:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2m26s       Normal    ScalingReplicaSet              deployment/sample-api                              Scaled up replica set sample-api-76ccff4dd from 2 to 3
+2m26s       Normal    SuccessfulRescale              horizontalpodautoscaler/cpu-hpa                    New size: 3; reason: cpu resource utilization (percentage of request) above target
+2m26s       Normal    SuccessfulCreate               replicaset/sample-api-76ccff4dd                    Created pod: sample-api-76ccff4dd-txt87
+2m25s       Normal    Started                        pod/sample-api-76ccff4dd-txt87                     Started container api
+2m25s       Normal    Created                        pod/sample-api-76ccff4dd-txt87                     Created container: api
+2m25s       Normal    Pulled                         pod/sample-api-76ccff4dd-txt87                     Container image "eclipse-temurin:21-jre-alpine" already present on machine
+84s         Warning   Unhealthy                      pod/sample-api-76ccff4dd-txt87                     Readiness probe failed: Get "http://10.42.0.35:8080/actuator/health": dial tcp 10.42.0.35:8080: connect: connection refused
+78s         Warning   Unhealthy                      pod/sample-api-76ccff4dd-txt87                     Readiness probe failed: Get "http://10.42.0.35:8080/actuator/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)

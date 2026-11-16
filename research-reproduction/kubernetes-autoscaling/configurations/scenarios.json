@@ -1,0 +1,9 @@
+{
+  "scope": "authored controlled local experiments, not original paper traffic replay",
+  "slo": {"request_latency_ms": 500, "objective": "at least 99 percent HTTP success within 500 ms across a scenario"},
+  "phase_seconds": 120,
+  "stable": [5, 5, 5, 5],
+  "increasing": [2, 10, 20, 40],
+  "spike": [5, 5, 50, 5],
+  "decreasing": [40, 20, 10, 2]
+}

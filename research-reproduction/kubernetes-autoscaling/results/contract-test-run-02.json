@@ -1,0 +1,135 @@
+{
+  "scope": "real author-model inference and real gRPC; mocked Prometheus; no cluster scaling",
+  "is_active": true,
+  "target": 1.0,
+  "records": [
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "metric_float": 2.09290273782291,
+      "metric_int": 2,
+      "elapsed_ms": 314.9057000009634,
+      "status": "success"
+    },
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "metric_float": 2.0928971835196655,
+      "metric_int": 2,
+      "elapsed_ms": 110.47309999958088,
+      "status": "success"
+    },
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "metric_float": 2.0928971837579993,
+      "metric_int": 2,
+      "elapsed_ms": 103.43990000001213,
+      "status": "success"
+    },
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "metric_float": 2.09289718398386,
+      "metric_int": 2,
+      "elapsed_ms": 94.47330000148213,
+      "status": "success"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 2,
+      "metric_float": 2.0991616190269733,
+      "metric_int": 2,
+      "elapsed_ms": 88.36739999969723,
+      "status": "success"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 10,
+      "metric_float": 2.0931294384784596,
+      "metric_int": 2,
+      "elapsed_ms": 115.2751999998145,
+      "status": "success"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 20,
+      "metric_float": 2.2080557540085053,
+      "metric_int": 2,
+      "elapsed_ms": 87.98980000028678,
+      "status": "success"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 40,
+      "metric_float": 3.904800489963347,
+      "metric_int": 3,
+      "elapsed_ms": 105.78889999851526,
+      "status": "success"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 5,
+      "metric_float": 2.092897185136679,
+      "metric_int": 2,
+      "elapsed_ms": 94.94769999946584,
+      "status": "success"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 5,
+      "metric_float": 2.092897185372078,
+      "metric_int": 2,
+      "elapsed_ms": 104.27829999935057,
+      "status": "success"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 50,
+      "metric_float": 4.551083735566409,
+      "metric_int": 4,
+      "elapsed_ms": 96.98960000059742,
+      "status": "success"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 5,
+      "metric_float": 2.0928916734174674,
+      "metric_int": 2,
+      "elapsed_ms": 94.11930000169377,
+      "status": "success"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 40,
+      "metric_float": 3.9047998004824884,
+      "metric_int": 3,
+      "elapsed_ms": 119.50980000074196,
+      "status": "success"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 20,
+      "metric_float": 2.208051860645646,
+      "metric_int": 2,
+      "elapsed_ms": 80.64540000123088,
+      "status": "success"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 10,
+      "metric_float": 2.0931241417672437,
+      "metric_int": 2,
+      "elapsed_ms": 108.05859999891254,
+      "status": "success"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 2,
+      "metric_float": 2.099156032866268,
+      "metric_int": 2,
+      "elapsed_ms": 101.41509999994014,
+      "status": "success"
+    }
+  ]
+}

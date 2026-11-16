@@ -1,0 +1,318 @@
+{
+  "run_id": "run-03",
+  "scope": "one local integration sequence per controller; short phases; not replication of a published Kubernetes benchmark; earlier run-01 preserved as diagnostic evidence",
+  "scenarios": [
+    {
+      "scenario": "spike",
+      "controller": "forecast",
+      "requests": 1950,
+      "failed": 0,
+      "p95_ms": 27.790135000032016,
+      "p99_ms": 53.93320299981497,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 5.6646035599999776,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 20.517379733333335,
+      "mean_app_memory_mib": 432.4536830357143,
+      "run_id": "run-03",
+      "monitor_samples": 14
+    },
+    {
+      "scenario": "stable",
+      "controller": "forecast",
+      "requests": 600,
+      "failed": 0,
+      "p95_ms": 16.42847000111942,
+      "p99_ms": 63.32314499984932,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 6.000953085000037,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 40.421936007843144,
+      "mean_app_memory_mib": 404.6711856617647,
+      "run_id": "run-03",
+      "monitor_samples": 17
+    },
+    {
+      "scenario": "increasing",
+      "controller": "forecast",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 17.910534998918592,
+      "p99_ms": 30.633635000485793,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 5.779146444999969,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 16.617888117647063,
+      "mean_app_memory_mib": 421.59191176470586,
+      "run_id": "run-03",
+      "monitor_samples": 17
+    },
+    {
+      "scenario": "decreasing",
+      "controller": "forecast",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 23.877700000957695,
+      "p99_ms": 56.90078399937188,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 5.8413456799999945,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 18.520449579487185,
+      "mean_app_memory_mib": 438.94471153846155,
+      "run_id": "run-03",
+      "monitor_samples": 13
+    },
+    {
+      "scenario": "increasing",
+      "controller": "hpa",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 20.69878500060435,
+      "p99_ms": 44.66407899879395,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 1,
+      "desired_replica_max": 1,
+      "sampled_pod_minutes": 1.904737554999974,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 18.33340911428572,
+      "mean_app_memory_mib": 173.06473214285714,
+      "run_id": "run-03",
+      "monitor_samples": 14
+    },
+    {
+      "scenario": "spike",
+      "controller": "hpa",
+      "requests": 1950,
+      "failed": 0,
+      "p95_ms": 35.24388499981796,
+      "p99_ms": 82.59028000033139,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 1,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 3.968429134999951,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": 12.157546099999308,
+          "censored": false
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": 14.606266100001449,
+          "censored": false
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 91.62588590666665,
+      "mean_app_memory_mib": 249.25052083333333,
+      "run_id": "run-03",
+      "monitor_samples": 15
+    },
+    {
+      "scenario": "decreasing",
+      "controller": "hpa",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 24.36464000002158,
+      "p99_ms": 43.41409799977512,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 3,
+      "desired_replica_max": 3,
+      "sampled_pod_minutes": 5.9040356999999855,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 63.56151584615385,
+      "mean_app_memory_mib": 414.75210336538464,
+      "run_id": "run-03",
+      "monitor_samples": 13
+    },
+    {
+      "scenario": "stable",
+      "controller": "hpa",
+      "requests": 600,
+      "failed": 0,
+      "p95_ms": 12.879945000076987,
+      "p99_ms": 16.991872999315085,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 1,
+      "desired_replica_max": 1,
+      "sampled_pod_minutes": 2.000834984999983,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ],
+      "mean_cpu_utilization_percent_of_request": 15.334182892307695,
+      "mean_app_memory_mib": 172.8299278846154,
+      "run_id": "run-03",
+      "monitor_samples": 13
+    }
+  ]
+}

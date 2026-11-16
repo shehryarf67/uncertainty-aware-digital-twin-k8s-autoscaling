@@ -1,0 +1,98 @@
+[
+  {
+    "scenario": "stable",
+    "phase": 0,
+    "rps": 5,
+    "elapsed": 7.820000064384658e-05
+  },
+  {
+    "scenario": "stable",
+    "phase": 1,
+    "rps": 5,
+    "elapsed": 30.013061100000414
+  },
+  {
+    "scenario": "stable",
+    "phase": 2,
+    "rps": 5,
+    "elapsed": 60.028580399999555
+  },
+  {
+    "scenario": "stable",
+    "phase": 3,
+    "rps": 5,
+    "elapsed": 90.02948359999937
+  },
+  {
+    "scenario": "increasing",
+    "phase": 0,
+    "rps": 2,
+    "elapsed": 120.03045399999974
+  },
+  {
+    "scenario": "increasing",
+    "phase": 1,
+    "rps": 10,
+    "elapsed": 150.04700819999925
+  },
+  {
+    "scenario": "increasing",
+    "phase": 2,
+    "rps": 20,
+    "elapsed": 180.06454060000033
+  },
+  {
+    "scenario": "increasing",
+    "phase": 3,
+    "rps": 40,
+    "elapsed": 210.0802937999997
+  },
+  {
+    "scenario": "spike",
+    "phase": 0,
+    "rps": 5,
+    "elapsed": 240.09741790000044
+  },
+  {
+    "scenario": "spike",
+    "phase": 1,
+    "rps": 5,
+    "elapsed": 270.1031750000002
+  },
+  {
+    "scenario": "spike",
+    "phase": 2,
+    "rps": 50,
+    "elapsed": 300.114625799999
+  },
+  {
+    "scenario": "spike",
+    "phase": 3,
+    "rps": 5,
+    "elapsed": 330.08908259999953
+  },
+  {
+    "scenario": "decreasing",
+    "phase": 0,
+    "rps": 40,
+    "elapsed": 360.1068128000006
+  },
+  {
+    "scenario": "decreasing",
+    "phase": 1,
+    "rps": 20,
+    "elapsed": 390.09751420000066
+  },
+  {
+    "scenario": "decreasing",
+    "phase": 2,
+    "rps": 10,
+    "elapsed": 420.10069509999994
+  },
+  {
+    "scenario": "decreasing",
+    "phase": 3,
+    "rps": 2,
+    "elapsed": 450.1095556
+  }
+]

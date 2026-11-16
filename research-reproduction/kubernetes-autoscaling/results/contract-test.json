@@ -1,0 +1,103 @@
+{
+  "scope": "real author-model inference and real gRPC; mocked Prometheus; no cluster scaling",
+  "is_active": true,
+  "target": 1.0,
+  "records": [
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:09.0897967+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:09.2107404+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\", grpc_status:2, created_time:\"2026-10-09T11:28:09.3291765+00:00\"}\"\n>"
+    },
+    {
+      "scenario": "stable",
+      "mock_rps": 5,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:09.4616466+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 2,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:09.6092926+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 10,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\", grpc_status:2, created_time:\"2026-10-09T11:28:09.7275663+00:00\"}\"\n>"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 20,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:09.853223+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "increasing",
+      "mock_rps": 40,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\", grpc_status:2, created_time:\"2026-10-09T11:28:09.9885155+00:00\"}\"\n>"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 5,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\", grpc_status:2, created_time:\"2026-10-09T11:28:10.1075502+00:00\"}\"\n>"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 5,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:10.2375015+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 50,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\", grpc_status:2, created_time:\"2026-10-09T11:28:10.3957095+00:00\"}\"\n>"
+    },
+    {
+      "scenario": "spike",
+      "mock_rps": 5,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:10.5440484+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 40,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\", grpc_status:2, created_time:\"2026-10-09T11:28:10.6845962+00:00\"}\"\n>"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 20,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:10.8299959+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 10,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {created_time:\"2026-10-09T11:28:10.9771191+00:00\", grpc_status:2, grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\"}\"\n>"
+    },
+    {
+      "scenario": "decreasing",
+      "mock_rps": 2,
+      "status": "failed",
+      "error": "<_InactiveRpcError of RPC that terminated with:\n\tstatus = StatusCode.UNKNOWN\n\tdetails = \"Exception calling application: Prediction failed with error: 'charmap' codec can't encode characters in position 19-38: character maps to <undefined>\"\n\tdebug_error_string = \"UNKNOWN:Error received from peer  {grpc_message:\"Exception calling application: Prediction failed with error: \\'charmap\\' codec can\\'t encode characters in position 19-38: character maps to <undefined>\", grpc_status:2, created_time:\"2026-10-09T11:28:11.1500201+00:00\"}\"\n>"
+    }
+  ]
+}

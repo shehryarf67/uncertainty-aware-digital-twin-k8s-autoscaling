@@ -1,0 +1,6 @@
+[
+  {
+    "elapsed": 0.0013448999998217914,
+    "error": "Command '['wsl', '-d', 'Ubuntu', '-u', 'root', '--', '/opt/guruge-reproduction/bin/k3s', 'kubectl', '--kubeconfig', '/opt/guruge-reproduction/kubeconfig.yaml', 'get', 'hpa', '-n', 'guruge-repro', '-o', 'json']' timed out after 40 seconds"
+  }
+]

@@ -1,0 +1,148 @@
+{
+  "status": "completed",
+  "phase_seconds": 30,
+  "elapsed_seconds": 480.78364169999986,
+  "scenarios": [
+    {
+      "scenario": "increasing",
+      "controller": "hpa",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 11.91557999982251,
+      "p99_ms": 15.35739200089665,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 1,
+      "desired_replica_max": 1,
+      "sampled_pod_minutes": 1.8811183099999955,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    },
+    {
+      "scenario": "decreasing",
+      "controller": "hpa",
+      "requests": 2160,
+      "failed": 0,
+      "p95_ms": 9.979759999805536,
+      "p99_ms": 12.583549000573834,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 1,
+      "desired_replica_max": 1,
+      "sampled_pod_minutes": 1.9966882566666755,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    },
+    {
+      "scenario": "spike",
+      "controller": "hpa",
+      "requests": 1950,
+      "failed": 0,
+      "p95_ms": 15.281820000018342,
+      "p99_ms": 22.591633000447473,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 1,
+      "desired_replica_max": 1,
+      "sampled_pod_minutes": 1.88844060499999,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    },
+    {
+      "scenario": "stable",
+      "controller": "hpa",
+      "requests": 600,
+      "failed": 0,
+      "p95_ms": 9.972510000079632,
+      "p99_ms": 12.466531999871219,
+      "slo_violation_fraction": 0.0,
+      "slo_met": true,
+      "desired_replica_min": 1,
+      "desired_replica_max": 1,
+      "sampled_pod_minutes": 2.0004878366666463,
+      "scaling_response": [
+        {
+          "phase": 0,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 1,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 2,
+          "first_replica_change_seconds": null,
+          "censored": true
+        },
+        {
+          "phase": 3,
+          "first_replica_change_seconds": null,
+          "censored": true
+        }
+      ]
+    }
+  ],
+  "scope": "consecutive short integration scenarios, no per-scenario reset; no repeated statistical comparison; five minute downscale window can censor short phases"
+}

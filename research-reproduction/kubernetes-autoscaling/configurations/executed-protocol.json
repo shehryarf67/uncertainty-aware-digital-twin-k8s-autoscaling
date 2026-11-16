@@ -1,0 +1,21 @@
+{
+  "scope": "Authored local integration protocol; not published trace replay",
+  "selected_run_id": "run-03",
+  "phase_seconds_cli_override": 30,
+  "warmup_seconds": 60,
+  "warmup_requests_per_second": 5,
+  "scenario_order": ["stable", "increasing", "spike", "decreasing"],
+  "stable": [5, 5, 5, 5],
+  "increasing": [2, 10, 20, 40],
+  "spike": [5, 5, 50, 5],
+  "decreasing": [40, 20, 10, 2],
+  "controller_order": ["forecast", "hpa"],
+  "request_timeout_seconds": 10,
+  "max_http_connections": 200,
+  "latency_threshold_ms": 500,
+  "scenario_success_objective": 0.99,
+  "monitor_sleep_seconds": 5,
+  "phase_duration_tolerance_seconds": 2,
+  "maximum_schedule_delay_tolerance_ms": 2000,
+  "evidence": "Actual phase times, scheduling delay and monitoring errors are retained in each run directory. Scenario configuration originally lists 120 seconds; the executed CLI overrides that field."
+}
