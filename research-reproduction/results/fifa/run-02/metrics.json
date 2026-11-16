@@ -1,0 +1,65 @@
+{
+  "dataset": "fifa",
+  "run_id": "run-02",
+  "method": "authors_released_alignment_and_preprocessing",
+  "MSE": 1.1315053799799974e-05,
+  "RMSE": 0.0033637856352330144,
+  "MAE": 0.0006491471509421904,
+  "R2": 0.9983122269807588,
+  "TPT_ms": 5285.898447036743,
+  "prophet_prediction_ms": 4181.581020355225,
+  "lstm_prediction_ms": 1104.3174266815186,
+  "epochs_completed": 6,
+  "best_validation_epoch": 1,
+  "history": {
+    "loss": [
+      5.891730324947275e-05,
+      1.1726458069460932e-05,
+      1.1565241038624663e-05,
+      1.1415854714869056e-05,
+      1.1291714145045262e-05,
+      1.1190611076017376e-05
+    ],
+    "val_loss": [
+      5.0723123422358185e-05,
+      5.145032628206536e-05,
+      5.245787906460464e-05,
+      5.36955485586077e-05,
+      5.4903572163311765e-05,
+      5.5981399782467633e-05
+    ]
+  },
+  "n_rows": 125300,
+  "n_train_prophet": 87710,
+  "n_test_scored": 37590,
+  "n_train_lstm": 87709,
+  "n_test_lstm": 37590,
+  "look_back": 1,
+  "growth": "flat",
+  "scaler": {
+    "min": [
+      1.0
+    ],
+    "max": [
+      229426.0
+    ]
+  },
+  "versions": {
+    "tensorflow": "2.17.0",
+    "keras": "3.4.1",
+    "prophet": "1.1.5",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.5.1",
+    "keras-tuner": "1.4.7",
+    "cmdstanpy": "1.2.4"
+  },
+  "python": "3.12.14",
+  "tensorflow_devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ],
+  "author_numpy_seed": 42,
+  "author_tensorflow_seed": 42,
+  "python_random_seed": "not explicitly set by author notebook",
+  "final_row_truth_fallback": true
+}

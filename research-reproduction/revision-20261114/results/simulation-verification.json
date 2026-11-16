@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "rollouts": 1000,
+  "common_inputs_verified_across_all_policies": true,
+  "selected_end_to_end_rollouts_reproduced": 2,
+  "original_simulation_hash_verified_after_reversing_serialization_only_fix": true,
+  "live_controller_hash_verified": true
+}

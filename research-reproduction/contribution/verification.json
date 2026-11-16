@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "unchanged_original_files": 253,
+  "live_runs": 15,
+  "simulated_runs": 350,
+  "live_metrics_independently_recomputed": true,
+  "historical_bounds_recomputed_in_chronological_order": true,
+  "future_information_order_checks_passed": true,
+  "all_prespecified_trials_retained": true,
+  "scope": "Evidence integrity, not a proof of novelty or reliability guarantees"
+}

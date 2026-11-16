@@ -1,0 +1,24 @@
+{
+  "frozen_utc": "2026-11-14T12:45:47.648676+00:00",
+  "replicas": [
+    6,
+    10,
+    14
+  ],
+  "rates": [
+    12,
+    24,
+    36
+  ],
+  "work_units": [
+    1.1,
+    1.5
+  ],
+  "offered_seconds": 5,
+  "drain_seconds": 3,
+  "conditions": 18,
+  "requests": 2160,
+  "scope": "Unseen combinations; evaluate conditional effective-P99 error and envelope false-safe outcomes after all controller trials; never refit parameters",
+  "controller_sha256": "b09ec39a367d071bee11511725be5313f9df651a80db77f30504731625582741",
+  "script_sha256": "a97285567fe9b29acf5a6c26a7917ab3a49fad6d191ca3386232ccec64fe8e95"
+}

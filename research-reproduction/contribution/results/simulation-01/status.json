@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "runs": 350,
+  "seeds": 10,
+  "regimes": [
+    "smooth",
+    "burst",
+    "service_drift",
+    "slow_readiness",
+    "observation_delay"
+  ],
+  "controllers": [
+    "point",
+    "workload_only",
+    "twin_only",
+    "full",
+    "no_delay",
+    "reactive_proxy",
+    "static6"
+  ],
+  "plant": "independent lognormal-service multi-server queue; 8-second cycles; simulated, not Kubernetes; draining removed-server work retained in request outcomes"
+}

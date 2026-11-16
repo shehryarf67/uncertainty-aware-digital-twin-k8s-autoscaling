@@ -1,0 +1,66 @@
+{
+  "captured_utc": "2026-11-14T12:35:17.273134+00:00",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "dependencies": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.5.1",
+    "httpx": "0.27.2"
+  },
+  "kubernetes": {
+    "major": "1",
+    "minor": "33",
+    "emulationMajor": "1",
+    "emulationMinor": "33",
+    "minCompatibilityMajor": "1",
+    "minCompatibilityMinor": "32",
+    "gitVersion": "v1.33.6+k3s1",
+    "gitCommit": "b5847677be5afdc431f70afec6780679c3845d16",
+    "gitTreeState": "clean",
+    "buildDate": "2025-11-20T21:45:54Z",
+    "goVersion": "go1.24.9",
+    "compiler": "gc",
+    "platform": "linux/amd64"
+  },
+  "node": {
+    "architecture": "amd64",
+    "containerRuntimeVersion": "containerd://2.1.5-k3s1.33",
+    "kernelVersion": "6.18.33.2-microsoft-standard-WSL2",
+    "kubeletVersion": "v1.33.6+k3s1",
+    "operatingSystem": "linux",
+    "osImage": "Ubuntu 24.04.1 LTS"
+  },
+  "capacity": {
+    "cpu": "12",
+    "memory": "8041104Ki"
+  },
+  "application": {
+    "image": "python:3.12-alpine",
+    "resolved_image_ids": [
+      "docker.io/library/python@sha256:5789aa194f757888f41fa3d48e14b6feaa1b57c0af0b56fcb1372d6474d3bff0"
+    ],
+    "resources": {
+      "limits": {
+        "cpu": "500m",
+        "memory": "192Mi"
+      },
+      "requests": {
+        "cpu": "250m",
+        "memory": "96Mi"
+      }
+    },
+    "readiness_probe": {
+      "httpGet": {
+        "path": "/health",
+        "port": 8080,
+        "scheme": "HTTP"
+      },
+      "timeoutSeconds": 1,
+      "periodSeconds": 2,
+      "successThreshold": 1,
+      "failureThreshold": 30
+    }
+  },
+  "scope": "Only local research environment facts; no kubeconfig, auth tokens or machine identity"
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "replicas": 16,
+    "rps": 5,
+    "units": 1,
+    "duration_seconds": 18.00426288699998,
+    "p95_ms": 119.00897839998379,
+    "p99_ms": 124.99709886002965,
+    "effective_p99_ms": 124.99709886002965,
+    "cpu_ms": 56.641554,
+    "failed": 0,
+    "slo_violation_fraction": 0.0,
+    "requests": 75
+  },
+  {
+    "replicas": 16,
+    "rps": 25,
+    "units": 1,
+    "duration_seconds": 18.003691634999996,
+    "p95_ms": 116.87780620003423,
+    "p99_ms": 161.9736730399631,
+    "effective_p99_ms": 161.9736730399631,
+    "cpu_ms": 39.270664,
+    "failed": 0,
+    "slo_violation_fraction": 0.0,
+    "requests": 375
+  },
+  {
+    "replicas": 16,
+    "rps": 45,
+    "units": 1,
+    "duration_seconds": 18.00425477400006,
+    "p95_ms": 109.338840899943,
+    "p99_ms": 182.59186992003828,
+    "effective_p99_ms": 182.59186992003828,
+    "cpu_ms": 36.283245,
+    "failed": 0,
+    "slo_violation_fraction": 0.0,
+    "requests": 675
+  },
+  {
+    "replicas": 16,
+    "rps": 30,
+    "units": 1.8,
+    "duration_seconds": 18.003981127999964,
+    "p95_ms": 302.88046610003215,
+    "p99_ms": 405.6015122499989,
+    "effective_p99_ms": 405.6015122499989,
+    "cpu_ms": 82.15633449999999,
+    "failed": 0,
+    "slo_violation_fraction": 0.0,
+    "requests": 450
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "dataset": "nasa",
+  "run_id": "run-01",
+  "started_utc": "2026-10-09T11:19:48.371012+00:00",
+  "stage": "failed",
+  "elapsed_seconds": 0.0723571999997148
+}

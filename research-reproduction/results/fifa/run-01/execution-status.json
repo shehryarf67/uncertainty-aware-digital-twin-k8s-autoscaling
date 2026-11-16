@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "dataset": "fifa",
+  "run_id": "run-01",
+  "started_utc": "2026-10-09T10:39:46.747743+00:00",
+  "original_notebook_sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5",
+  "source_cells_unchanged": true,
+  "changes": [
+    "created images directory",
+    "read-only fit-history capture after author cell 46",
+    "appended export cells",
+    "CPU intra-op threads=4, inter-op=2"
+  ],
+  "elapsed_seconds": 107.76263380050659,
+  "current_cell": 61,
+  "current_source": "\n# Reproduction instrumentation: export existing notebook state without retraining.\nimport json as _json\nfrom pathlib import Path as _Path\nimport platform as _platform\nimport importlib.metadata as _me",
+  "latest_epoch_message": "Epoch 6/20\n"
+}

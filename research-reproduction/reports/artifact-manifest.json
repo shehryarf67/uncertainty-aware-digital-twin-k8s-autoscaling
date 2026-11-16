@@ -1,0 +1,1206 @@
+{
+  ".gitignore": {
+    "bytes": 72,
+    "sha256": "bd865d1353e81377c9ea1e5704dfcfe1964dd88b784688789085c6b4b0ec39ce"
+  },
+  "baseline-experiments/fifa/run-01/.gitignore": {
+    "bytes": 62,
+    "sha256": "be6897cc154b832be3439ca8a4db26dd75114d6c91394ed318669eb1adae77f4"
+  },
+  "baseline-experiments/fifa/run-01/Autoscaler Evaluation.ipynb": {
+    "bytes": 16485,
+    "sha256": "850bea3cad15614f399993cea8c9b716671c3b7e17b040be3e5524043d4a5411"
+  },
+  "baseline-experiments/fifa/run-01/CITATION.cff": {
+    "bytes": 1106,
+    "sha256": "10a47dced7629305868013a5b73188c4a834a4e53f44e02fcd15a9308457b247"
+  },
+  "baseline-experiments/fifa/run-01/datasets/fifa.csv": {
+    "bytes": 3282426,
+    "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be"
+  },
+  "baseline-experiments/fifa/run-01/datasets/nasa.csv": {
+    "bytes": 1952180,
+    "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b"
+  },
+  "baseline-experiments/fifa/run-01/Hybrid Model - FIFA - Prophet LSTM.ipynb": {
+    "bytes": 22496,
+    "sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5"
+  },
+  "baseline-experiments/fifa/run-01/Hybrid Model - NASA - Prophet LSTM.ipynb": {
+    "bytes": 22722,
+    "sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4"
+  },
+  "baseline-experiments/fifa/run-01/Hybrid Model - Prophet BiLSTM.ipynb": {
+    "bytes": 17777,
+    "sha256": "ca6eea63e8fd3fad129aa2a00a92b0d8ffca03147ee8442436d362414d5a12f1"
+  },
+  "baseline-experiments/fifa/run-01/Hybrid Model - Prophet GRU.ipynb": {
+    "bytes": 17730,
+    "sha256": "8ba37c7c3526b3f86a1c8447f9c05b444d148b0a6a565b7c92fef91168872be1"
+  },
+  "baseline-experiments/fifa/run-01/images/fifa-final-output.jpeg": {
+    "bytes": 248026,
+    "sha256": "a199f60fdc472d73d419aca785a5aa48417e38a27674ec2d3c075e9d3aac8824"
+  },
+  "baseline-experiments/fifa/run-01/images/fifa-lstm-output.jpeg": {
+    "bytes": 266130,
+    "sha256": "ebbd14fa9d05cafa530fb9e34acb6e80d097aa464bbc98ce3e99e6e5f43b4aff"
+  },
+  "baseline-experiments/fifa/run-01/images/fifa-original.jpeg": {
+    "bytes": 275085,
+    "sha256": "7afdf6e3982c1b09a30c08dc06f61e57150f854da6b43bc654980ce771dc0a42"
+  },
+  "baseline-experiments/fifa/run-01/images/fifa-prophet-daily.jpeg": {
+    "bytes": 247664,
+    "sha256": "1112e2fcf735d4a66310775e0ff73a12cddd324ce05ab3cc2f6dea352f47b98d"
+  },
+  "baseline-experiments/fifa/run-01/images/fifa-prophet-output.jpeg": {
+    "bytes": 283398,
+    "sha256": "4fc002eaf68dee137cf60fd2aee4a391ff3bcdde5cc49a29701f75e1dae054eb"
+  },
+  "baseline-experiments/fifa/run-01/images/fifa-prophet-weekly.jpeg": {
+    "bytes": 254899,
+    "sha256": "7bc6b47278c0377b9c27cf1b11c6d875ee9c0303e4db738aefca6c3445997e13"
+  },
+  "baseline-experiments/fifa/run-01/images/fifa-train-test.jpeg": {
+    "bytes": 284193,
+    "sha256": "f10acd767a3287c4d84976ff246ae62fbe30aed55c66c20ec2c336a3b1c45bb2"
+  },
+  "baseline-experiments/fifa/run-01/instrumented.ipynb": {
+    "bytes": 26646,
+    "sha256": "8af9f5837f41cc7927966703a20b3b600e3fe2029ac99f860af505fe97cbe5ec"
+  },
+  "baseline-experiments/fifa/run-01/LICENCE": {
+    "bytes": 19051,
+    "sha256": "cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+  },
+  "baseline-experiments/fifa/run-01/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-experiments/fifa/run-01/models/fbprophet-fifa-20261009_154130.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-experiments/fifa/run-01/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "baseline-experiments/fifa/run-01/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "baseline-experiments/fifa/run-01/models/lstm-fifa-20261009_154130.keras": {
+    "bytes": 396831,
+    "sha256": "cc6eb805af5bca5b53ca951e9acb0179708e50c8fddaccb46bbb92dd596e06b8"
+  },
+  "baseline-experiments/fifa/run-01/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "baseline-experiments/fifa/run-01/README.md": {
+    "bytes": 2961,
+    "sha256": "f9774218bd0c657cb0c5411a6a4fd92e4dc0d24794aadde2ae2d2a8776ea878e"
+  },
+  "baseline-experiments/fifa/run-02/.gitignore": {
+    "bytes": 62,
+    "sha256": "be6897cc154b832be3439ca8a4db26dd75114d6c91394ed318669eb1adae77f4"
+  },
+  "baseline-experiments/fifa/run-02/Autoscaler Evaluation.ipynb": {
+    "bytes": 16485,
+    "sha256": "850bea3cad15614f399993cea8c9b716671c3b7e17b040be3e5524043d4a5411"
+  },
+  "baseline-experiments/fifa/run-02/CITATION.cff": {
+    "bytes": 1106,
+    "sha256": "10a47dced7629305868013a5b73188c4a834a4e53f44e02fcd15a9308457b247"
+  },
+  "baseline-experiments/fifa/run-02/datasets/fifa.csv": {
+    "bytes": 3282426,
+    "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be"
+  },
+  "baseline-experiments/fifa/run-02/datasets/nasa.csv": {
+    "bytes": 1952180,
+    "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b"
+  },
+  "baseline-experiments/fifa/run-02/Hybrid Model - FIFA - Prophet LSTM.ipynb": {
+    "bytes": 22496,
+    "sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5"
+  },
+  "baseline-experiments/fifa/run-02/Hybrid Model - NASA - Prophet LSTM.ipynb": {
+    "bytes": 22722,
+    "sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4"
+  },
+  "baseline-experiments/fifa/run-02/Hybrid Model - Prophet BiLSTM.ipynb": {
+    "bytes": 17777,
+    "sha256": "ca6eea63e8fd3fad129aa2a00a92b0d8ffca03147ee8442436d362414d5a12f1"
+  },
+  "baseline-experiments/fifa/run-02/Hybrid Model - Prophet GRU.ipynb": {
+    "bytes": 17730,
+    "sha256": "8ba37c7c3526b3f86a1c8447f9c05b444d148b0a6a565b7c92fef91168872be1"
+  },
+  "baseline-experiments/fifa/run-02/images/fifa-final-output.jpeg": {
+    "bytes": 248118,
+    "sha256": "73696fc08121fc548fbf43714e577e708a527888e14b96841c2a1ed61564f379"
+  },
+  "baseline-experiments/fifa/run-02/images/fifa-lstm-output.jpeg": {
+    "bytes": 266265,
+    "sha256": "b595f02864a6b2d90816c2d0b211648016fda0c56496bf131569e9187796194a"
+  },
+  "baseline-experiments/fifa/run-02/images/fifa-original.jpeg": {
+    "bytes": 275085,
+    "sha256": "7afdf6e3982c1b09a30c08dc06f61e57150f854da6b43bc654980ce771dc0a42"
+  },
+  "baseline-experiments/fifa/run-02/images/fifa-prophet-daily.jpeg": {
+    "bytes": 247664,
+    "sha256": "1112e2fcf735d4a66310775e0ff73a12cddd324ce05ab3cc2f6dea352f47b98d"
+  },
+  "baseline-experiments/fifa/run-02/images/fifa-prophet-output.jpeg": {
+    "bytes": 283398,
+    "sha256": "4fc002eaf68dee137cf60fd2aee4a391ff3bcdde5cc49a29701f75e1dae054eb"
+  },
+  "baseline-experiments/fifa/run-02/images/fifa-prophet-weekly.jpeg": {
+    "bytes": 254899,
+    "sha256": "7bc6b47278c0377b9c27cf1b11c6d875ee9c0303e4db738aefca6c3445997e13"
+  },
+  "baseline-experiments/fifa/run-02/images/fifa-train-test.jpeg": {
+    "bytes": 284193,
+    "sha256": "f10acd767a3287c4d84976ff246ae62fbe30aed55c66c20ec2c336a3b1c45bb2"
+  },
+  "baseline-experiments/fifa/run-02/instrumented.ipynb": {
+    "bytes": 26646,
+    "sha256": "48d915cfded2259c68d9c832974ca8476842c36c45f71615ab99f4e93137c6b0"
+  },
+  "baseline-experiments/fifa/run-02/LICENCE": {
+    "bytes": 19051,
+    "sha256": "cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+  },
+  "baseline-experiments/fifa/run-02/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-experiments/fifa/run-02/models/fbprophet-fifa-20261009_154624.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-experiments/fifa/run-02/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "baseline-experiments/fifa/run-02/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "baseline-experiments/fifa/run-02/models/lstm-fifa-20261009_154624.keras": {
+    "bytes": 396831,
+    "sha256": "1ae03737ab7f6180edd3c475c28b372eb18b08af71be91de9443afab8d943bf3"
+  },
+  "baseline-experiments/fifa/run-02/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "baseline-experiments/fifa/run-02/README.md": {
+    "bytes": 2961,
+    "sha256": "f9774218bd0c657cb0c5411a6a4fd92e4dc0d24794aadde2ae2d2a8776ea878e"
+  },
+  "baseline-experiments/nasa/run-01/.gitignore": {
+    "bytes": 62,
+    "sha256": "be6897cc154b832be3439ca8a4db26dd75114d6c91394ed318669eb1adae77f4"
+  },
+  "baseline-experiments/nasa/run-01/Autoscaler Evaluation.ipynb": {
+    "bytes": 16485,
+    "sha256": "850bea3cad15614f399993cea8c9b716671c3b7e17b040be3e5524043d4a5411"
+  },
+  "baseline-experiments/nasa/run-01/CITATION.cff": {
+    "bytes": 1106,
+    "sha256": "10a47dced7629305868013a5b73188c4a834a4e53f44e02fcd15a9308457b247"
+  },
+  "baseline-experiments/nasa/run-01/datasets/fifa.csv": {
+    "bytes": 3282426,
+    "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be"
+  },
+  "baseline-experiments/nasa/run-01/datasets/nasa.csv": {
+    "bytes": 1952180,
+    "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b"
+  },
+  "baseline-experiments/nasa/run-01/Hybrid Model - FIFA - Prophet LSTM.ipynb": {
+    "bytes": 22496,
+    "sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5"
+  },
+  "baseline-experiments/nasa/run-01/Hybrid Model - NASA - Prophet LSTM.ipynb": {
+    "bytes": 22722,
+    "sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4"
+  },
+  "baseline-experiments/nasa/run-01/Hybrid Model - Prophet BiLSTM.ipynb": {
+    "bytes": 17777,
+    "sha256": "ca6eea63e8fd3fad129aa2a00a92b0d8ffca03147ee8442436d362414d5a12f1"
+  },
+  "baseline-experiments/nasa/run-01/Hybrid Model - Prophet GRU.ipynb": {
+    "bytes": 17730,
+    "sha256": "8ba37c7c3526b3f86a1c8447f9c05b444d148b0a6a565b7c92fef91168872be1"
+  },
+  "baseline-experiments/nasa/run-01/images/nasa-final-output.jpeg": {
+    "bytes": 417598,
+    "sha256": "9fc4b5e88d25a2301cd0bced98cffa57b77f3383611f4208a2f6a4cdb399ba91"
+  },
+  "baseline-experiments/nasa/run-01/images/nasa-lstm-output.jpeg": {
+    "bytes": 334253,
+    "sha256": "c0d6c00de075d08d4769ca6a53c0d408a9b66345ffd46eb3a6848b961397ee02"
+  },
+  "baseline-experiments/nasa/run-01/images/nasa-original.jpeg": {
+    "bytes": 331217,
+    "sha256": "42378723b6ef3de49b588730e9eeb5f3d1e5729b08223aa9f0e15bdf04b5d808"
+  },
+  "baseline-experiments/nasa/run-01/images/nasa-prophet-daily.jpeg": {
+    "bytes": 249843,
+    "sha256": "709f105f2af930a6cac7c8573d2b00b96733f445a802a510f15b2b0c921f1362"
+  },
+  "baseline-experiments/nasa/run-01/images/nasa-prophet-output.jpeg": {
+    "bytes": 406948,
+    "sha256": "d2c3dc37612d888c380d74eaf64805c20a9671c26d20c83ff349f0b8462a7c3f"
+  },
+  "baseline-experiments/nasa/run-01/images/nasa-prophet-weekly.jpeg": {
+    "bytes": 260265,
+    "sha256": "0bd890311ee666a700b632bc11b4d5371e0e5b469170a67c64c9c60fc2df1930"
+  },
+  "baseline-experiments/nasa/run-01/images/nasa-train-test.jpeg": {
+    "bytes": 335515,
+    "sha256": "0993fe07541d75ebd6f79a630bc8d88ce4064a9b6a2572e441d57037fb51990e"
+  },
+  "baseline-experiments/nasa/run-01/instrumented.ipynb": {
+    "bytes": 26426,
+    "sha256": "09d865beccd651391c52bffaaacd357454b26daf49cda4a1798b9d30dedc9045"
+  },
+  "baseline-experiments/nasa/run-01/LICENCE": {
+    "bytes": 19051,
+    "sha256": "cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+  },
+  "baseline-experiments/nasa/run-01/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-experiments/nasa/run-01/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "baseline-experiments/nasa/run-01/models/fbprophet-nasa-20261009_153436.json": {
+    "bytes": 8502485,
+    "sha256": "ce555892aeac88b7bcc878fb49feb71e8a587806e6631ba5e87a8032a262714a"
+  },
+  "baseline-experiments/nasa/run-01/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "baseline-experiments/nasa/run-01/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "baseline-experiments/nasa/run-01/models/lstm-nasa-20261009_153436.keras": {
+    "bytes": 396831,
+    "sha256": "6f12da4382026fa83f4cb3a8d8aaec6b89a952493a45305af50ac5e5005b12eb"
+  },
+  "baseline-experiments/nasa/run-01/README.md": {
+    "bytes": 2961,
+    "sha256": "f9774218bd0c657cb0c5411a6a4fd92e4dc0d24794aadde2ae2d2a8776ea878e"
+  },
+  "baseline-experiments/nasa/run-02/.gitignore": {
+    "bytes": 62,
+    "sha256": "be6897cc154b832be3439ca8a4db26dd75114d6c91394ed318669eb1adae77f4"
+  },
+  "baseline-experiments/nasa/run-02/Autoscaler Evaluation.ipynb": {
+    "bytes": 16485,
+    "sha256": "850bea3cad15614f399993cea8c9b716671c3b7e17b040be3e5524043d4a5411"
+  },
+  "baseline-experiments/nasa/run-02/CITATION.cff": {
+    "bytes": 1106,
+    "sha256": "10a47dced7629305868013a5b73188c4a834a4e53f44e02fcd15a9308457b247"
+  },
+  "baseline-experiments/nasa/run-02/datasets/fifa.csv": {
+    "bytes": 3282426,
+    "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be"
+  },
+  "baseline-experiments/nasa/run-02/datasets/nasa.csv": {
+    "bytes": 1952180,
+    "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b"
+  },
+  "baseline-experiments/nasa/run-02/Hybrid Model - FIFA - Prophet LSTM.ipynb": {
+    "bytes": 22496,
+    "sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5"
+  },
+  "baseline-experiments/nasa/run-02/Hybrid Model - NASA - Prophet LSTM.ipynb": {
+    "bytes": 22722,
+    "sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4"
+  },
+  "baseline-experiments/nasa/run-02/Hybrid Model - Prophet BiLSTM.ipynb": {
+    "bytes": 17777,
+    "sha256": "ca6eea63e8fd3fad129aa2a00a92b0d8ffca03147ee8442436d362414d5a12f1"
+  },
+  "baseline-experiments/nasa/run-02/Hybrid Model - Prophet GRU.ipynb": {
+    "bytes": 17730,
+    "sha256": "8ba37c7c3526b3f86a1c8447f9c05b444d148b0a6a565b7c92fef91168872be1"
+  },
+  "baseline-experiments/nasa/run-02/images/nasa-final-output.jpeg": {
+    "bytes": 417543,
+    "sha256": "ac7248e8f95a4083dfc727f81abf18d571c8a4f8239990ff239b08b1631c3760"
+  },
+  "baseline-experiments/nasa/run-02/images/nasa-lstm-output.jpeg": {
+    "bytes": 334256,
+    "sha256": "21ba2d951adcfec9b774f424121b54c345676fdcb6101863aa0ab09a89c04fce"
+  },
+  "baseline-experiments/nasa/run-02/images/nasa-original.jpeg": {
+    "bytes": 331217,
+    "sha256": "42378723b6ef3de49b588730e9eeb5f3d1e5729b08223aa9f0e15bdf04b5d808"
+  },
+  "baseline-experiments/nasa/run-02/images/nasa-prophet-daily.jpeg": {
+    "bytes": 249843,
+    "sha256": "709f105f2af930a6cac7c8573d2b00b96733f445a802a510f15b2b0c921f1362"
+  },
+  "baseline-experiments/nasa/run-02/images/nasa-prophet-output.jpeg": {
+    "bytes": 406948,
+    "sha256": "d2c3dc37612d888c380d74eaf64805c20a9671c26d20c83ff349f0b8462a7c3f"
+  },
+  "baseline-experiments/nasa/run-02/images/nasa-prophet-weekly.jpeg": {
+    "bytes": 260265,
+    "sha256": "0bd890311ee666a700b632bc11b4d5371e0e5b469170a67c64c9c60fc2df1930"
+  },
+  "baseline-experiments/nasa/run-02/images/nasa-train-test.jpeg": {
+    "bytes": 335515,
+    "sha256": "0993fe07541d75ebd6f79a630bc8d88ce4064a9b6a2572e441d57037fb51990e"
+  },
+  "baseline-experiments/nasa/run-02/instrumented.ipynb": {
+    "bytes": 26872,
+    "sha256": "b3a593abb1fc83c5979149fe335e22ac379202d0a78304a234e22fc23e867404"
+  },
+  "baseline-experiments/nasa/run-02/LICENCE": {
+    "bytes": 19051,
+    "sha256": "cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+  },
+  "baseline-experiments/nasa/run-02/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-experiments/nasa/run-02/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "baseline-experiments/nasa/run-02/models/fbprophet-nasa-20261009_153915.json": {
+    "bytes": 8502485,
+    "sha256": "ce555892aeac88b7bcc878fb49feb71e8a587806e6631ba5e87a8032a262714a"
+  },
+  "baseline-experiments/nasa/run-02/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "baseline-experiments/nasa/run-02/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "baseline-experiments/nasa/run-02/models/lstm-nasa-20261009_153915.keras": {
+    "bytes": 396831,
+    "sha256": "579c3fa28e32df5dedbfc912eec2b98c72546a8e85574535624d534d4c627173"
+  },
+  "baseline-experiments/nasa/run-02/README.md": {
+    "bytes": 2961,
+    "sha256": "f9774218bd0c657cb0c5411a6a4fd92e4dc0d24794aadde2ae2d2a8776ea878e"
+  },
+  "baseline-experiments/nasa/run-03/.gitignore": {
+    "bytes": 62,
+    "sha256": "be6897cc154b832be3439ca8a4db26dd75114d6c91394ed318669eb1adae77f4"
+  },
+  "baseline-experiments/nasa/run-03/Autoscaler Evaluation.ipynb": {
+    "bytes": 16485,
+    "sha256": "850bea3cad15614f399993cea8c9b716671c3b7e17b040be3e5524043d4a5411"
+  },
+  "baseline-experiments/nasa/run-03/CITATION.cff": {
+    "bytes": 1106,
+    "sha256": "10a47dced7629305868013a5b73188c4a834a4e53f44e02fcd15a9308457b247"
+  },
+  "baseline-experiments/nasa/run-03/datasets/fifa.csv": {
+    "bytes": 3282426,
+    "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be"
+  },
+  "baseline-experiments/nasa/run-03/datasets/nasa.csv": {
+    "bytes": 1952180,
+    "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b"
+  },
+  "baseline-experiments/nasa/run-03/Hybrid Model - FIFA - Prophet LSTM.ipynb": {
+    "bytes": 22496,
+    "sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5"
+  },
+  "baseline-experiments/nasa/run-03/Hybrid Model - NASA - Prophet LSTM.ipynb": {
+    "bytes": 22722,
+    "sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4"
+  },
+  "baseline-experiments/nasa/run-03/Hybrid Model - Prophet BiLSTM.ipynb": {
+    "bytes": 17777,
+    "sha256": "ca6eea63e8fd3fad129aa2a00a92b0d8ffca03147ee8442436d362414d5a12f1"
+  },
+  "baseline-experiments/nasa/run-03/Hybrid Model - Prophet GRU.ipynb": {
+    "bytes": 17730,
+    "sha256": "8ba37c7c3526b3f86a1c8447f9c05b444d148b0a6a565b7c92fef91168872be1"
+  },
+  "baseline-experiments/nasa/run-03/images/nasa-final-output.jpeg": {
+    "bytes": 417542,
+    "sha256": "9396b4a687ecc77ad8ac9d647e4747a1a2046e1a90578ac635dc8f29057bc99f"
+  },
+  "baseline-experiments/nasa/run-03/images/nasa-lstm-output.jpeg": {
+    "bytes": 334161,
+    "sha256": "de14e640baba11442a48aedcedf87ce7792db37b37cb77bc96ba6ec5e350b8d3"
+  },
+  "baseline-experiments/nasa/run-03/images/nasa-original.jpeg": {
+    "bytes": 331217,
+    "sha256": "42378723b6ef3de49b588730e9eeb5f3d1e5729b08223aa9f0e15bdf04b5d808"
+  },
+  "baseline-experiments/nasa/run-03/images/nasa-prophet-daily.jpeg": {
+    "bytes": 249843,
+    "sha256": "709f105f2af930a6cac7c8573d2b00b96733f445a802a510f15b2b0c921f1362"
+  },
+  "baseline-experiments/nasa/run-03/images/nasa-prophet-output.jpeg": {
+    "bytes": 406948,
+    "sha256": "d2c3dc37612d888c380d74eaf64805c20a9671c26d20c83ff349f0b8462a7c3f"
+  },
+  "baseline-experiments/nasa/run-03/images/nasa-prophet-weekly.jpeg": {
+    "bytes": 260265,
+    "sha256": "0bd890311ee666a700b632bc11b4d5371e0e5b469170a67c64c9c60fc2df1930"
+  },
+  "baseline-experiments/nasa/run-03/images/nasa-train-test.jpeg": {
+    "bytes": 335515,
+    "sha256": "0993fe07541d75ebd6f79a630bc8d88ce4064a9b6a2572e441d57037fb51990e"
+  },
+  "baseline-experiments/nasa/run-03/instrumented.ipynb": {
+    "bytes": 26872,
+    "sha256": "886ebce9ccc457daf01d8625d263115747fb91ebece8540d603947d961dfd82b"
+  },
+  "baseline-experiments/nasa/run-03/LICENCE": {
+    "bytes": 19051,
+    "sha256": "cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+  },
+  "baseline-experiments/nasa/run-03/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-experiments/nasa/run-03/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "baseline-experiments/nasa/run-03/models/fbprophet-nasa-20261009_154438.json": {
+    "bytes": 8502485,
+    "sha256": "ce555892aeac88b7bcc878fb49feb71e8a587806e6631ba5e87a8032a262714a"
+  },
+  "baseline-experiments/nasa/run-03/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "baseline-experiments/nasa/run-03/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "baseline-experiments/nasa/run-03/models/lstm-nasa-20261009_154438.keras": {
+    "bytes": 396831,
+    "sha256": "f9e02e9bd0cc91cb955804762d7f46915631d3914d7d77a711ca656bde20fb99"
+  },
+  "baseline-experiments/nasa/run-03/README.md": {
+    "bytes": 2961,
+    "sha256": "f9774218bd0c657cb0c5411a6a4fd92e4dc0d24794aadde2ae2d2a8776ea878e"
+  },
+  "baseline-original/.git/config": {
+    "bytes": 355,
+    "sha256": "f109990c0698b2e2568a9af3985be2684fe781b4ebd1a4fe16a0bd2485cb5173"
+  },
+  "baseline-original/.git/description": {
+    "bytes": 73,
+    "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+  },
+  "baseline-original/.git/HEAD": {
+    "bytes": 41,
+    "sha256": "480a1147a94339344742fe556e3cf9a6118158248d7aa643a2f730856f107e94"
+  },
+  "baseline-original/.git/hooks/applypatch-msg.sample": {
+    "bytes": 478,
+    "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+  },
+  "baseline-original/.git/hooks/commit-msg.sample": {
+    "bytes": 896,
+    "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+  },
+  "baseline-original/.git/hooks/fsmonitor-watchman.sample": {
+    "bytes": 4726,
+    "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+  },
+  "baseline-original/.git/hooks/post-update.sample": {
+    "bytes": 189,
+    "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+  },
+  "baseline-original/.git/hooks/pre-applypatch.sample": {
+    "bytes": 424,
+    "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+  },
+  "baseline-original/.git/hooks/pre-commit.sample": {
+    "bytes": 1649,
+    "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+  },
+  "baseline-original/.git/hooks/pre-merge-commit.sample": {
+    "bytes": 416,
+    "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+  },
+  "baseline-original/.git/hooks/pre-push.sample": {
+    "bytes": 1374,
+    "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+  },
+  "baseline-original/.git/hooks/pre-rebase.sample": {
+    "bytes": 4898,
+    "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+  },
+  "baseline-original/.git/hooks/pre-receive.sample": {
+    "bytes": 544,
+    "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+  },
+  "baseline-original/.git/hooks/prepare-commit-msg.sample": {
+    "bytes": 1492,
+    "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+  },
+  "baseline-original/.git/hooks/push-to-checkout.sample": {
+    "bytes": 2783,
+    "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+  },
+  "baseline-original/.git/hooks/sendemail-validate.sample": {
+    "bytes": 2308,
+    "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+  },
+  "baseline-original/.git/hooks/update.sample": {
+    "bytes": 3650,
+    "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+  },
+  "baseline-original/.git/index": {
+    "bytes": 1530,
+    "sha256": "085f818b537898c51ac9466942088925d40b9dd3324224c79a15165527e6ac7a"
+  },
+  "baseline-original/.git/info/exclude": {
+    "bytes": 240,
+    "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+  },
+  "baseline-original/.git/logs/HEAD": {
+    "bytes": 458,
+    "sha256": "0765b3061f6111816aaa8665c908e55340efeab00ff1148503e53440bdd3715b"
+  },
+  "baseline-original/.git/logs/refs/heads/main": {
+    "bytes": 248,
+    "sha256": "e9543fa71804d0c7f055c96bf7d4627e9021e9fc42900bd6058663241d4f974d"
+  },
+  "baseline-original/.git/logs/refs/remotes/origin/HEAD": {
+    "bytes": 248,
+    "sha256": "e9543fa71804d0c7f055c96bf7d4627e9021e9fc42900bd6058663241d4f974d"
+  },
+  "baseline-original/.git/objects/pack/pack-eb021156133e2e7f1ef51c2c3febda4931472a95.idx": {
+    "bytes": 4208,
+    "sha256": "8266d864a9490af626b3d5261a929c16968bad0526870968a6d0cc0fe52565a9"
+  },
+  "baseline-original/.git/objects/pack/pack-eb021156133e2e7f1ef51c2c3febda4931472a95.pack": {
+    "bytes": 5059409,
+    "sha256": "678688f8391bbf79962730e60823d5ecf3973637944d610a1065dc7b25d4f97d"
+  },
+  "baseline-original/.git/objects/pack/pack-eb021156133e2e7f1ef51c2c3febda4931472a95.rev": {
+    "bytes": 500,
+    "sha256": "830f0f7f987f742c9ffdd8328e48e4cd4f8119dbe98062ce1a7c4930d15b3c73"
+  },
+  "baseline-original/.git/packed-refs": {
+    "bytes": 112,
+    "sha256": "abf1e098142fb292955d31b8da32ef5a612eac7b9091529ca86b11bd027c91a1"
+  },
+  "baseline-original/.git/refs/heads/main": {
+    "bytes": 41,
+    "sha256": "480a1147a94339344742fe556e3cf9a6118158248d7aa643a2f730856f107e94"
+  },
+  "baseline-original/.git/refs/remotes/origin/HEAD": {
+    "bytes": 30,
+    "sha256": "2bb6a24aa0fc6c484100f5d51a29bbad841cd2c755f5d93faa204e5dbb4eb2b4"
+  },
+  "baseline-original/.gitignore": {
+    "bytes": 62,
+    "sha256": "be6897cc154b832be3439ca8a4db26dd75114d6c91394ed318669eb1adae77f4"
+  },
+  "baseline-original/Autoscaler Evaluation.ipynb": {
+    "bytes": 16485,
+    "sha256": "850bea3cad15614f399993cea8c9b716671c3b7e17b040be3e5524043d4a5411"
+  },
+  "baseline-original/CITATION.cff": {
+    "bytes": 1106,
+    "sha256": "10a47dced7629305868013a5b73188c4a834a4e53f44e02fcd15a9308457b247"
+  },
+  "baseline-original/datasets/fifa.csv": {
+    "bytes": 3282426,
+    "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be"
+  },
+  "baseline-original/datasets/nasa.csv": {
+    "bytes": 1952180,
+    "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b"
+  },
+  "baseline-original/Hybrid Model - FIFA - Prophet LSTM.ipynb": {
+    "bytes": 22496,
+    "sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5"
+  },
+  "baseline-original/Hybrid Model - NASA - Prophet LSTM.ipynb": {
+    "bytes": 22722,
+    "sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4"
+  },
+  "baseline-original/Hybrid Model - Prophet BiLSTM.ipynb": {
+    "bytes": 17777,
+    "sha256": "ca6eea63e8fd3fad129aa2a00a92b0d8ffca03147ee8442436d362414d5a12f1"
+  },
+  "baseline-original/Hybrid Model - Prophet GRU.ipynb": {
+    "bytes": 17730,
+    "sha256": "8ba37c7c3526b3f86a1c8447f9c05b444d148b0a6a565b7c92fef91168872be1"
+  },
+  "baseline-original/LICENCE": {
+    "bytes": 19051,
+    "sha256": "cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+  },
+  "baseline-original/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "baseline-original/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "baseline-original/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "baseline-original/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "baseline-original/README.md": {
+    "bytes": 2961,
+    "sha256": "f9774218bd0c657cb0c5411a6a4fd92e4dc0d24794aadde2ae2d2a8776ea878e"
+  },
+  "datasets/fifa.csv": {
+    "bytes": 3282426,
+    "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be"
+  },
+  "datasets/nasa.csv": {
+    "bytes": 1952180,
+    "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b"
+  },
+  "environments/hardware.json": {
+    "bytes": 588,
+    "sha256": "61bf9ff51b8c7036eabdb6c786d15ace63af6f26c128e53b2daea41265dbf66f"
+  },
+  "environments/requirements-after-runs.txt": {
+    "bytes": 2655,
+    "sha256": "758c56a5942049d23e0091e6c2d062152e3b4aeb8e4922d3eb166bd295d2dc01"
+  },
+  "environments/requirements-candidate.txt": {
+    "bytes": 403,
+    "sha256": "1f01a4dc515536afbd5ebaf81746842397296bc49cf879fb24f8f67302edb73d"
+  },
+  "environments/requirements-working.txt": {
+    "bytes": 2655,
+    "sha256": "758c56a5942049d23e0091e6c2d062152e3b4aeb8e4922d3eb166bd295d2dc01"
+  },
+  "environments/smoke-test.json": {
+    "bytes": 1107,
+    "sha256": "681cab18ff460c1845df2fce1a1969c2f2f73026572c66fc99e9e12745bd66b9"
+  },
+  "logs/environment-install.log": {
+    "bytes": 39219,
+    "sha256": "57b9461a7c73271cbab1d3cbff4b9e0bd985c889a7855ecdac4e4937ea2fa1a6"
+  },
+  "logs/environment-smoke.log": {
+    "bytes": 2511,
+    "sha256": "66ca50608d6aee518c69e695b6c4aa9c094e60cac7fb486661d89af1e171a75a"
+  },
+  "logs/fifa/run-01/events.jsonl": {
+    "bytes": 6904,
+    "sha256": "e5a071970d1aabadc74bbb061eeb845372e06a4d163e0fe722c588de3d6e10e6"
+  },
+  "logs/fifa/run-01/kernel-stream.log": {
+    "bytes": 167370,
+    "sha256": "3465c595647061fc919d93b46a47ef8d3aceb73945d2db52244ca64c9db3321b"
+  },
+  "logs/fifa/run-02/events.jsonl": {
+    "bytes": 6889,
+    "sha256": "97b6e8b8c3d118370e10983045c8841414e325728c618293859aa6fceb358739"
+  },
+  "logs/fifa/run-02/kernel-stream.log": {
+    "bytes": 165680,
+    "sha256": "2ec0d0c1cec6547b53ed04c3022b2371c9feb2f34be915cf952c6020f50a8071"
+  },
+  "logs/fifa-run-01-driver.log": {
+    "bytes": 5779,
+    "sha256": "433060d81021bca71362d7acbdc2487572ef115d91a244fb0a74131322b83b20"
+  },
+  "logs/fifa-run-02-driver.log": {
+    "bytes": 5780,
+    "sha256": "c67e861f24a549effcb41620f67391e6cd931d94895fdbb0c261d5e6336c84c0"
+  },
+  "logs/nasa/run-01/events.jsonl": {
+    "bytes": 6806,
+    "sha256": "45d3457cea236ae7ecea8e2c2e2de998e74fb52b704152bac688deb5a155f41f"
+  },
+  "logs/nasa/run-01/failure.txt": {
+    "bytes": 5636,
+    "sha256": "2e065ccc3855f3f1d633361611d1ec90727265ef63e82041473028e8d256b664"
+  },
+  "logs/nasa/run-01/kernel-stream.log": {
+    "bytes": 123346,
+    "sha256": "077151dc4ab6ce8e3dbf2e17e9e1c39318e5fda7b177367b38d13ddcfac76740"
+  },
+  "logs/nasa/run-02/events.jsonl": {
+    "bytes": 6942,
+    "sha256": "8baa85dc54827e2270d33470d3afc6319bd61ed6e12ecccd98f483ecd6484d89"
+  },
+  "logs/nasa/run-02/kernel-stream.log": {
+    "bytes": 121186,
+    "sha256": "b6ccb834c162e440df749e1aef032d5d9b8dcd5ec90e6817a3df4344c76b8fed"
+  },
+  "logs/nasa/run-03/events.jsonl": {
+    "bytes": 6939,
+    "sha256": "a0743be3fd7a8dd02871208e16c3ff22c84a498a9f8af824d07f5baf304fe258"
+  },
+  "logs/nasa/run-03/kernel-stream.log": {
+    "bytes": 122026,
+    "sha256": "8695a54e42ee3a137dd6d64a17ae357ae89a9ca75833989d36252193ea02398b"
+  },
+  "logs/nasa-run-01-driver.log": {
+    "bytes": 9434,
+    "sha256": "52ea5ded0273bce149109b41a5cc5a129c35c70c4655e33661025c6da25879b1"
+  },
+  "logs/nasa-run-02-driver.log": {
+    "bytes": 5788,
+    "sha256": "1d2f8509dd0c2dae7f44d07d981627eae7886bc58a9aceb35846b1815360a62d"
+  },
+  "logs/nasa-run-03-driver.log": {
+    "bytes": 5788,
+    "sha256": "dcc1f4edf931276669b2d5958ddc5ab13b92b461a37728a421500728f1ba9bbd"
+  },
+  "logs/pip-check.log": {
+    "bytes": 31,
+    "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+  },
+  "logs/source-audit.log": {
+    "bytes": 2081,
+    "sha256": "19d9160442beecfc0118853cf4499047490641dc68f34522c437062bddff467c"
+  },
+  "logs/verification.log": {
+    "bytes": 1817,
+    "sha256": "fa4bb0120ddcf7d3ea3eb6d1a8855705c16317c44742289f31ca957e69757b53"
+  },
+  "README.md": {
+    "bytes": 10622,
+    "sha256": "43b93abc44c77fef73ffd3a55633109f259497f3be1e2761180331999ab09a19"
+  },
+  "reports/aggregate-comparisons.csv": {
+    "bytes": 1762,
+    "sha256": "219d7cfa08003b81f1613b4f599c6939a78904fd8b3812b8e253981c1ae920b2"
+  },
+  "reports/errors-and-changes.json": {
+    "bytes": 1565,
+    "sha256": "122a77e6dee8db6250a7f0ce79e74d0e05b28dc00c2989c1eeda5970c6caf336"
+  },
+  "reports/metric-comparisons.csv": {
+    "bytes": 2282,
+    "sha256": "466285fc05906fc83640016f558e19e9be9ed772757eafe2f9e10ecf2025e0d1"
+  },
+  "reports/preprocessing-source/CITATION.cff": {
+    "bytes": 1045,
+    "sha256": "66c3772fee1a53e7656086f707d003d92fc905fd2d5d9c337f824a29b5813c25"
+  },
+  "reports/preprocessing-source/Data Processor.ipynb": {
+    "bytes": 19584,
+    "sha256": "27c4c952cc52bfe04f8a7faa703e9ec7837d1335159392d03d08da118efca76a"
+  },
+  "reports/preprocessing-source/LICENSE": {
+    "bytes": 1096,
+    "sha256": "0e9efa284f18d13f621ce3789e7b0141fea4bbbbe05f0caa0c58f75045a9c253"
+  },
+  "reports/preprocessing-source/README.md": {
+    "bytes": 1162,
+    "sha256": "2479b0b61e6013526b4f5707b498d9eecc8649399d540da56cbfc891443363b5"
+  },
+  "reports/prior-audit-evidence.json": {
+    "bytes": 17292450,
+    "sha256": "d7944e229290f4c6cb470ae5c149bf0b622a2ed08f321d4bd949289c47c21813"
+  },
+  "reports/prior-audit.html": {
+    "bytes": 40239,
+    "sha256": "35ca103a376056c3b67a83b85fd9a3eac7c0f34f9727ff366b833576c36b872b"
+  },
+  "reports/published-tables-source.txt": {
+    "bytes": 776,
+    "sha256": "108b6e6d8fe336b556d1802caed4eec07d63e86ba1a88f0b1c9f86630a38f74e"
+  },
+  "reports/reproduction-report.html": {
+    "bytes": 14790,
+    "sha256": "a21ddf129f5cff97af9597f3370a857ba4e4d84c5c9a24a2bdbeea57aad37848"
+  },
+  "reports/results-summary.json": {
+    "bytes": 28341,
+    "sha256": "9a5aac27960f273cfb6536d5878c8417804cac2fbfebc3ba524e35d678a2131d"
+  },
+  "reports/source-audit.json": {
+    "bytes": 13721,
+    "sha256": "4634e4dad3abec1674a00055e954e9d51e99a6d471596c3d66582bf73179e0ec"
+  },
+  "reports/verification.json": {
+    "bytes": 3483,
+    "sha256": "919ed8b7a9fbe0733e0f1b9657bc5db7bcd53ef3cf46324715eae3427051932f"
+  },
+  "results/fifa/run-01/executed.ipynb": {
+    "bytes": 800844,
+    "sha256": "be7bd3f1a5163614e2ade11d0104f96c4d7db6bba91ef5c4993b4d579e19948b"
+  },
+  "results/fifa/run-01/execution-status.json": {
+    "bytes": 786,
+    "sha256": "72febaca0dff64353966a7941d701e7caa1371e5b5fbb950828580b1a2fa9677"
+  },
+  "results/fifa/run-01/images/fifa-final-output.jpeg": {
+    "bytes": 248026,
+    "sha256": "a199f60fdc472d73d419aca785a5aa48417e38a27674ec2d3c075e9d3aac8824"
+  },
+  "results/fifa/run-01/images/fifa-lstm-output.jpeg": {
+    "bytes": 266130,
+    "sha256": "ebbd14fa9d05cafa530fb9e34acb6e80d097aa464bbc98ce3e99e6e5f43b4aff"
+  },
+  "results/fifa/run-01/images/fifa-original.jpeg": {
+    "bytes": 275085,
+    "sha256": "7afdf6e3982c1b09a30c08dc06f61e57150f854da6b43bc654980ce771dc0a42"
+  },
+  "results/fifa/run-01/images/fifa-prophet-daily.jpeg": {
+    "bytes": 247664,
+    "sha256": "1112e2fcf735d4a66310775e0ff73a12cddd324ce05ab3cc2f6dea352f47b98d"
+  },
+  "results/fifa/run-01/images/fifa-prophet-output.jpeg": {
+    "bytes": 283398,
+    "sha256": "4fc002eaf68dee137cf60fd2aee4a391ff3bcdde5cc49a29701f75e1dae054eb"
+  },
+  "results/fifa/run-01/images/fifa-prophet-weekly.jpeg": {
+    "bytes": 254899,
+    "sha256": "7bc6b47278c0377b9c27cf1b11c6d875ee9c0303e4db738aefca6c3445997e13"
+  },
+  "results/fifa/run-01/images/fifa-train-test.jpeg": {
+    "bytes": 284193,
+    "sha256": "f10acd767a3287c4d84976ff246ae62fbe30aed55c66c20ec2c336a3b1c45bb2"
+  },
+  "results/fifa/run-01/metrics.json": {
+    "bytes": 1640,
+    "sha256": "7110a565fbb12825f95eff7930b053a22036dfda39c1e3c69c62423a853b1c91"
+  },
+  "results/fifa/run-01/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "results/fifa/run-01/models/fbprophet-fifa-20261009_154130.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "results/fifa/run-01/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "results/fifa/run-01/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "results/fifa/run-01/models/lstm-fifa-20261009_154130.keras": {
+    "bytes": 396831,
+    "sha256": "cc6eb805af5bca5b53ca951e9acb0179708e50c8fddaccb46bbb92dd596e06b8"
+  },
+  "results/fifa/run-01/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "results/fifa/run-01/predictions.csv": {
+    "bytes": 18078347,
+    "sha256": "1051656726cad343e22b251ad41cde51e27bfc45bc2bb287914962762f0c18ce"
+  },
+  "results/fifa/run-01/prophet-test-predictions.csv": {
+    "bytes": 13155715,
+    "sha256": "c225c9315281cb6da6fca401a63a340b3c3e3f28b492bba40370bc6798b8864a"
+  },
+  "results/fifa/run-01/residual-predictions.npz": {
+    "bytes": 733504,
+    "sha256": "bf3c52b83032a15258f4d8a045887aea9e3867415929e84974c893f1f9fe7e44"
+  },
+  "results/fifa/run-01/training-history.csv": {
+    "bytes": 309,
+    "sha256": "490c72c4eb232a6f822efff2de853e9747281960a41e4c812775ec3f8679cb75"
+  },
+  "results/fifa/run-02/executed.ipynb": {
+    "bytes": 797342,
+    "sha256": "9daa8d886d8556a99dbeb13f4c6f9f088afd3b8c5b1fdaa9fde90d66479ba21b"
+  },
+  "results/fifa/run-02/execution-status.json": {
+    "bytes": 786,
+    "sha256": "a4ef3f7a22919162e26e0caa7eb414ce462abd7b7b34b80ff926dffe0a13c352"
+  },
+  "results/fifa/run-02/images/fifa-final-output.jpeg": {
+    "bytes": 248118,
+    "sha256": "73696fc08121fc548fbf43714e577e708a527888e14b96841c2a1ed61564f379"
+  },
+  "results/fifa/run-02/images/fifa-lstm-output.jpeg": {
+    "bytes": 266265,
+    "sha256": "b595f02864a6b2d90816c2d0b211648016fda0c56496bf131569e9187796194a"
+  },
+  "results/fifa/run-02/images/fifa-original.jpeg": {
+    "bytes": 275085,
+    "sha256": "7afdf6e3982c1b09a30c08dc06f61e57150f854da6b43bc654980ce771dc0a42"
+  },
+  "results/fifa/run-02/images/fifa-prophet-daily.jpeg": {
+    "bytes": 247664,
+    "sha256": "1112e2fcf735d4a66310775e0ff73a12cddd324ce05ab3cc2f6dea352f47b98d"
+  },
+  "results/fifa/run-02/images/fifa-prophet-output.jpeg": {
+    "bytes": 283398,
+    "sha256": "4fc002eaf68dee137cf60fd2aee4a391ff3bcdde5cc49a29701f75e1dae054eb"
+  },
+  "results/fifa/run-02/images/fifa-prophet-weekly.jpeg": {
+    "bytes": 254899,
+    "sha256": "7bc6b47278c0377b9c27cf1b11c6d875ee9c0303e4db738aefca6c3445997e13"
+  },
+  "results/fifa/run-02/images/fifa-train-test.jpeg": {
+    "bytes": 284193,
+    "sha256": "f10acd767a3287c4d84976ff246ae62fbe30aed55c66c20ec2c336a3b1c45bb2"
+  },
+  "results/fifa/run-02/metrics.json": {
+    "bytes": 1641,
+    "sha256": "19fe31e24d9d901e19ad5b46d03f632d8ea303c72cdf8e7a8932727b41186686"
+  },
+  "results/fifa/run-02/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "results/fifa/run-02/models/fbprophet-fifa-20261009_154624.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "results/fifa/run-02/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "results/fifa/run-02/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "results/fifa/run-02/models/lstm-fifa-20261009_154624.keras": {
+    "bytes": 396831,
+    "sha256": "1ae03737ab7f6180edd3c475c28b372eb18b08af71be91de9443afab8d943bf3"
+  },
+  "results/fifa/run-02/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "results/fifa/run-02/predictions.csv": {
+    "bytes": 18078566,
+    "sha256": "8654d15cbfd6657d3ed254f72e203080970c4cb97a3a047aa26b5f39576074e9"
+  },
+  "results/fifa/run-02/prophet-test-predictions.csv": {
+    "bytes": 13155715,
+    "sha256": "c225c9315281cb6da6fca401a63a340b3c3e3f28b492bba40370bc6798b8864a"
+  },
+  "results/fifa/run-02/residual-predictions.npz": {
+    "bytes": 733539,
+    "sha256": "aa376c78894dccc2f2c93c81a92aac429f5d1d1c42b20741c5a30c8c5322c922"
+  },
+  "results/fifa/run-02/training-history.csv": {
+    "bytes": 310,
+    "sha256": "8d4eab05a174d138411dc786626f7132e3d1033288cceb26ce55b41b6b815f50"
+  },
+  "results/nasa/run-01/executed.ipynb": {
+    "bytes": 882658,
+    "sha256": "b17c0da61fbd82f7d5530d6b55ee8e3b24e4e0812bd5dc35ae95f16cf4fcdf41"
+  },
+  "results/nasa/run-01/execution-status.json": {
+    "bytes": 5207,
+    "sha256": "6733f163ec983015d0fd638ee77a9e63d499da3ccceced5ebc40e02e5675b095"
+  },
+  "results/nasa/run-01/predictions.csv": {
+    "bytes": 9143024,
+    "sha256": "74c87b9ac2939f5f5b29c8c154a2dd15422f54c3e39894986dd2507b24170715"
+  },
+  "results/nasa/run-02/executed.ipynb": {
+    "bytes": 879314,
+    "sha256": "f4cc9cd63ce9085f6ceab981467cc38d06d7a8d512b03d9114b13cf2165a6828"
+  },
+  "results/nasa/run-02/execution-status.json": {
+    "bytes": 786,
+    "sha256": "01a2d2f781706f9d7488340c393fab9ebf45715ac69d76006cb2dc3a51d69c20"
+  },
+  "results/nasa/run-02/images/nasa-final-output.jpeg": {
+    "bytes": 417543,
+    "sha256": "ac7248e8f95a4083dfc727f81abf18d571c8a4f8239990ff239b08b1631c3760"
+  },
+  "results/nasa/run-02/images/nasa-lstm-output.jpeg": {
+    "bytes": 334256,
+    "sha256": "21ba2d951adcfec9b774f424121b54c345676fdcb6101863aa0ab09a89c04fce"
+  },
+  "results/nasa/run-02/images/nasa-original.jpeg": {
+    "bytes": 331217,
+    "sha256": "42378723b6ef3de49b588730e9eeb5f3d1e5729b08223aa9f0e15bdf04b5d808"
+  },
+  "results/nasa/run-02/images/nasa-prophet-daily.jpeg": {
+    "bytes": 249843,
+    "sha256": "709f105f2af930a6cac7c8573d2b00b96733f445a802a510f15b2b0c921f1362"
+  },
+  "results/nasa/run-02/images/nasa-prophet-output.jpeg": {
+    "bytes": 406948,
+    "sha256": "d2c3dc37612d888c380d74eaf64805c20a9671c26d20c83ff349f0b8462a7c3f"
+  },
+  "results/nasa/run-02/images/nasa-prophet-weekly.jpeg": {
+    "bytes": 260265,
+    "sha256": "0bd890311ee666a700b632bc11b4d5371e0e5b469170a67c64c9c60fc2df1930"
+  },
+  "results/nasa/run-02/images/nasa-train-test.jpeg": {
+    "bytes": 335515,
+    "sha256": "0993fe07541d75ebd6f79a630bc8d88ce4064a9b6a2572e441d57037fb51990e"
+  },
+  "results/nasa/run-02/metrics.json": {
+    "bytes": 1643,
+    "sha256": "4f839cff564c0871e262bac0e3e37e8d5cd4b7d981366fbba5069d09d41fe356"
+  },
+  "results/nasa/run-02/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "results/nasa/run-02/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "results/nasa/run-02/models/fbprophet-nasa-20261009_153915.json": {
+    "bytes": 8502485,
+    "sha256": "ce555892aeac88b7bcc878fb49feb71e8a587806e6631ba5e87a8032a262714a"
+  },
+  "results/nasa/run-02/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "results/nasa/run-02/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "results/nasa/run-02/models/lstm-nasa-20261009_153915.keras": {
+    "bytes": 396831,
+    "sha256": "579c3fa28e32df5dedbfc912eec2b98c72546a8e85574535624d534d4c627173"
+  },
+  "results/nasa/run-02/predictions.csv": {
+    "bytes": 9142844,
+    "sha256": "7aac869f21e8580e482d66edd1ad4f1ea63bbe425bed2a3b7f85f96f627c6ea3"
+  },
+  "results/nasa/run-02/prophet-test-predictions.csv": {
+    "bytes": 7765290,
+    "sha256": "aafcd15ba1bf4bf6aab47a872ac7d3d01f4d1b523f2d39ea30e17357af145908"
+  },
+  "results/nasa/run-02/residual-predictions.npz": {
+    "bytes": 484465,
+    "sha256": "050d592a503df9bc0c033dba866e3f2816411e83559d903018e1ee29e90dc811"
+  },
+  "results/nasa/run-02/training-history.csv": {
+    "bytes": 300,
+    "sha256": "a8533f45f557806915537667dceacc73016d54b9d82e8f4cc57a33098eaafeef"
+  },
+  "results/nasa/run-03/executed.ipynb": {
+    "bytes": 880858,
+    "sha256": "b1ba7224c24f7d8b3f7ae74953e5dfbeb56f55cda6f97efc2f97a501b892a08b"
+  },
+  "results/nasa/run-03/execution-status.json": {
+    "bytes": 786,
+    "sha256": "49d48b56a3936aa10fb21b13ab2f56de8467389b1ffbd1adbda06fdca122d9a1"
+  },
+  "results/nasa/run-03/images/nasa-final-output.jpeg": {
+    "bytes": 417542,
+    "sha256": "9396b4a687ecc77ad8ac9d647e4747a1a2046e1a90578ac635dc8f29057bc99f"
+  },
+  "results/nasa/run-03/images/nasa-lstm-output.jpeg": {
+    "bytes": 334161,
+    "sha256": "de14e640baba11442a48aedcedf87ce7792db37b37cb77bc96ba6ec5e350b8d3"
+  },
+  "results/nasa/run-03/images/nasa-original.jpeg": {
+    "bytes": 331217,
+    "sha256": "42378723b6ef3de49b588730e9eeb5f3d1e5729b08223aa9f0e15bdf04b5d808"
+  },
+  "results/nasa/run-03/images/nasa-prophet-daily.jpeg": {
+    "bytes": 249843,
+    "sha256": "709f105f2af930a6cac7c8573d2b00b96733f445a802a510f15b2b0c921f1362"
+  },
+  "results/nasa/run-03/images/nasa-prophet-output.jpeg": {
+    "bytes": 406948,
+    "sha256": "d2c3dc37612d888c380d74eaf64805c20a9671c26d20c83ff349f0b8462a7c3f"
+  },
+  "results/nasa/run-03/images/nasa-prophet-weekly.jpeg": {
+    "bytes": 260265,
+    "sha256": "0bd890311ee666a700b632bc11b4d5371e0e5b469170a67c64c9c60fc2df1930"
+  },
+  "results/nasa/run-03/images/nasa-train-test.jpeg": {
+    "bytes": 335515,
+    "sha256": "0993fe07541d75ebd6f79a630bc8d88ce4064a9b6a2572e441d57037fb51990e"
+  },
+  "results/nasa/run-03/metrics.json": {
+    "bytes": 1643,
+    "sha256": "30b4526535a08643718df4de9aee7a2c20e08f03cb79d46092c1d53035858eab"
+  },
+  "results/nasa/run-03/models/fbprophet-fifa-20240911_180633.json": {
+    "bytes": 15252759,
+    "sha256": "a92e5834ae565831bc2d27dad6662c0dbd69f4412f1c607be38cc6d61bb61615"
+  },
+  "results/nasa/run-03/models/fbprophet-nasa-20240911_175323.json": {
+    "bytes": 8502205,
+    "sha256": "bd59ceb7ab971323e7de18489213799c411395657e62c4230c335e4d10cd318d"
+  },
+  "results/nasa/run-03/models/fbprophet-nasa-20261009_154438.json": {
+    "bytes": 8502485,
+    "sha256": "ce555892aeac88b7bcc878fb49feb71e8a587806e6631ba5e87a8032a262714a"
+  },
+  "results/nasa/run-03/models/lstm-fifa-20240911_180633.keras": {
+    "bytes": 396794,
+    "sha256": "3932a0dad44e4a22662dd5a8efa715bd751c7f371ccf049fd0b156e51250c391"
+  },
+  "results/nasa/run-03/models/lstm-nasa-20240911_175323.keras": {
+    "bytes": 396798,
+    "sha256": "4d92b248cc2381952f97a6877fae4602854eeba422f54d33bbb129af3f89d425"
+  },
+  "results/nasa/run-03/models/lstm-nasa-20261009_154438.keras": {
+    "bytes": 396831,
+    "sha256": "f9e02e9bd0cc91cb955804762d7f46915631d3914d7d77a711ca656bde20fb99"
+  },
+  "results/nasa/run-03/predictions.csv": {
+    "bytes": 9142699,
+    "sha256": "c01a637ebd4151fe0df6d2ccbb7e78d01f453eca2da3c381fb74ce18049cd975"
+  },
+  "results/nasa/run-03/prophet-test-predictions.csv": {
+    "bytes": 7765290,
+    "sha256": "aafcd15ba1bf4bf6aab47a872ac7d3d01f4d1b523f2d39ea30e17357af145908"
+  },
+  "results/nasa/run-03/residual-predictions.npz": {
+    "bytes": 484577,
+    "sha256": "05c17b7116d8f6da0897ff671a0c1e058bd50253bd810ac2d9eec2038b40dc4f"
+  },
+  "results/nasa/run-03/training-history.csv": {
+    "bytes": 300,
+    "sha256": "7fc7f018964c7d71ca946d82c98fbea5765db8074fc1513a61d46390ae2c73f3"
+  },
+  "scripts/audit_sources.py": {
+    "bytes": 4176,
+    "sha256": "4ec0409c635137f8ab77abe6d3931cc0cabf0160c9949640ce985d269c96e447"
+  },
+  "scripts/package_results.py": {
+    "bytes": 1631,
+    "sha256": "bc6c690f706bdc0184fa0d59ec9b6916048ed06612a55e462f6d266d0199fe36"
+  },
+  "scripts/run_baseline.py": {
+    "bytes": 10040,
+    "sha256": "ae3331bfc8b787459b3230c6241154dc7c3d618db84acc59cc2586aa0653d8d3"
+  },
+  "scripts/smoke_environment.py": {
+    "bytes": 2082,
+    "sha256": "b5c9771e644d2f60b7bed70d534bc0f5abd1d7ae0a2b16dcc2e6e895f79fbfb2"
+  },
+  "scripts/summarize_results.py": {
+    "bytes": 13932,
+    "sha256": "e852b19b545d954970558afef8e6a161c95deb3192fb28f029181b534c0a3ecf"
+  },
+  "scripts/verify_results.py": {
+    "bytes": 4777,
+    "sha256": "bb1caf393f21b15e79e5dbf45f3a65d77cbd8de7a52cc22d53140140c341eb36"
+  }
+}

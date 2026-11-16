@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guruge and Priyadarshana 2025 reproduction audit</title>
+<style>body{font:17px/1.6 system-ui,sans-serif;max-width:1060px;margin:45px auto;padding:0 24px;color:#182633;background:#fafbfd}h1{font-size:32px;line-height:1.2}h2{margin-top:42px;color:#164d65}h3{margin-top:28px}table{border-collapse:collapse;width:100%;font-size:14px;margin:18px 0}th,td{border:1px solid #cbd5df;padding:9px;text-align:left;vertical-align:top}th{background:#e8f0f5}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eaf0f4;padding:16px;font:13px/1.6 Consolas,monospace}code{overflow-wrap:anywhere}a{color:#075d91}.notice{background:#fff1d7;padding:18px;border-left:5px solid #b57a00}.small{font-size:14px;color:#455766}@media print{body{background:white;margin:0;max-width:none;font-size:11pt}pre,table{font-size:9pt}h2,h3{break-after:avoid}tr{break-inside:avoid}a{color:inherit}}</style>
+<h1>Guruge and Priyadarshana 2025 reproduction audit</h1>
+<p>Research steps 1 and 2, inspected 9 October 2026. Reference: Pasan Bhanu Guruge and Y.H.P.P. Priyadarshana, <em>Time series forecasting-based Kubernetes autoscaling using Facebook Prophet and Long Short-Term Memory</em>, Frontiers in Computer Science, volume 7, article 1509165, published 19 February 2025. DOI: <a href="https://doi.org/10.3389/fcomp.2025.1509165">10.3389/fcomp.2025.1509165</a>. <a href="https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1509165/full">Original article</a>.</p>
+<div class="notice"><strong>Decision:</strong> suitable as a forecasting baseline with an explicit reproducibility audit; exact reproduction of every cell in Tables 4 and 5 is not currently supported by the released materials. Both datasets, hybrid notebooks and trained checkpoints are accessible. Missing comparator implementations and evaluation inconsistencies prevent a defensible promise of exact table replication. Kubernetes deployment is a separate integration exercise. No training, cluster deployment or numerical model reproduction is claimed here.</div>
+<p>The original repositories have been cloned unchanged. This report and inspection evidence live outside those checkouts and outside the project's read-only <code>sources/</code> directory. Keep this baseline intact before developing the calibrated uncertainty-aware Digital Twin for SLO-constrained Kubernetes autoscaling.</p>
+<p><strong>Evidence labels:</strong> <b>Executed</b> means performed during this audit; <b>source-verified</b> means directly present in inspected code or documentation, without runtime validation; <b>inferred</b> means a proposed setup or reconstruction; <b>missing</b> means absent from inspected materials; <b>unverified</b> means access or operation was not established. Code cells below use zero-based notebook indices.</p>
+
+<h2>1. Original method and scope</h2>
+<p>The study forecasts HTTP demand using Prophet seasonality followed by LSTM residual prediction. Its MAPE architecture collects metrics with Prometheus, forecasts workload, converts workload to replica demand and executes Kubernetes scaling. The Kubernetes components include Ingress, Service, ReplicaSet, pods, scheduler and API server. Tables 4 and 5 report forecasting errors and prediction time; they do not establish latency SLO compliance, cloud cost savings or a live cluster comparison. Sections 5 and 6 acknowledge further Kubernetes/KEDA integration work, prediction latency, anomalies and vertical scaling.</p>
+<p>The source implementation fits Prophet to the chronological training partition, predicts its trend/seasonality for training and test timestamps, computes residuals <code>r[t] = y[t] - Prophet[t]</code>, then trains a neural model on pairs <code>r[i] → r[i+1]</code>. Conceptually the hybrid forecast adds the predicted residual to Prophet's forecast for the same target timestamp. The released final combination does not respect that target alignment; see section 5.</p>
+<p>These are univariate request-count time series derived from HTTP logs. They are not multimodal data. NASA is evaluated in requests per minute; WorldCup98 metrics use min–max normalized counts. Cloud hardware, provider, node types, CPU/GPU, RAM, operating system and original cluster/tool versions are not specified sufficiently to reconstruct a historical environment.</p>
+<p>Paper equation 7 uses forecast workload divided by per-pod rated workload. Equations 8 and 9 both print a less-than condition, although one is labelled scale-up. Treat this as an apparent specification error: scale-up logically requires desired count greater than current count. Do not silently treat the repaired condition as the printed baseline.</p>
+
+<h2>2. Official repositories and exact snapshot</h2>
+<p>The forecasting README identifies the other three repositories, and its CITATION.cff identifies this journal paper. These links establish their relationship to the authors' release.</p>
+<table><thead><tr><th>Repository</th><th>Inspected commit</th><th>Available files and role</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/PasanBhanu/time-series-forcasting-with-facebook-prophet-lstm-hybrid-model">Forecasting</a></td><td><code>354f0042ae7d5812dc7a44335a56b4992e853483</code><br>19 February 2025</td><td><code>Hybrid Model - NASA - Prophet LSTM.ipynb</code>; <code>Hybrid Model - FIFA - Prophet LSTM.ipynb</code>; <code>Hybrid Model - Prophet BiLSTM.ipynb</code>; <code>Hybrid Model - Prophet GRU.ipynb</code>; <code>Autoscaler Evaluation.ipynb</code>; <code>datasets/nasa.csv</code>; <code>datasets/fifa.csv</code>; four saved models; README, LICENCE, CITATION.cff. No requirements/lockfile, standalone ARIMA, standalone LSTM or standalone Bi-LSTM experiment script.</td></tr>
+<tr><td><a href="https://github.com/PasanBhanu/time-series-forcasting-benchmark-dataset-preprocessing">Dataset preprocessing</a></td><td><code>0e8bc6697f2bf9c147b8fb7a6a757a5107874ee9</code><br>19 February 2025</td><td><code>Data Processor.ipynb</code>; <code>bin/object_mappings.sort</code>; <code>processeddata/nasa/requestdata-20240626.csv</code>; <code>processeddata/wc/requestdata-20240630.csv</code>. Raw traces and compiled <code>bin/read</code>, <code>bin/recreate</code> are not committed.</td></tr>
+<tr><td><a href="https://github.com/PasanBhanu/proactive-autoscaler-for-keda-kubernetes">KEDA scaler</a></td><td><code>dabb205b2d03d594b45d152404229638d497380b</code><br>13 July 2025</td><td><code>keda-grpc-server.py</code>, <code>fetch_data_api.py</code>, <code>externalscaler.proto</code>, generated <code>externalscaler_pb2.py</code> and <code>externalscaler_pb2_grpc.py</code>, Dockerfile, requirements.txt, supervisord.conf, UI, model files; <code>kubernetes/deployment.yaml</code>, <code>kubernetes/keda-values.yaml</code>, <code>kubernetes/keda-lsfb-scaler.yaml</code>. Current snapshot postdates publication.</td></tr>
+<tr><td><a href="https://github.com/PasanBhanu/springboot-sample-api-with-prometheus">Sample application</a></td><td><code>02f381511d22a5dfba29031da7f4c828620c4235</code><br>16 February 2025</td><td><code>pom.xml</code>, <code>mvnw</code>, <code>mvnw.cmd</code>, Dockerfile, Java sources, application.properties, basic context-load test; <code>kubernetes/deployment.yaml</code>, <code>kubernetes/service-monitor.yaml</code>, <code>kubernetes/prometheus-values.yaml</code>. No NASA/FIFA traffic replay generator or documented SLO test harness.</td></tr>
+</tbody></table>
+<p>Use commit-specific GitHub links by replacing <code>/tree/main/</code> or <code>/blob/main/</code> with the SHA above. Latest branches and container tags are mutable; record commits and image digests in every later run.</p>
+
+<h2>3. Data, splits and preprocessing</h2>
+<p><b>Executed:</b> parsed all four released CSVs, verified row counts, timestamps, sums, ordering, duplicates, missing minutes and SHA-256 hashes. The preprocessing CSVs are byte-identical to the corresponding forecasting CSVs. Schema is <code>minute,count</code>. The models rename these columns to <code>ds,y</code>, or <code>ds,y_us</code> before WorldCup normalization.</p>
+<table><thead><tr><th>Property</th><th>NASA-HTTP</th><th>WorldCup98</th></tr></thead><tbody>
+<tr><td>Archive</td><td><a href="https://ita.ee.lbl.gov/html/contrib/NASA-HTTP.html">NASA archive page</a></td><td><a href="https://ita.ee.lbl.gov/html/contrib/WorldCup.html">WorldCup archive page</a>; <a href="https://ita.ee.lbl.gov/html/contrib/worldcup-readme.txt">binary format and tools README</a></td></tr>
+<tr><td>Raw modality and request total</td><td>ASCII HTTP logs; 3,461,612 requests</td><td>Big-endian binary HTTP request records; 1,352,804,107 requests</td></tr>
+<tr><td>Released minute rows</td><td>81,396</td><td>125,300</td></tr>
+<tr><td>Released first / last timestamp</td><td>1995-07-01 00:00 / 1995-08-31 23:59</td><td>1998-04-30 21:30 / 1998-07-26 21:59</td></tr>
+<tr><td>Minimum / maximum minute count</td><td>1 / 405</td><td>1 / 229,426</td></tr>
+<tr><td>Zero rows / duplicate timestamps</td><td>0 / 0</td><td>0 / 0</td></tr>
+<tr><td>Missing timestamps in full first-to-last minute grid</td><td>7,884</td><td>10</td></tr>
+<tr><td>Prophet training / test rows</td><td>56,977 / 24,419</td><td>87,710 / 37,590</td></tr>
+<tr><td>Last training / first test timestamp</td><td>1995-08-14 23:59 / 1995-08-15 00:00</td><td>1998-06-30 19:29 / 1998-06-30 19:30</td></tr>
+<tr><td>Neural supervised pairs: train / test</td><td>56,976 / 24,419</td><td>87,709 / 37,590</td></tr>
+<tr><td>Neural fit / validation pairs with validation_split=0.2</td><td>45,580 / 11,396</td><td>70,167 / 17,542</td></tr>
+</tbody></table>
+<p>The split is by stored rows, not a complete calendar grid: <code>train_test_split(test_size=0.3, shuffle=False, random_state=42)</code>. The LSTM pairs are created before a second split. Its validation partition is the final 20% of neural training pairs; <code>fit</code> otherwise leaves Keras defaults, including training shuffle, unchanged. A gap in the CSV means a one-row step can span more than one minute.</p>
+<p><b>Source-verified:</b> <code>Data Processor.ipynb</code> parses log timestamps, floors them to minutes and counts all parsed requests; it does not filter by HTTP method/status or augment data. It groups only observed minutes and never reindexes to insert empty minutes. NASA's timezone offset is ignored by <code>parse_line</code>, leaving local -0400 wall-clock times as naive datetimes. The inspected official WorldCup <code>recreate.c</code> uses <code>gmtime</code> and prints +0000; the notebook strips the timezone and retains those UTC wall-clock values. Do not shift either CSV to Asia/Karachi.</p>
+<p>The paper describes zero replacement and no-traffic gaps; the released training cells instead use forward fill on existing training values, and the CSVs have no zero-count rows. Forward fill cannot insert missing timestamps. For the initial code reproduction, use the released CSVs as-is. A zero-filled calendar-grid experiment is a separately labelled deviation.</p>
+<p>NASA residuals are scaled to [0,1] using extrema from the full residual series, including test observations. WorldCup raw counts are scaled on the entire dataset as <code>(count - 1) / 229425</code>; its residuals are not separately min–max scaled. These are code facts, not recommended evaluation practices.</p>
+<pre>NASA SHA-256:
+c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b
+WorldCup98 SHA-256:
+5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be</pre>
+
+<h2>4. Hyperparameters and software evidence</h2>
+<table><thead><tr><th>Setting</th><th>Paper / released implementation</th></tr></thead><tbody>
+<tr><td>Prophet growth</td><td>Table 2 prints linear. NASA notebook and checkpoint: linear. FIFA notebook and checkpoint: flat; the discussion of neglecting FIFA trend is consistent with flat growth.</td></tr>
+<tr><td>Seasonality</td><td>Yearly false; weekly Fourier order 20; daily Fourier order 50; seasonality prior scale 30; changepoint prior scale 5.1. Table 2 repeats “Weekly seasonality” for the value 50; code resolves it as daily.</td></tr>
+<tr><td>Residual model</td><td>Look-back 1; input shape (1,1); LSTM(50, return_sequences=True), LSTM(50), Dense(1); Adam; MSE; saved optimizer learning rate approximately 0.001. No explicit dropout or extra covariates.</td></tr>
+<tr><td>Training</td><td>Paper 50 epochs, batch 16, early-stop patience 5. Main notebooks actually fit for at most 20 epochs, batch 16, validation_split 0.2, monitor val_loss, restore_best_weights=True. NumPy and TensorFlow seed 42; no complete deterministic-run guarantee.</td></tr>
+<tr><td>Tuning</td><td>Main notebook flag false. LSTM RandomSearch: 10 trials, 2 executions/trial, units 32–512 step 32, Adam/RMSprop, search at most 50 epochs. Tuner is instantiated even when tuning is disabled. Paper also reports Prophet growth linear/flat, changepoint scale 1–10 step 1 then 5–6 step 0.1, seasonality scale 5–50 step 5. Released code has no complete Prophet search driver/log.</td></tr>
+<tr><td>Other hybrid notebooks</td><td>NASA Bi-LSTM/GRU: two recurrent layers of 50, Dense(1), Adam/MSE, batch 16, 20 epochs. They omit the main notebook seeds, validation and early stopping, and do not print a combined TPT. They load FIFA data but implement the NASA hybrid experiment only.</td></tr>
+<tr><td>Saved model versions</td><td>Both Prophet JSONs state version 1.1.5. Both .keras archives state Keras 3.4.1. TensorFlow and Python versions are not recoverable from these metadata alone.</td></tr>
+<tr><td>Forecast dependencies</td><td>pandas, numpy, matplotlib, prophet, scikit-learn, tensorflow, keras-tuner, setuptools; Jupyter/ipykernel/nbconvert needed for notebook execution. FIFA imports keras_tuner but its install cell omits installing it.</td></tr>
+<tr><td>Scaler dependencies</td><td>requirements.txt: numpy, pandas, scikit-learn, prophet, keras, tensorflow, grpcio, grpcio-tools, protobuf, prometheus-api-client, flask, flask-cors; all unpinned. Docker base python:3.12-slim with supervisor.</td></tr>
+<tr><td>Sample app</td><td>Spring Boot 3.4.2; Java 21; Maven wrapper 3.9.9. Actuator, Spring Web, Micrometer Prometheus registry and test starter. Runtime eclipse-temurin:21-jre-alpine, JVM -Xmx256m.</td></tr>
+</tbody></table>
+<p><b>Inferred candidate forecasting environment:</b> Python 3.12, TensorFlow 2.17.0, Keras 3.4.1, Prophet 1.1.5, NumPy 1.26.4, pandas 2.2.2, scikit-learn 1.5.1, matplotlib 3.9.2, keras-tuner 1.4.7, cmdstanpy 1.2.4. Only Keras/Prophet versions are directly established by author checkpoint metadata. PyPI dependency metadata was inspected for TensorFlow/Keras/Prophet; the candidate environment has not been installed or trained in this audit.</p>
+<p>Python 3.12 is useful because notebook f-strings reuse the enclosing single quote inside expressions, which fails on earlier Python versions. pandas 2.x preserves older chained-assignment behavior, though warnings should be logged. pandas 3 Copy-on-Write can change the behavior of the released assignment. Preserve a tested environment rather than accepting latest packages.</p>
+<p><b>Dependency conflict:</b> checked-in scaler gRPC code requires grpcio ≥1.70.0; protobuf code was generated for 5.29.0. TensorFlow 2.17.0 requires protobuf &lt;5. Therefore the candidate historical forecasting environment cannot directly run the current generated scaler stubs. Use separate environments; regenerating stubs or using a newer TensorFlow stack is an integration deviation.</p>
+
+<h2>5. Evaluation errors and reproducibility barriers</h2>
+<ol>
+<li><strong>Residual alignment:</strong> NASA cells 29–31 and FIFA cells 29–31 construct input r[i] and target r[i+1]. Both cell 52 blocks assign predictions starting at row zero rather than row one. The final score therefore compares <code>Prophet[i] + predicted r[i+1]</code> against <code>y[i]</code>, although the prediction used actual r[i]. This is not a correctly aligned next-minute forecast. Preserve it for the first code reproduction; repair only in a distinct baseline-validation variant.</li>
+<li><strong>Observed truth fallback:</strong> cell 52 fills the final unpredicted row with its actual residual. The resulting last hybrid prediction equals the observation exactly. A corrected evaluation must exclude unavailable targets or forecast them; it must not substitute truth.</li>
+<li><strong>Test-informed scaling:</strong> NASA cell 28 fits the residual scaler to all rows; FIFA cell 10 fits raw-count normalization to all rows. Training-only scaling is a later correction, not the unmodified release.</li>
+<li><strong>Evaluation regime:</strong> test residual windows use observed test values. This can support a rolling one-step evaluation only with correctly aligned timestamps and availability. It is not a recursive 30% holdout forecast issued once at the training cutoff.</li>
+<li><strong>Training disagreement:</strong> paper 50 epochs vs code 20; FIFA flat vs printed linear; auxiliary hybrids do not use the same early-stop/validation/seed policy.</li>
+<li><strong>Missing table comparators:</strong> no released ARIMA order/selection/refit schedule, one/five-step scripts, standalone LSTM script, or standalone Bi-LSTM one/five-step scripts. Whether five-step metrics score the fifth horizon only or pool horizons is not specified sufficiently. Do not invent these settings and label results exact reproductions.</li>
+<li><strong>Timing:</strong> main notebooks time batch Prophet test prediction and batch LSTM test prediction using time.time, then add them. They exclude training and most transformation/merge work. This is total held-out batch inference time, not one online control cycle. Hardware, warm-up and repeated timing methodology are missing; millisecond equality is not a reasonable reproducibility requirement.</li>
+<li><strong>Run artifacts:</strong> no executed outputs in the inspected notebooks, no complete historical package lock, and no comparator run logs. Checkpoints alone do not establish which training run produced every printed value.</li>
+</ol>
+
+<h2>6. Tables 4 and 5 and consistency checks</h2>
+<p>Values below retain the published numeric entries. MSE is mean squared error, RMSE its square root, MAE mean absolute error, and R² is computed in the notebooks with scikit-learn r2_score. TPT is in milliseconds. The paper's “65–90% accuracy” phrasing should be interpreted as relative error reduction for particular comparisons, not a classification accuracy score.</p>
+<h3>Table 4 NASA</h3>
+<table><thead><tr><th>Model</th><th>MSE</th><th>RMSE</th><th>MAE</th><th>R²</th><th>TPT ms</th><th>Released implementation</th></tr></thead><tbody>
+<tr><td>Prophet–LSTM</td><td>63.836</td><td>7.990</td><td>6.164</td><td>0.900</td><td>3,492</td><td>Main NASA notebook</td></tr>
+<tr><td>Prophet–Bi-LSTM</td><td>67.995</td><td>8.246</td><td>6.312</td><td>0.894</td><td>4,647</td><td>Auxiliary notebook; no combined timing output</td></tr>
+<tr><td>Prophet–GRU</td><td>75.74</td><td>8.703</td><td>6.64</td><td>0.882</td><td>4,124</td><td>Auxiliary notebook; no combined timing output</td></tr>
+<tr><td>ARIMA 1 step</td><td>196.288</td><td>14.010</td><td>10.572</td><td>0.692</td><td>2,300</td><td>Missing</td></tr>
+<tr><td>Bi-LSTM 1 step</td><td>183.642</td><td>13.551</td><td>10.280</td><td>0.712</td><td>4.3</td><td>Missing</td></tr>
+<tr><td>ARIMA 5 step</td><td>237.604</td><td>15.414</td><td>11.628</td><td>0.628</td><td>2,488</td><td>Missing</td></tr>
+<tr><td>Bi-LSTM 5 step</td><td>207.313</td><td>14.39</td><td>10.592</td><td>0.675</td><td>45.1</td><td>Missing</td></tr>
+</tbody></table>
+<h3>Table 5 WorldCup98 normalized results</h3>
+<table><thead><tr><th>Model</th><th>MSE</th><th>RMSE</th><th>MAE</th><th>R²</th><th>TPT ms</th></tr></thead><tbody>
+<tr><td>Prophet–LSTM</td><td>0.000011</td><td>0.003358</td><td>0.000675</td><td>0.998318</td><td>3,971</td></tr>
+<tr><td>ARIMA 1 step</td><td>0.000040</td><td>0.006350</td><td>0.003302</td><td>0.998496</td><td>37,00 (as printed)</td></tr>
+<tr><td>LSTM 1 step</td><td>0.000043</td><td>0.006523</td><td>0.003958</td><td>0.998397</td><td>5.1</td></tr>
+<tr><td>Bi-LSTM 1 step</td><td>0.000036</td><td>0.006015</td><td>0.003127</td><td>0.998637</td><td>5.8</td></tr>
+<tr><td>ARIMA 5 step</td><td>0.000172</td><td>0.0131</td><td>0.0049</td><td>0.9930</td><td>4,076</td></tr>
+<tr><td>Bi-LSTM 5 step</td><td>0.000120</td><td>0.010</td><td>0.00428</td><td>0.9954</td><td>51.2</td></tr>
+</tbody></table>
+<p>Only the Table 5 hybrid has a corresponding released training notebook. Do not normalize the NASA scores or inverse-transform the FIFA scores when comparing these table entries.</p>
+<p><b>Executed arithmetic audit:</b> with one identical target series and standard MSE/R², <code>MSE / (1 - R²)</code> equals target population variance. NASA's released test variance is approximately 639.278; hybrid MSE 63.836 implies R² 0.900144, consistent with rounding. WorldCup's released normalized test variance is approximately 0.00670413. The hybrid MSE/R² pair is consistent within MSE rounding, but comparator pairs imply variances around 0.0246–0.0268. They cannot all represent standard MSE and R² on an identical target series and scale. Different splits, scales, aggregation or reporting mistakes could explain it; the cause is unverified.</p>
+<p>WorldCup Bi-LSTM 5-step RMSE 0.010 squared is 0.000100 rather than 0.000120; ordinary rounding to three decimals does not reconcile those entries. The ARIMA 1-step timing “37,00” is ambiguous: retain it until confirmed, rather than asserting 3,700 ms. The best Table 5 single-model MSE is Bi-LSTM 1-step (0.000036), not Bi-LSTM 5-step. Using rounded entries gives approximately 69.4% hybrid MSE reduction against the former, or 90.8% against the latter; the larger number uses the weaker comparator. The hybrid does not have the highest printed FIFA R².</p>
+
+<h2>7. Actionable forecasting reproduction procedure</h2>
+<p>This procedure first reproduces released behavior. It does not fix alignment, scaling, data gaps or epoch settings. Environment installation and notebook runs below are <b>inferred commands</b>, based on inspected files; they have not been executed here. Clone commands and file existence were executed and verified. Run commands in Bash on Linux/WSL2 unless stated otherwise. A CPU run is sufficient to attempt forecasting; an 8–16 GB RAM machine is a reasonable planning estimate, not an author hardware requirement. Original runtime cannot be estimated reliably.</p>
+<h3>A. Pin the unmodified release</h3>
+<pre>git clone https://github.com/PasanBhanu/time-series-forcasting-with-facebook-prophet-lstm-hybrid-model.git baseline
+cd baseline
+git checkout 354f0042ae7d5812dc7a44335a56b4992e853483
+git status --short
+sha256sum datasets/nasa.csv datasets/fifa.csv</pre>
+<p>Compare hashes with section 3. Keep the checkout pristine. Use a separate run copy, retaining a record of which files are generated. The repo lacks an images directory, so create it in that run copy before executing plotting cells.</p>
+<h3>B. Create the candidate environment</h3>
+<pre># Inferred compatibility setup; not the recovered author environment
+cd ..
+cp -a baseline baseline-run
+python3.12 -m venv forecast-env
+source forecast-env/bin/activate
+python -m pip install --upgrade pip
+python -m pip install tensorflow==2.17.0 keras==3.4.1 prophet==1.1.5 numpy==1.26.4 pandas==2.2.2 scikit-learn==1.5.1 matplotlib==3.9.2 keras-tuner==1.4.7 cmdstanpy==1.2.4 setuptools jupyterlab nbconvert ipykernel
+python -m pip check
+python -m pip freeze &gt; forecast-environment.txt
+python -m ipykernel install --sys-prefix --name guruge-baseline --display-name "Guruge baseline"
+cd baseline-run
+mkdir -p images executed
+export MPLBACKEND=Agg</pre>
+<p>On Windows use Python 3.12, <code>python -m venv forecast-env</code> and <code>.\forecast-env\Scripts\Activate.ps1</code> instead of Bash activation. Linux/WSL2 is preferred for raw WorldCup tools and a later cluster experiment. Do not interpret OS choice as historically verified.</p>
+<h3>C. Execute main notebooks from the repository root</h3>
+<pre>jupyter nbconvert --to notebook --execute "Hybrid Model - NASA - Prophet LSTM.ipynb" --ExecutePreprocessor.kernel_name=guruge-baseline --ExecutePreprocessor.timeout=-1 --output nasa-executed.ipynb --output-dir executed
+jupyter nbconvert --to notebook --execute "Hybrid Model - FIFA - Prophet LSTM.ipynb" --ExecutePreprocessor.kernel_name=guruge-baseline --ExecutePreprocessor.timeout=-1 --output fifa-executed.ipynb --output-dir executed</pre>
+<p>Leave <code>HYPERPARAMETER_TUNING=False</code>. Each notebook's initial install cell runs unpinned pip installs; on the candidate environment the installed direct requirements should already satisfy these commands. Confirm this by comparing package inventories before and after execution. If a setup cell changes versions, discard that run and record a setup-only workaround in a separate copy; do not claim that workaround is the unchanged notebook.</p>
+<p>Capture the final <code>=== Hybrid Model Metrics ===</code> output, not Prophet-only or residual-only metrics. NASA prints three decimals; FIFA prints six. Save the entire executed notebook, full precision external metrics if subsequently added, training epochs actually completed, package list, CPU/GPU, RAM, OS, device usage and warnings. Model saves create new timestamped files; retain the original checkpoints.</p>
+<p>The unmodified result comparison has two supported primary rows: NASA Prophet–LSTM and FIFA Prophet–LSTM. Report published value, reproduced value, signed difference and relative error difference for each metric; leave reproduced cells “not run” until numerical execution. Do not substitute dataset statistics for reproduced model accuracy.</p>
+<h3>D. NASA alternative hybrids</h3>
+<pre>jupyter nbconvert --to notebook --execute "Hybrid Model - Prophet BiLSTM.ipynb" --ExecutePreprocessor.kernel_name=guruge-baseline --ExecutePreprocessor.timeout=-1 --output nasa-bilstm-executed.ipynb --output-dir executed
+jupyter nbconvert --to notebook --execute "Hybrid Model - Prophet GRU.ipynb" --ExecutePreprocessor.kernel_name=guruge-baseline --ExecutePreprocessor.timeout=-1 --output nasa-gru-executed.ipynb --output-dir executed</pre>
+<p>These are source-derived run commands, not author-provided CLI instructions. These notebooks do not have the main model's complete seed/early-stop policy. Their released outputs do not combine Prophet and recurrent timing. If you instrument combined timing externally, label it as an added measurement and use the same batch scope. Do not treat variable training results as evidence of identical published runs.</p>
+<h3>E. Complete-table reproduction boundary</h3>
+<p>Request the authors' ARIMA and standalone LSTM/Bi-LSTM notebooks, ARIMA orders, horizon scoring rules, original package lock, hardware, pre/postprocessing order, table run logs, FIFA metric scales/splits and ARIMA timing clarification. Until supplied, those comparison rows remain missing. A reconstruction using chosen orders, validation or seed settings is a new comparator experiment. Keep it separate from the original tables.</p>
+<p>Saved checkpoints can be used for a distinct inference-only check, recreating notebook preprocessing and released alignment. They do not replace retraining. NASA's residual scaler is not shipped as a serialized object; reconstruct it from the same full residual series for released behavior. Do not use the scaler repository's hard-coded extrema as proof of exact historical extrema.</p>
+
+<h2>8. Optional raw-data reconstruction and access status</h2>
+<p><b>Executed access checks:</b> anonymous FTP login to <code>ita.ee.lbl.gov</code> succeeded; HTTP range requests returned 206 and gzip headers for both NASA archives, the WorldCup tools archive and <code>wc_day92_1.gz</code>. The tools archive was downloaded and its Makefile and recreate.c inspected. The complete raw NASA traces and all 249 WorldCup logs were not downloaded or parsed. Access to every WorldCup file is therefore unverified, not declared inaccessible.</p>
+<ul>
+<li><a href="https://ita.ee.lbl.gov/traces/NASA_access_log_Jul95.gz">NASA July gzip</a></li>
+<li><a href="https://ita.ee.lbl.gov/traces/NASA_access_log_Aug95.gz">NASA August gzip</a></li>
+<li><a href="https://ita.ee.lbl.gov/software/WorldCup_tools.tar.gz">WorldCup tools tar.gz</a></li>
+<li><a href="https://ita.ee.lbl.gov/traces/WorldCup/wc_day92_1.gz">WorldCup last-day example</a>; notebook uses FTP path <code>/traces/WorldCup/</code>.</li>
+</ul>
+<p>For NASA, put decompressed files at <code>rawdata/nasa/NASA_access_log_Jul95</code> and <code>rawdata/nasa/NASA_access_log_Aug95</code>. Run only the NASA-processing part of <code>Data Processor.ipynb</code>, including imports and <code>parse_line</code>; running all cells first attempts the full WorldCup download. The July parser catches malformed lines, while the August parser does not. Output is <code>processeddata/nasa/requestdata.csv</code>, different from the committed dated name.</p>
+<p>For WorldCup, the notebook lists 249 files, downloads with ordinary FTP (despite its “SFTP” heading), converts each using gzip and recreate, counts requests by minute, validates against read and aggregates temporary CSVs. Create <code>rawdata/wc</code>, <code>rawdata/nasa</code>, <code>temp</code>, <code>bin</code>, <code>processeddata/wc</code> and <code>processeddata/nasa</code> first.</p>
+<pre># Inferred raw-tool setup; run in a separate preprocessing work copy
+curl -fL https://ita.ee.lbl.gov/software/WorldCup_tools.tar.gz -o WorldCup_tools.tar.gz
+tar -xzf WorldCup_tools.tar.gz
+cd ita_public_tools
+make recreate read
+cd ..
+cp ita_public_tools/bin/recreate bin/recreate
+cp ita_public_tools/bin/read bin/read
+
+# Source-verified invocation pattern from the notebook
+gzip -dc rawdata/wc/wc_day92_1.gz | bin/recreate bin/object_mappings.sort
+gzip -dc rawdata/wc/wc_day92_1.gz | bin/read</pre>
+<p>The notebook markdown says <code>make reduce</code>; the inspected archive has <code>make recreate</code> and <code>make read</code>, not reduce. Legacy C may need compiler/header adjustments; compilation has not been tested. The source captures an entire recreated log in memory, writes a large text file and accumulates all timestamps for each shard; expect substantial RAM/disk requirements. Streaming binary aggregation would be an implementation change. WorldCup binary requests have 20 bytes each, about 27.1 GB for all records before gzip and much larger recreated text. Verify totals, UTC timestamps and final CSV hash before using regenerated data. A request-total match alone does not prove identical minute bins.</p>
+<p>The paper's supplementary section references Image_1.JPEG and Image_2.JPEG in page data, but exposed HTML spans do not provide working download links. Their actual contents and availability are unverified. No supplementary experiment scripts or environment lock were retrieved. The earlier referenced chat's attached document contents were not returned by read_thread; this audit follows the explicitly named proposal and primary sources.</p>
+
+<h2>9. KEDA implementation and sample app</h2>
+<p><b>Source-verified current scaler behavior:</b> loads the NASA Prophet and LSTM checkpoints at startup; fits a hard-coded residual MinMaxScaler on [-118,284]; forecasts Prophet at <code>datetime.now() + 1 minute</code>; subtracts that future forecast from the current Prometheus value; predicts an LSTM residual from this scalar; adds it to the future Prophet forecast. This differs from subtracting Prophet's current-time estimate before forecasting the next residual. The model was trained on 1995 dates and is now queried at current dates, so extrapolation and date/domain transfer must be investigated.</p>
+<p>The gRPC server listens on 50051; Flask API/UI on 5000; SQLite stores timestamp, current_value, predicted_value and pod_count in <code>metrics.db</code>. <code>IsActive</code> always returns true; StreamIsActive yields continuously. GetMetricSpec exposes custom_metric with target 1. GetMetrics reads metadata, queries Prometheus, applies scaleFactor, forecasts, replaces low-load forecasts with observed demand below activationValue and returns forecast/podLimit as both truncated integer and floating metric. KEDA/HPA handles final replica reconciliation; the server does not directly call Kubernetes to scale pods.</p>
+<table><thead><tr><th>Released ScaledObject setting</th><th>Value</th></tr></thead><tbody>
+<tr><td>Target / namespace</td><td>Deployment springbootapi-deployment / springboot-test</td></tr>
+<tr><td>Polling / cooldown</td><td>60 seconds / 30 seconds</td></tr>
+<tr><td>Minimum / maximum replicas</td><td>1 / 10</td></tr>
+<tr><td>Fallback</td><td>3 failures, 1 replica</td></tr>
+<tr><td>Endpoint</td><td>keda-lsfb-scaler-service.keda.svc.cluster.local:50051</td></tr>
+<tr><td>Prometheus</td><td>http://prmop-kube-prometheus-prometheus.monitoring.svc.cluster.local:9090</td></tr>
+<tr><td>PromQL</td><td><code>sum(rate(http_server_requests_seconds_count{job="springbootapi-service"}[1m]))</code></td></tr>
+<tr><td>podLimit / scaleFactor / activationValue</td><td>1000 / 100 / 10</td></tr>
+</tbody></table>
+<p>Prometheus rate returns requests per second, while training data uses counts per minute. The factor 100 is not the 60 conversion and has no documented calibration. The query is not restricted to /sample and may count monitoring requests. Verify actual job and URI labels before relying on it. The rated pod limit is an authored setting, not a measured SLO-safe capacity. There are no pod CPU/memory requests/limits, readiness/liveness probes or cluster sizing specifications in these application/scaler manifests.</p>
+<p>The sample API serves GET /sample with a success response and logs each request; metrics are at /actuator/prometheus. Its Dockerfile copies an already-built <code>target/springbootapi.jar</code>, so a Maven build must precede docker build. The README image name is <code>pasanbhanu/spring-boot-api-with-prometheus:latest</code>, while deployment.yaml uses <code>pasanbhanu/springboot-sample-api-with-prometheus:latest</code>. Verify an image digest or build an image in your own registry. Docker Hub image availability was not verified.</p>
+<h3>Conditional deployment procedure</h3>
+<p>These commands are source-derived or corrected path proposals, <b>not deployment-tested</b>. Use an isolated test cluster. This stage does not reproduce Tables 4 and 5. Kubernetes, Helm, KEDA, a reachable registry, Prometheus Operator CRDs, working ServiceMonitor selection and network connectivity are required. Chart/Kubernetes versions are unspecified and must be chosen and recorded as deviations.</p>
+<pre># From the sample application repository; Java 21 required
+./mvnw clean package
+# Windows alternative: .\mvnw.cmd clean package
+docker build -t YOUR_REGISTRY/springbootapi:RUN_TAG .
+
+# Inspect/adjust image in a run-copy manifest before applying it
+kubectl create namespace springboot-test
+kubectl create namespace monitoring
+kubectl apply -f kubernetes/deployment.yaml -n springboot-test
+
+# README's chart command, with verified on-disk values path
+helm upgrade --install prmop oci://registry-1.docker.io/bitnamicharts/kube-prometheus --values kubernetes/prometheus-values.yaml --namespace monitoring
+kubectl apply -f kubernetes/service-monitor.yaml -n monitoring
+
+# From scaler repository: chart repository setup is inferred
+helm repo add kedacore https://kedacore.github.io/charts
+helm repo update
+kubectl create namespace keda
+helm upgrade --install keda kedacore/keda --values kubernetes/keda-values.yaml --namespace keda
+docker build -t YOUR_REGISTRY/keda-lsfb-scaler:RUN_TAG .
+
+# Apply only after image, dependencies, Prometheus endpoint/labels and units work
+kubectl apply -f kubernetes/deployment.yaml -n keda
+kubectl apply -f kubernetes/keda-lsfb-scaler.yaml
+kubectl get scaledobject,hpa -n springboot-test
+kubectl logs deployment/keda-lsfb-scaler-deployment -n keda
+kubectl port-forward service/springbootapi-service 8080:8080 -n springboot-test
+curl http://localhost:8080/sample
+curl http://localhost:8080/actuator/prometheus</pre>
+<p>Insert a chart version and image digest once you establish a working setup. Public chart/image access is unverified; the README's Bitnami reference is not evidence that its historical dependencies remain pullable. For any stub regeneration or dependency updates, preserve a patch log. Do not push to the author's Docker account.</p>
+<p>Other runtime barriers include an unprotected shared SQLite cursor across a ten-worker gRPC server, no persisted metric volume, no load replay generator, no experimentally measured startup delay and no demonstrated request-latency SLO. StreamIsActive has no pause/cancellation check. These are static risks that require runtime validation, not observed failures in this audit.</p>
+<h3>Autoscaler Evaluation notebook is a separate simulation</h3>
+<p>It selects FIFA 1998-07-07 09:51–16:31, rescales that slice independently, loads the saved FIFA models and repeats the alignment/fill behavior. It uses workload_per_pod=100, rrs=0.6 (markdown says 0.1), minimum 1, initial count 100, simulated CPU threshold 0.7 and downscale delay 5 minutes. It computes under/overprovisioning measures and an elasticity expression with hard-coded comparison constants. This is not live HPA behavior or Table 4/5 forecasting evaluation. Its filtered DataFrame retains original indices but subsequent loops use .loc from zero, risking missing-row KeyErrors and inserted NaN rows. No executed output establishes that the simulation runs unchanged.</p>
+
+<h2>10. Baseline preservation and Digital Twin contribution</h2>
+<p>Maintain three explicitly distinguished stages: (1) unmodified released-code replication, including documented artifacts; (2) a corrected, causally evaluated Prophet–LSTM baseline, with timestamp alignment, training-only transforms and no truth fallback; (3) the proposed calibrated uncertainty-aware Digital Twin controller. Do not compare the new controller against incorrectly aligned forecasting results as if they measured causal predictive advantage.</p>
+<p>The defensible baseline-specific opportunity is to connect forecast uncertainty and actual service behavior to SLO-constrained decisions. The inspected release provides point forecasts and workload/capacity division; it does not calibrate hybrid forecast uncertainty or optimize a measured latency SLO through a validated service twin. Prophet may generate interval columns internally, but those alone do not establish calibrated uncertainty for the combined model or SLO violation probability. Novelty beyond this paper still requires a wider literature review.</p>
+<p>For later experiments, hold workload splits, service, resource limits and hardware constant. Fit/calibrate on past data only. Evaluate uncertainty coverage/width and calibration, forecast errors, p95/p99 latency, SLO violation rate, dropped requests, ready replica counts, pod-minutes/cost and controller overhead. Include persistence, reactive HPA/KEDA, corrected Prophet–LSTM and twin/controller ablations. Measure cold-start and queue/service-capacity behavior before interpreting replica forecasts as SLO guarantees. These are proposed contribution experiments, not claims about the original paper.</p>
+<p><strong>Completion boundary:</strong> paper/code/data inspection and the reproduction procedure are complete. Numerical reproduction remains to be run in the chosen environment; full table reproduction depends on missing comparators and clarification of inconsistent FIFA entries.</p>
+<p class="small">Local evidence: audit-evidence.json contains exact commit, CSV and checkpoint metadata; candidate-environment-evidence.json contains inspected PyPI dependency metadata. Cloned sources remain unchanged. The article is CC BY; repository and dataset licensing/attribution should accompany reuse. NASA/WorldCup links and the four author repository links above are the primary sources for this audit.</p>
+</html>

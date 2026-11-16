@@ -1,0 +1,1760 @@
+[
+  {
+    "block": 0,
+    "elapsed": 0.06070032800016634,
+    "duration_seconds": 8.003664298999865,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 5.0,
+      "desired": 1,
+      "ready": 1,
+      "p95_ms": 95.41791419987929,
+      "p99_ms": 99.3992915198214,
+      "effective_p99_ms": 99.3992915198214,
+      "cpu_ms": 44.483830000000005,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 25
+    },
+    "decision": {
+      "target": 1,
+      "point_rps": 5.0,
+      "upper_rps": 5.0,
+      "demand_margin": 0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 38.64407525,
+      "feasible": true,
+      "demand_coverage_updates": [],
+      "twin_covered": null,
+      "predicted_next_p99_ms": 61.5418494230701,
+      "elapsed_ms": 0.99809900029868
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:35:21Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:35:06Z",
+          "window": "14.368s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "107322661n",
+                "memory": "13368Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 1,
+    "elapsed": 8.173499852000077,
+    "duration_seconds": 8.003058297999814,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 5.0,
+      "desired": 1,
+      "ready": 1,
+      "p95_ms": 51.78569779991449,
+      "p99_ms": 71.15477307999748,
+      "effective_p99_ms": 71.15477307999748,
+      "cpu_ms": 40.693219,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 25
+    },
+    "decision": {
+      "target": 1,
+      "point_rps": 5.0,
+      "upper_rps": 5.0,
+      "demand_margin": 0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 39.668647125,
+      "feasible": true,
+      "demand_coverage_updates": [],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 64.82729594826812,
+      "elapsed_ms": 1.6368860001421126
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:35:30Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:35:06Z",
+          "window": "14.368s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "107322661n",
+                "memory": "13368Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 2,
+    "elapsed": 16.274854172000232,
+    "duration_seconds": 8.004426456000147,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 5.0,
+      "desired": 1,
+      "ready": 1,
+      "p95_ms": 85.14024040023286,
+      "p99_ms": 87.3036913600481,
+      "effective_p99_ms": 87.3036913600481,
+      "cpu_ms": 42.262811,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 25
+    },
+    "decision": {
+      "target": 1,
+      "point_rps": 5.0,
+      "upper_rps": 5.0,
+      "demand_margin": 0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 40.9657290625,
+      "feasible": true,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 68.98658769581537,
+      "elapsed_ms": 1.3456870001391508
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:35:38Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:35:26Z",
+          "window": "19.266s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "155469428n",
+                "memory": "14152Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 3,
+    "elapsed": 24.372313646999828,
+    "duration_seconds": 8.004105249000077,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 5.0,
+      "desired": 1,
+      "ready": 1,
+      "p95_ms": 52.719395800158956,
+      "p99_ms": 68.80639947987216,
+      "effective_p99_ms": 68.80639947987216,
+      "cpu_ms": 40.084551,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 25
+    },
+    "decision": {
+      "target": 1,
+      "point_rps": 5.0,
+      "upper_rps": 5.0,
+      "demand_margin": 0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 40.525140031250004,
+      "feasible": true,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": true,
+      "predicted_next_p99_ms": 67.5737715361285,
+      "elapsed_ms": 1.6681669999343285
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:35:46Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:35:26Z",
+          "window": "19.266s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "155469428n",
+                "memory": "14152Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 4,
+    "elapsed": 32.471643304999816,
+    "duration_seconds": 8.003473326999938,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 10.0,
+      "desired": 1,
+      "ready": 1,
+      "p95_ms": 52.320819800115714,
+      "p99_ms": 70.41030067990953,
+      "effective_p99_ms": 70.41030067990953,
+      "cpu_ms": 40.011017,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 50
+    },
+    "decision": {
+      "target": 2,
+      "point_rps": 11.666666666666668,
+      "upper_rps": 16.666666666666668,
+      "demand_margin": 5.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 40.26807851562501,
+      "feasible": true,
+      "demand_coverage_updates": [
+        false
+      ],
+      "twin_covered": true,
+      "predicted_next_p99_ms": 80.11490198810625,
+      "elapsed_ms": 3.4284719999959634
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:35:54Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:35:40Z",
+          "window": "14.092s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "130171373n",
+                "memory": "14136Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 5,
+    "elapsed": 40.74506263400008,
+    "duration_seconds": 8.002390371000274,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 15.0,
+      "desired": 2,
+      "ready": 1,
+      "p95_ms": 1768.943552599785,
+      "p99_ms": 1816.9602275401396,
+      "effective_p99_ms": 1816.9602275401396,
+      "cpu_ms": 41.843139,
+      "failed": 0,
+      "slo_violation_fraction": 0.7333333333333333,
+      "requests": 75
+    },
+    "decision": {
+      "target": 3,
+      "point_rps": 20.0,
+      "upper_rps": 30.0,
+      "demand_margin": 10.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 41.05560875781251,
+      "feasible": true,
+      "demand_coverage_updates": [
+        false
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 1531.0252313697592,
+      "elapsed_ms": 1.0432789999867964
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:02Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:35:50Z",
+          "window": "10.141s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "239529928n",
+                "memory": "14092Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 6,
+    "elapsed": 48.89080313600016,
+    "duration_seconds": 8.001634103000015,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 20.0,
+      "desired": 3,
+      "ready": 2,
+      "p95_ms": 352.45739404995214,
+      "p99_ms": 458.80244078980945,
+      "effective_p99_ms": 458.80244078980945,
+      "cpu_ms": 37.5830845,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 100
+    },
+    "decision": {
+      "target": 3,
+      "point_rps": 25.0,
+      "upper_rps": 35.0,
+      "demand_margin": 10.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 39.31934662890625,
+      "feasible": true,
+      "demand_coverage_updates": [
+        false
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 79.4450445740788,
+      "elapsed_ms": 1.08003400009693
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:10Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:35:50Z",
+          "window": "10.141s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "239529928n",
+                "memory": "14092Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 7,
+    "elapsed": 56.993813842000236,
+    "duration_seconds": 8.003316770999845,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 25.0,
+      "desired": 3,
+      "ready": 3,
+      "p95_ms": 330.18765119977616,
+      "p99_ms": 383.4718960799001,
+      "effective_p99_ms": 383.4718960799001,
+      "cpu_ms": 42.310807,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 125
+    },
+    "decision": {
+      "target": 4,
+      "point_rps": 30.0,
+      "upper_rps": 40.0,
+      "demand_margin": 10.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 40.81507681445312,
+      "feasible": true,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 70.91016240241079,
+      "elapsed_ms": 1.602721999915957
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:18Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:08Z",
+          "window": "13.293753792s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "260470898n",
+                "memory": "14128Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:18Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:16Z",
+          "window": "13.554919616s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "190706774n",
+                "memory": "13684Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:18Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:04Z",
+          "window": "13.883s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "302083915n",
+                "memory": "14216Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 8,
+    "elapsed": 65.16124866100017,
+    "duration_seconds": 8.002163484999983,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 45.0,
+      "desired": 4,
+      "ready": 3,
+      "p95_ms": 1916.310985799828,
+      "p99_ms": 2046.7884314401272,
+      "effective_p99_ms": 2046.7884314401272,
+      "cpu_ms": 38.249926,
+      "failed": 2,
+      "slo_violation_fraction": 0.6666666666666666,
+      "requests": 225
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 55.0,
+      "upper_rps": 75.0,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 39.53250140722656,
+      "feasible": false,
+      "demand_coverage_updates": [
+        false
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 1295.737286328789,
+      "elapsed_ms": 1.716902000225673
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:27Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:08Z",
+          "window": "13.293753792s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "260470898n",
+                "memory": "14128Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:27Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:16Z",
+          "window": "13.554919616s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "190706774n",
+                "memory": "13684Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:27Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:04Z",
+          "window": "13.883s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "302083915n",
+                "memory": "14216Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 9,
+    "elapsed": 73.32836252100014,
+    "duration_seconds": 8.003284816999894,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 45.0,
+      "desired": 6,
+      "ready": 3,
+      "p95_ms": 922.2875740001654,
+      "p99_ms": 982.12584459985,
+      "effective_p99_ms": 982.12584459985,
+      "cpu_ms": 40.89423599999999,
+      "failed": 0,
+      "slo_violation_fraction": 0.3333333333333333,
+      "requests": 225
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 58.333333333333336,
+      "upper_rps": 78.33333333333334,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 40.21336870361328,
+      "feasible": false,
+      "demand_coverage_updates": [
+        false
+      ],
+      "twin_covered": true,
+      "predicted_next_p99_ms": 1400.9169159529265,
+      "elapsed_ms": 1.6063919997577614
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:35Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:21Z",
+          "window": "13.419s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "253331097n",
+                "memory": "13868Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:35Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:23Z",
+          "window": "6.342s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "333102175n",
+                "memory": "14792Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:35Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:30Z",
+          "window": "26.241s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "289519416n",
+                "memory": "14076Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-xq7zd",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:35Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:30Z",
+          "window": "10.710975552s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "193997735n",
+                "memory": "14492Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 10,
+    "elapsed": 81.43583375200024,
+    "duration_seconds": 8.00387723599988,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 15.0,
+      "desired": 6,
+      "ready": 4,
+      "p95_ms": 84.39243090010669,
+      "p99_ms": 122.249445960124,
+      "effective_p99_ms": 122.249445960124,
+      "cpu_ms": 39.212335,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 75
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 35.0,
+      "upper_rps": 55.0,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 39.71285185180664,
+      "feasible": true,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 45.507841159974305,
+      "elapsed_ms": 1.0786429998006497
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:43Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:21Z",
+          "window": "13.419s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "253331097n",
+                "memory": "13868Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:43Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:23Z",
+          "window": "6.342s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "333102175n",
+                "memory": "14792Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:43Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:30Z",
+          "window": "26.241s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "289519416n",
+                "memory": "14076Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-xq7zd",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:43Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:30Z",
+          "window": "10.710975552s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "193997735n",
+                "memory": "14492Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 11,
+    "elapsed": 89.53450159100021,
+    "duration_seconds": 8.004217764999794,
+    "offered_units": 1.0,
+    "sample": {
+      "rps": 10.0,
+      "desired": 6,
+      "ready": 6,
+      "p95_ms": 54.21754220001275,
+      "p99_ms": 67.8110073399784,
+      "effective_p99_ms": 67.8110073399784,
+      "cpu_ms": 40.351732000000005,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 50
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 23.333333333333332,
+      "upper_rps": 43.33333333333333,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 40.03229192590332,
+      "feasible": true,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 45.507841159974305,
+      "elapsed_ms": 1.822059000005538
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:51Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:33Z",
+          "window": "11.785s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "333777683n",
+                "memory": "13476Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:51Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:41Z",
+          "window": "18.047s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "248437856n",
+                "memory": "13644Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:51Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:30Z",
+          "window": "26.241s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "289519416n",
+                "memory": "14076Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-mvvz8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:51Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:46Z",
+          "window": "14.996s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "66004934n",
+                "memory": "13256Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-w2lt2",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:51Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:39Z",
+          "window": "11.864544704s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "122021791n",
+                "memory": "13156Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-xq7zd",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:51Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:40Z",
+          "window": "10.122s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "191798261n",
+                "memory": "13376Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 12,
+    "elapsed": 97.63998716800006,
+    "duration_seconds": 8.003513971999837,
+    "offered_units": 1.8,
+    "sample": {
+      "rps": 25.0,
+      "desired": 6,
+      "ready": 6,
+      "p95_ms": 272.370805799801,
+      "p99_ms": 302.09189887998946,
+      "effective_p99_ms": 302.09189887998946,
+      "cpu_ms": 71.371514,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 125
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 26.666666666666668,
+      "upper_rps": 46.66666666666667,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 55.701902962951664,
+      "feasible": true,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 69.01502088797042,
+      "elapsed_ms": 2.2938199999771314
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:59Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:33Z",
+          "window": "11.785s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "333777683n",
+                "memory": "13476Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:59Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:41Z",
+          "window": "18.047s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "248437856n",
+                "memory": "13644Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:59Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:30Z",
+          "window": "26.241s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "289519416n",
+                "memory": "14076Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-mvvz8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:59Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:46Z",
+          "window": "14.996s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "66004934n",
+                "memory": "13256Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-w2lt2",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:59Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:39Z",
+          "window": "11.864544704s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "122021791n",
+                "memory": "13156Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-xq7zd",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:36:59Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:40Z",
+          "window": "10.122s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "191798261n",
+                "memory": "13376Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 13,
+    "elapsed": 105.74975891600025,
+    "duration_seconds": 8.002843988000222,
+    "offered_units": 1.8,
+    "sample": {
+      "rps": 30.0,
+      "desired": 6,
+      "ready": 6,
+      "p95_ms": 826.5653581500824,
+      "p99_ms": 932.8807919301514,
+      "effective_p99_ms": 932.8807919301514,
+      "cpu_ms": 77.44184100000001,
+      "failed": 0,
+      "slo_violation_fraction": 0.14666666666666667,
+      "requests": 150
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 41.66666666666667,
+      "upper_rps": 61.66666666666667,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 66.57187198147584,
+      "feasible": false,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 69.01502088797042,
+      "elapsed_ms": 3.1817650001357833
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:07Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:52Z",
+          "window": "18.512s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "76759399n",
+                "memory": "13544Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:07Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:55Z",
+          "window": "13.886s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "97328100n",
+                "memory": "13416Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:07Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:48Z",
+          "window": "17.811s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "94684857n",
+                "memory": "13700Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-mvvz8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:07Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:00Z",
+          "window": "13.14s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "150545509n",
+                "memory": "13972Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-w2lt2",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:07Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:54Z",
+          "window": "15.033s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "89823055n",
+                "memory": "13160Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-xq7zd",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:07Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:51Z",
+          "window": "11.177s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "25220363n",
+                "memory": "13112Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 14,
+    "elapsed": 113.86079597700018,
+    "duration_seconds": 8.003730049999831,
+    "offered_units": 1.8,
+    "sample": {
+      "rps": 15.0,
+      "desired": 6,
+      "ready": 6,
+      "p95_ms": 236.60928539984522,
+      "p99_ms": 268.400414419948,
+      "effective_p99_ms": 268.400414419948,
+      "cpu_ms": 68.92971200000001,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 75
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 23.333333333333332,
+      "upper_rps": 43.33333333333333,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 67.75079199073792,
+      "feasible": false,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 48.82753160920108,
+      "elapsed_ms": 1.4384040000550158
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:15Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:52Z",
+          "window": "18.512s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "76759399n",
+                "memory": "13544Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:15Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:55Z",
+          "window": "13.886s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "97328100n",
+                "memory": "13416Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:15Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:48Z",
+          "window": "17.811s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "94684857n",
+                "memory": "13700Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-mvvz8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:15Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:00Z",
+          "window": "13.14s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "150545509n",
+                "memory": "13972Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-w2lt2",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:15Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:54Z",
+          "window": "15.033s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "89823055n",
+                "memory": "13160Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-xq7zd",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:15Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:36:51Z",
+          "window": "11.177s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "25220363n",
+                "memory": "13112Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "block": 15,
+    "elapsed": 121.96864020300018,
+    "duration_seconds": 8.001989789000163,
+    "offered_units": 1.8,
+    "sample": {
+      "rps": 5.0,
+      "desired": 6,
+      "ready": 6,
+      "p95_ms": 138.89314419993752,
+      "p99_ms": 139.96254388004672,
+      "effective_p99_ms": 139.96254388004672,
+      "cpu_ms": 70.247984,
+      "failed": 0,
+      "slo_violation_fraction": 0.0,
+      "requests": 25
+    },
+    "decision": {
+      "target": 6,
+      "point_rps": 16.666666666666668,
+      "upper_rps": 36.66666666666667,
+      "demand_margin": 20.0,
+      "twin_margin_ms": 0,
+      "cpu_estimate_ms": 68.99938799536896,
+      "feasible": true,
+      "demand_coverage_updates": [
+        true
+      ],
+      "twin_covered": false,
+      "predicted_next_p99_ms": 45.507841159974305,
+      "elapsed_ms": 2.019480999933876
+    },
+    "pod_metrics": {
+      "kind": "PodMetricsList",
+      "apiVersion": "metrics.k8s.io/v1beta1",
+      "metadata": {},
+      "items": [
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-64mpn",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:23Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:03Z",
+          "window": "11.063s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "271641146n",
+                "memory": "12840Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-7lbvl",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:23Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:12Z",
+          "window": "16.868s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "218491522n",
+                "memory": "12972Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-b5pw8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:23Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:15Z",
+          "window": "27.382s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "159004711n",
+                "memory": "12928Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-mvvz8",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:23Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:10Z",
+          "window": "10.936s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "260445226n",
+                "memory": "13488Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-w2lt2",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:23Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:09Z",
+          "window": "14.629s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "230371453n",
+                "memory": "13732Ki"
+              }
+            }
+          ]
+        },
+        {
+          "metadata": {
+            "name": "twin-service-5989d5c94-xq7zd",
+            "namespace": "twin-research",
+            "creationTimestamp": "2026-10-28T14:37:23Z",
+            "labels": {
+              "app": "twin-service",
+              "pod-template-hash": "5989d5c94"
+            }
+          },
+          "timestamp": "2026-10-28T14:37:10Z",
+          "window": "18.672s",
+          "containers": [
+            {
+              "name": "service",
+              "usage": {
+                "cpu": "168820961n",
+                "memory": "12888Ki"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

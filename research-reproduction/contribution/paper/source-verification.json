@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "root_tex_files": [
+    "main_article_v1a_change_this.tex"
+  ],
+  "final_main_matches_reviewed_local_source": true,
+  "prior_files_preserved_byte_for_byte": 8,
+  "external_tex_image_or_bibliography_inputs": false,
+  "main_sha256": "bc3b8e7d1f6f1f9f54c3ba5368e53c57462b83d1d715ef4856717b1deb9e9a5e",
+  "source_archive_files": [
+    "archive_20261015/main_before_20261015.tex",
+    "archive_20261015/baseline_worldcup_forecasts.png",
+    "archive_20261015/baseline_nasa_forecasts.png",
+    "archive_20261015/baseline_hpa_scaling.png",
+    "archive_20261015/baseline_references.bib",
+    "archive_20261015/baseline_progress_sections.tex",
+    "archive_20261015/main_article_before_20261028.tex",
+    "main_article_v1a_change_this.tex",
+    "archive_20261015/main.tex"
+  ]
+}

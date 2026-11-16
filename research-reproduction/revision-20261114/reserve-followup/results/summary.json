@@ -1,0 +1,54 @@
+{
+  "status": "completed",
+  "trials": 18,
+  "requests": 28866,
+  "same_minimum_eight_and_maximum_sixteen_verified": true,
+  "results": [
+    {
+      "scenario": "legacy_batch",
+      "n": 3,
+      "guarded_met": 3,
+      "hpa_reserve_met": 3,
+      "guarded_bad_percent": 0.0,
+      "hpa_reserve_bad_percent": 0.0,
+      "guarded_pod_minutes": 26.241016150033303,
+      "hpa_reserve_pod_minutes": 17.086084250000003,
+      "paired_bad_pp": 0.0,
+      "paired95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "scenario": "abrupt_batch",
+      "n": 3,
+      "guarded_met": 3,
+      "hpa_reserve_met": 3,
+      "guarded_bad_percent": 0.0,
+      "hpa_reserve_bad_percent": 0.0,
+      "guarded_pod_minutes": 28.830078940622155,
+      "hpa_reserve_pod_minutes": 17.08446701831102,
+      "paired_bad_pp": 0.0,
+      "paired95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "scenario": "continuous",
+      "n": 3,
+      "guarded_met": 3,
+      "hpa_reserve_met": 3,
+      "guarded_bad_percent": 0.0,
+      "hpa_reserve_bad_percent": 0.0,
+      "guarded_pod_minutes": 29.15017206719449,
+      "hpa_reserve_pod_minutes": 17.089409782355506,
+      "paired_bad_pp": 0.0,
+      "paired95": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "scope": "Exploratory follow-up specified after early primary outcomes to test minimum-replica confounding. Frozen controller unchanged. Three fresh paired repetitions, separate from the original 75-comparison cohort."
+}

@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "conditions": 18,
+  "requests": 2160,
+  "effective_p99_mae_ms": 94.0400498541318,
+  "median_absolute_error_ms": 88.45182788252251,
+  "conditions_meeting_slo": 18,
+  "envelope_safe_conditions": 17,
+  "false_safe_conditions": 0,
+  "all_dispatch_valid": true,
+  "scope": "Independent conditional response-map validation; realized CPU input; no ex-ante CPU forecasting or full-cluster counterfactual guarantee; no refitting"
+}

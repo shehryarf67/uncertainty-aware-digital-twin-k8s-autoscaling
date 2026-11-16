@@ -1,0 +1,533 @@
+{
+  "status": "completed",
+  "final_live_runs": 75,
+  "valid_requests": 120275,
+  "all_attempts": 76,
+  "invalid_attempts": 1,
+  "all_attempt_requests": 122371,
+  "aggregate": [
+    {
+      "scenario": "abrupt_batch",
+      "controller": "cpu_hpa",
+      "label": "CPU HPA",
+      "n": 5,
+      "slo_met_runs": 0,
+      "requests": 6575,
+      "mean_violation_percent": 31.498098859315594,
+      "min_violation_percent": 21.90114068441065,
+      "max_violation_percent": 40.68441064638783,
+      "bootstrap95_violation_percent": [
+        24.44106463878327,
+        38.555133079847906
+      ],
+      "p99_ms": 1971.4091217921082,
+      "pod_minutes": 9.022862547126746,
+      "mean_ready_replicas": 4.0546875,
+      "mean_controller_ms": null
+    },
+    {
+      "scenario": "abrupt_batch",
+      "controller": "guarded",
+      "label": "Guarded Twin",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 6575,
+      "mean_violation_percent": 0.0,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.0,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.0
+      ],
+      "p99_ms": 192.913245552021,
+      "pod_minutes": 28.767547070053404,
+      "mean_ready_replicas": 12.909375,
+      "mean_controller_ms": 0.42980848742786293
+    },
+    {
+      "scenario": "abrupt_batch",
+      "controller": "legacy",
+      "label": "Original dual",
+      "n": 5,
+      "slo_met_runs": 0,
+      "requests": 6575,
+      "mean_violation_percent": 31.39163498098859,
+      "min_violation_percent": 28.8212927756654,
+      "max_violation_percent": 33.30798479087452,
+      "bootstrap95_violation_percent": [
+        30.007604562737644,
+        32.56273764258555
+      ],
+      "p99_ms": 2101.831949944095,
+      "pod_minutes": 21.77629953180342,
+      "mean_ready_replicas": 9.184375,
+      "mean_controller_ms": 1.6885000124489125
+    },
+    {
+      "scenario": "abrupt_batch",
+      "controller": "no_reserve",
+      "label": "No reserve",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 6575,
+      "mean_violation_percent": 0.1064638783269962,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.22813688212927757,
+      "bootstrap95_violation_percent": [
+        0.030418250950570342,
+        0.18250950570342206
+      ],
+      "p99_ms": 294.2322516236683,
+      "pod_minutes": 28.415877043979975,
+      "mean_ready_replicas": 12.5875,
+      "mean_controller_ms": 0.40837081244831097
+    },
+    {
+      "scenario": "abrupt_batch",
+      "controller": "static",
+      "label": "Fixed sixteen",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 6575,
+      "mean_violation_percent": 0.0,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.0,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.0
+      ],
+      "p99_ms": 135.84314912392597,
+      "pod_minutes": 34.16775484533345,
+      "mean_ready_replicas": 16.0,
+      "mean_controller_ms": null
+    },
+    {
+      "scenario": "continuous",
+      "controller": "cpu_hpa",
+      "label": "CPU HPA",
+      "n": 5,
+      "slo_met_runs": 1,
+      "requests": 10480,
+      "mean_violation_percent": 12.48091603053435,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 34.589694656488554,
+      "bootstrap95_violation_percent": [
+        3.225190839694657,
+        23.559160305343514
+      ],
+      "p99_ms": 1236.3396853898555,
+      "pod_minutes": 11.711093207123348,
+      "mean_ready_replicas": 5.234375,
+      "mean_controller_ms": null
+    },
+    {
+      "scenario": "continuous",
+      "controller": "guarded",
+      "label": "Guarded Twin",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 10480,
+      "mean_violation_percent": 0.0,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.0,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.0
+      ],
+      "p99_ms": 118.62288531006955,
+      "pod_minutes": 28.68814394951001,
+      "mean_ready_replicas": 12.8265625,
+      "mean_controller_ms": 0.420451937432631
+    },
+    {
+      "scenario": "continuous",
+      "controller": "legacy",
+      "label": "Original dual",
+      "n": 5,
+      "slo_met_runs": 0,
+      "requests": 10480,
+      "mean_violation_percent": 20.667938931297712,
+      "min_violation_percent": 12.929389312977099,
+      "max_violation_percent": 24.37977099236641,
+      "bootstrap95_violation_percent": [
+        16.708015267175572,
+        23.49236641221374
+      ],
+      "p99_ms": 2079.825281580031,
+      "pod_minutes": 26.755553442816712,
+      "mean_ready_replicas": 11.4125,
+      "mean_controller_ms": 1.996276175017897
+    },
+    {
+      "scenario": "continuous",
+      "controller": "no_reserve",
+      "label": "No reserve",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 10480,
+      "mean_violation_percent": 0.009541984732824428,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.047709923664122134,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.028625954198473285
+      ],
+      "p99_ms": 126.35128106020166,
+      "pod_minutes": 28.947772704720045,
+      "mean_ready_replicas": 12.9453125,
+      "mean_controller_ms": 0.4026628375072505
+    },
+    {
+      "scenario": "continuous",
+      "controller": "static",
+      "label": "Fixed sixteen",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 10480,
+      "mean_violation_percent": 0.0,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.0,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.0
+      ],
+      "p99_ms": 112.39590057010462,
+      "pod_minutes": 34.17560861792005,
+      "mean_ready_replicas": 16.0,
+      "mean_controller_ms": null
+    },
+    {
+      "scenario": "legacy_batch",
+      "controller": "cpu_hpa",
+      "label": "CPU HPA",
+      "n": 5,
+      "slo_met_runs": 0,
+      "requests": 7000,
+      "mean_violation_percent": 50.957142857142856,
+      "min_violation_percent": 44.714285714285715,
+      "max_violation_percent": 65.71428571428571,
+      "bootstrap95_violation_percent": [
+        45.92857142857142,
+        58.542857142857144
+      ],
+      "p99_ms": 2107.877973723997,
+      "pod_minutes": 8.887271077880024,
+      "mean_ready_replicas": 4.075,
+      "mean_controller_ms": null
+    },
+    {
+      "scenario": "legacy_batch",
+      "controller": "guarded",
+      "label": "Guarded Twin",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 7000,
+      "mean_violation_percent": 0.0,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.0,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.0
+      ],
+      "p99_ms": 146.08522628594528,
+      "pod_minutes": 26.526729930913348,
+      "mean_ready_replicas": 11.88125,
+      "mean_controller_ms": 0.44294629992691625
+    },
+    {
+      "scenario": "legacy_batch",
+      "controller": "legacy",
+      "label": "Original dual",
+      "n": 5,
+      "slo_met_runs": 0,
+      "requests": 7000,
+      "mean_violation_percent": 7.414285714285715,
+      "min_violation_percent": 1.8571428571428572,
+      "max_violation_percent": 14.142857142857142,
+      "bootstrap95_violation_percent": [
+        3.0857142857142863,
+        11.842857142857142
+      ],
+      "p99_ms": 1232.2281285778408,
+      "pod_minutes": 20.15672754262662,
+      "mean_ready_replicas": 8.3328125,
+      "mean_controller_ms": 2.025482362449793
+    },
+    {
+      "scenario": "legacy_batch",
+      "controller": "no_reserve",
+      "label": "No reserve",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 7000,
+      "mean_violation_percent": 0.0,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.0,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.0
+      ],
+      "p99_ms": 128.7918676797085,
+      "pod_minutes": 25.871839880386602,
+      "mean_ready_replicas": 11.4015625,
+      "mean_controller_ms": 0.40537889993288445
+    },
+    {
+      "scenario": "legacy_batch",
+      "controller": "static",
+      "label": "Fixed sixteen",
+      "n": 5,
+      "slo_met_runs": 5,
+      "requests": 7000,
+      "mean_violation_percent": 0.0,
+      "min_violation_percent": 0.0,
+      "max_violation_percent": 0.0,
+      "bootstrap95_violation_percent": [
+        0.0,
+        0.0
+      ],
+      "p99_ms": 124.13712186608427,
+      "pod_minutes": 34.18390682384002,
+      "mean_ready_replicas": 16.0,
+      "mean_controller_ms": null
+    }
+  ],
+  "overall": [
+    {
+      "controller": "cpu_hpa",
+      "label": "CPU HPA",
+      "runs": 15,
+      "slo_met_runs": 1,
+      "mean_trial_violation_percent": 31.64538591566427,
+      "pooled_request_violation_percent": 28.87549366036167,
+      "mean_pod_minutes": 9.873742277376705,
+      "p99_ms": 1771.8755936353202
+    },
+    {
+      "controller": "guarded",
+      "label": "Guarded Twin",
+      "runs": 15,
+      "slo_met_runs": 15,
+      "mean_trial_violation_percent": 0.0,
+      "pooled_request_violation_percent": 0.0,
+      "mean_pod_minutes": 27.994140316825582,
+      "p99_ms": 152.5404523826786
+    },
+    {
+      "controller": "legacy",
+      "label": "Original dual",
+      "runs": 15,
+      "slo_met_runs": 0,
+      "mean_trial_violation_percent": 19.824619875524004,
+      "pooled_request_violation_percent": 19.742257326959052,
+      "mean_pod_minutes": 22.89619350574892,
+      "p99_ms": 1804.6284533673227
+    },
+    {
+      "controller": "no_reserve",
+      "label": "No reserve",
+      "runs": 15,
+      "slo_met_runs": 15,
+      "mean_trial_violation_percent": 0.03866862101994021,
+      "pooled_request_violation_percent": 0.03325711910205779,
+      "mean_pod_minutes": 27.745163209695548,
+      "p99_ms": 183.12513345452615
+    },
+    {
+      "controller": "static",
+      "label": "Fixed sixteen",
+      "runs": 15,
+      "slo_met_runs": 15,
+      "mean_trial_violation_percent": 0.0,
+      "pooled_request_violation_percent": 0.0,
+      "mean_pod_minutes": 34.1757567623645,
+      "p99_ms": 124.12539052003828
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "scenario": "legacy_batch",
+      "comparison": "guarded minus legacy",
+      "violation_pp": -7.414285714285714,
+      "violation95": [
+        -11.842857142857142,
+        -3.0857142857142863
+      ],
+      "pod_minutes_delta": 6.370002388286733,
+      "pod_minutes95": [
+        3.7746419435967353,
+        9.619570449336711
+      ],
+      "relative_pod_minutes_percent": 31.602363899674234
+    },
+    {
+      "scenario": "legacy_batch",
+      "comparison": "guarded minus no_reserve",
+      "violation_pp": 0.0,
+      "violation95": [
+        0.0,
+        0.0
+      ],
+      "pod_minutes_delta": 0.6548900505267483,
+      "pod_minutes95": [
+        0.13813245125008605,
+        1.4312838035701234
+      ],
+      "relative_pod_minutes_percent": 2.531285187116583
+    },
+    {
+      "scenario": "legacy_batch",
+      "comparison": "guarded minus cpu_hpa",
+      "violation_pp": -50.95714285714286,
+      "violation95": [
+        -58.942857142857136,
+        -45.92857142857143
+      ],
+      "pod_minutes_delta": 17.639458853033325,
+      "pod_minutes95": [
+        16.971927214063445,
+        18.304272763769895
+      ],
+      "relative_pod_minutes_percent": 198.4800362052313
+    },
+    {
+      "scenario": "legacy_batch",
+      "comparison": "guarded minus static",
+      "violation_pp": 0.0,
+      "violation95": [
+        0.0,
+        0.0
+      ],
+      "pod_minutes_delta": -7.657176892926662,
+      "pod_minutes95": [
+        -8.293946858599924,
+        -7.0204069272534015
+      ],
+      "relative_pod_minutes_percent": -22.399946654390355
+    },
+    {
+      "scenario": "abrupt_batch",
+      "comparison": "guarded minus legacy",
+      "violation_pp": -31.39163498098859,
+      "violation95": [
+        -32.57794676806083,
+        -30.007604562737647
+      ],
+      "pod_minutes_delta": 6.991247538249985,
+      "pod_minutes95": [
+        2.4688967826467554,
+        12.655282133823253
+      ],
+      "relative_pod_minutes_percent": 32.10484650084622
+    },
+    {
+      "scenario": "abrupt_batch",
+      "comparison": "guarded minus no_reserve",
+      "violation_pp": -0.10646387832699619,
+      "violation95": [
+        -0.18250950570342206,
+        -0.030418250950570342
+      ],
+      "pod_minutes_delta": 0.35167002607342823,
+      "pod_minutes95": [
+        0.26927265145687757,
+        0.44218101934985654
+      ],
+      "relative_pod_minutes_percent": 1.2375828679478618
+    },
+    {
+      "scenario": "abrupt_batch",
+      "comparison": "guarded minus cpu_hpa",
+      "violation_pp": -31.498098859315586,
+      "violation95": [
+        -38.555133079847906,
+        -24.44106463878327
+      ],
+      "pod_minutes_delta": 19.74468452292666,
+      "pod_minutes95": [
+        19.217120447610085,
+        20.197985818246615
+      ],
+      "relative_pod_minutes_percent": 218.8294947396066
+    },
+    {
+      "scenario": "abrupt_batch",
+      "comparison": "guarded minus static",
+      "violation_pp": 0.0,
+      "violation95": [
+        0.0,
+        0.0
+      ],
+      "pod_minutes_delta": -5.4002077752800455,
+      "pod_minutes95": [
+        -5.449890268586654,
+        -5.351939789066819
+      ],
+      "relative_pod_minutes_percent": -15.804982796572576
+    },
+    {
+      "scenario": "continuous",
+      "comparison": "guarded minus legacy",
+      "violation_pp": -20.66793893129771,
+      "violation95": [
+        -23.31106870229008,
+        -16.622137404580155
+      ],
+      "pod_minutes_delta": 1.9325905066933018,
+      "pod_minutes95": [
+        1.3263180690799607,
+        2.7990133063000426
+      ],
+      "relative_pod_minutes_percent": 7.223137846218464
+    },
+    {
+      "scenario": "continuous",
+      "comparison": "guarded minus no_reserve",
+      "violation_pp": -0.009541984732824426,
+      "violation95": [
+        -0.02862595419847328,
+        0.0
+      ],
+      "pod_minutes_delta": -0.2596287552100371,
+      "pod_minutes95": [
+        -0.5808364200499441,
+        0.06016512097994422
+      ],
+      "relative_pod_minutes_percent": -0.8968868101126848
+    },
+    {
+      "scenario": "continuous",
+      "comparison": "guarded minus cpu_hpa",
+      "violation_pp": -12.48091603053435,
+      "violation95": [
+        -23.979007633587788,
+        -3.225190839694657
+      ],
+      "pod_minutes_delta": 16.977050742386663,
+      "pod_minutes95": [
+        16.396530881529948,
+        17.41013872649005
+      ],
+      "relative_pod_minutes_percent": 144.9655505436526
+    },
+    {
+      "scenario": "continuous",
+      "comparison": "guarded minus static",
+      "violation_pp": 0.0,
+      "violation95": [
+        0.0,
+        0.0
+      ],
+      "pod_minutes_delta": -5.487464668410033,
+      "pod_minutes95": [
+        -5.670776243683349,
+        -5.304153093136717
+      ],
+      "relative_pod_minutes_percent": -16.056669918477105
+    }
+  ],
+  "source_hashes_verified": true,
+  "request_metrics_independently_recomputed": true,
+  "allocation_audit": "Integrated sampled replica area checked with a terminal 0--3s uncertainty bound; reported live integration uses actual elapsed time",
+  "statistical_scope": "Five paired repetitions per workload; descriptive seed bootstrap intervals; per-request samples are temporally dependent; zero empirical violations do not certify zero risk"
+}

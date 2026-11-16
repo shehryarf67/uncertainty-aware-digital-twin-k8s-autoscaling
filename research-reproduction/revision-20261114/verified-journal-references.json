@@ -1,0 +1,852 @@
+[
+  {
+    "query": "10.3390/s20164621",
+    "DOI": "10.3390/s20164621",
+    "title": "Horizontal Pod Autoscaling in Kubernetes for Elastic Container Orchestration",
+    "journal": "Sensors",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Nguyen",
+        "given": "Thanh-Tung"
+      },
+      {
+        "family": "Yeom",
+        "given": "Yu-Jin"
+      },
+      {
+        "family": "Kim",
+        "given": "Taehong"
+      },
+      {
+        "family": "Park",
+        "given": "Dae-Heon"
+      },
+      {
+        "family": "Kim",
+        "given": "Sehan"
+      }
+    ],
+    "year": 2020,
+    "volume": "20",
+    "issue": "16",
+    "page": "4621",
+    "article-number": null
+  },
+  {
+    "query": "10.3390/app14020646",
+    "DOI": "10.3390/app14020646",
+    "title": "Tuning a Kubernetes Horizontal Pod Autoscaler for Meeting Performance and Load Demands in Cloud Deployments",
+    "journal": "Applied Sciences",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Augustyn",
+        "given": "Dariusz R."
+      },
+      {
+        "family": "Wyciślik",
+        "given": "Łukasz"
+      },
+      {
+        "family": "Sojka",
+        "given": "Mateusz"
+      }
+    ],
+    "year": 2024,
+    "volume": "14",
+    "issue": "2",
+    "page": "646",
+    "article-number": null
+  },
+  {
+    "query": "10.3390/math11122675",
+    "DOI": "10.3390/math11122675",
+    "title": "Toward Optimal Load Prediction and Customizable Autoscaling Scheme for Kubernetes",
+    "journal": "Mathematics",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Mondal",
+        "given": "Subrota Kumar"
+      },
+      {
+        "family": "Wu",
+        "given": "Xiaohai"
+      },
+      {
+        "family": "Kabir",
+        "given": "Hussain Mohammed Dipu"
+      },
+      {
+        "family": "Dai",
+        "given": "Hong-Ning"
+      },
+      {
+        "family": "Ni",
+        "given": "Kan"
+      },
+      {
+        "family": "Yuan",
+        "given": "Honggang"
+      },
+      {
+        "family": "Wang",
+        "given": "Ting"
+      }
+    ],
+    "year": 2023,
+    "volume": "11",
+    "issue": "12",
+    "page": "2675",
+    "article-number": null
+  },
+  {
+    "query": "10.3390/electronics13071242",
+    "DOI": "10.3390/electronics13071242",
+    "title": "SLA-Adaptive Threshold Adjustment for a Kubernetes Horizontal Pod Autoscaler",
+    "journal": "Electronics",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Pozdniakova",
+        "given": "Olesia"
+      },
+      {
+        "family": "Mažeika",
+        "given": "Dalius"
+      },
+      {
+        "family": "Cholomskis",
+        "given": "Aurimas"
+      }
+    ],
+    "year": 2024,
+    "volume": "13",
+    "issue": "7",
+    "page": "1242",
+    "article-number": null
+  },
+  {
+    "query": "10.1109/tnsm.2025.3532121",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "query": "10.1109/access.2022.3150867",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "query": "10.1007/s10723-022-09634-x",
+    "DOI": "10.1007/s10723-022-09634-x",
+    "title": "K-AGRUED: A Container Autoscaling Technique for Cloud-based Web Applications in Kubernetes Using Attention-based GRU Encoder-Decoder",
+    "journal": "Journal of Grid Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Dogani",
+        "given": "Javad"
+      },
+      {
+        "family": "Khunjush",
+        "given": "Farshad"
+      },
+      {
+        "family": "Seydali",
+        "given": "Mehdi"
+      }
+    ],
+    "year": 2022,
+    "volume": "20",
+    "issue": "4",
+    "page": null,
+    "article-number": "40"
+  },
+  {
+    "query": "10.1016/j.comcom.2023.06.010",
+    "DOI": "10.1016/j.comcom.2023.06.010",
+    "title": "Auto-scaling techniques in container-based cloud and edge/fog computing: Taxonomy and survey",
+    "journal": "Computer Communications",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Dogani",
+        "given": "Javad"
+      },
+      {
+        "family": "Namvar",
+        "given": "Reza"
+      },
+      {
+        "family": "Khunjush",
+        "given": "Farshad"
+      }
+    ],
+    "year": 2023,
+    "volume": "209",
+    "issue": null,
+    "page": "120-150",
+    "article-number": null
+  },
+  {
+    "query": "10.1016/j.future.2025.107872",
+    "DOI": "10.1016/j.future.2025.107872",
+    "title": "Adaptive container auto-scaling for fluctuating workloads in cloud",
+    "journal": "Future Generation Computer Systems",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Feng",
+        "given": "Xiaoyue"
+      },
+      {
+        "family": "Zhang",
+        "given": "Sijia"
+      },
+      {
+        "family": "Jiao",
+        "given": "Tianzhe"
+      },
+      {
+        "family": "Guo",
+        "given": "Chaopeng"
+      },
+      {
+        "family": "Song",
+        "given": "Jie"
+      }
+    ],
+    "year": 2025,
+    "volume": "172",
+    "issue": null,
+    "page": "107872",
+    "article-number": "107872"
+  },
+  {
+    "query": "10.3390/s24175551",
+    "DOI": "10.3390/s24175551",
+    "title": "Auto-Scaling Techniques in Cloud Computing: Issues and Research Directions",
+    "journal": "Sensors",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Alharthi",
+        "given": "Saleha"
+      },
+      {
+        "family": "Alshamsi",
+        "given": "Afra"
+      },
+      {
+        "family": "Alseiari",
+        "given": "Anoud"
+      },
+      {
+        "family": "Alwarafy",
+        "given": "Abdulmalik"
+      }
+    ],
+    "year": 2024,
+    "volume": "24",
+    "issue": "17",
+    "page": "5551",
+    "article-number": null
+  },
+  {
+    "query": "10.1007/s10586-021-03265-9",
+    "DOI": "10.1007/s10586-021-03265-9",
+    "title": "Auto-scaling techniques for IoT-based cloud applications: a review",
+    "journal": "Cluster Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Verma",
+        "given": "Shveta"
+      },
+      {
+        "family": "Bala",
+        "given": "Anju"
+      }
+    ],
+    "year": 2021,
+    "volume": "24",
+    "issue": "3",
+    "page": "2425-2459",
+    "article-number": null
+  },
+  {
+    "query": "10.1109/tsc.2025.3596887",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "query": "10.1109/access.2020.2980852",
+    "DOI": "10.1109/access.2020.2980852",
+    "title": "Toward Bio-Inspired Auto-Scaling Algorithms: An Elasticity Approach for Container Orchestration Platforms",
+    "journal": "IEEE Access",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Herrera",
+        "given": "Jose"
+      },
+      {
+        "family": "Molto",
+        "given": "German"
+      }
+    ],
+    "year": 2020,
+    "volume": "8",
+    "issue": null,
+    "page": "52139-52150",
+    "article-number": null
+  },
+  {
+    "query": "10.1109/tcc.2018.2830793",
+    "DOI": "10.1109/tcc.2018.2830793",
+    "title": "Online VM Auto-Scaling Algorithms for Application Hosting in a Cloud",
+    "journal": "IEEE Transactions on Cloud Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Guo",
+        "given": "Yang"
+      },
+      {
+        "family": "Stolyar",
+        "given": "Alexander"
+      },
+      {
+        "family": "Walid",
+        "given": "Anwar"
+      }
+    ],
+    "year": 2018,
+    "volume": null,
+    "issue": null,
+    "page": "1-1",
+    "article-number": null
+  },
+  {
+    "query": "10.1186/s13677-026-00970-x",
+    "DOI": "10.1186/s13677-026-00970-x",
+    "title": "Techniques for efficient resource allocation transitions in container cluster autoscaling",
+    "journal": "Journal of Cloud Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "López",
+        "given": "José María"
+      },
+      {
+        "family": "García",
+        "given": "Javier"
+      },
+      {
+        "family": "Díaz",
+        "given": "José Luis"
+      },
+      {
+        "family": "García",
+        "given": "Manuel"
+      },
+      {
+        "family": "Entrialgo",
+        "given": "Joaquín"
+      },
+      {
+        "family": "Usamentiaga",
+        "given": "Rubén"
+      }
+    ],
+    "year": 2026,
+    "volume": null,
+    "issue": null,
+    "page": null,
+    "article-number": null
+  },
+  {
+    "query": "10.1007/s11227-025-07500-7",
+    "DOI": "10.1007/s11227-025-07500-7",
+    "title": "Optimizing resource allocation in cloud-native applications through proactive autoscaling with the InformerAutoScale model",
+    "journal": "The Journal of Supercomputing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Kumar",
+        "given": "Bablu"
+      },
+      {
+        "family": "Verma",
+        "given": "Anshul"
+      },
+      {
+        "family": "Verma",
+        "given": "Pradeepika"
+      },
+      {
+        "family": "Bennour",
+        "given": "Akram"
+      }
+    ],
+    "year": 2025,
+    "volume": "81",
+    "issue": "9",
+    "page": null,
+    "article-number": "1077"
+  },
+  {
+    "query": "10.1016/j.neucom.2020.08.076",
+    "DOI": "10.1016/j.neucom.2020.08.076",
+    "title": "A proactive autoscaling and energy-efficient VM allocation framework using online multi-resource neural network for cloud data center",
+    "journal": "Neurocomputing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Saxena",
+        "given": "Deepika"
+      },
+      {
+        "family": "Singh",
+        "given": "Ashutosh Kumar"
+      }
+    ],
+    "year": 2021,
+    "volume": "426",
+    "issue": null,
+    "page": "248-264",
+    "article-number": null
+  },
+  {
+    "query": "10.1007/s00607-025-01426-x",
+    "DOI": "10.1007/s00607-025-01426-x",
+    "title": "A multivariate transformer-based monitor-analyze-plan-execute (MAPE) autoscaling framework for dynamic resource allocation in cloud environment",
+    "journal": "Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Kumar",
+        "given": "Bablu"
+      },
+      {
+        "family": "Verma",
+        "given": "Anshul"
+      },
+      {
+        "family": "Verma",
+        "given": "Pradeepika"
+      }
+    ],
+    "year": 2025,
+    "volume": "107",
+    "issue": "3",
+    "page": null,
+    "article-number": "69"
+  },
+  {
+    "query": "10.1109/tcc.2020.2998017",
+    "DOI": "10.1109/tcc.2020.2998017",
+    "title": "Forecasting Cloud Application Workloads With<i>CloudInsight</i>for Predictive Resource Management",
+    "journal": "IEEE Transactions on Cloud Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Kim",
+        "given": "In Kee"
+      },
+      {
+        "family": "Wang",
+        "given": "Wei"
+      },
+      {
+        "family": "Qi",
+        "given": "Yanjun"
+      },
+      {
+        "family": "Humphrey",
+        "given": "Marty"
+      }
+    ],
+    "year": 2022,
+    "volume": "10",
+    "issue": "3",
+    "page": "1848-1863",
+    "article-number": null
+  },
+  {
+    "query": "10.1109/tsc.2024.3354062",
+    "DOI": "10.1109/tsc.2024.3354062",
+    "title": "Autoscaling Solutions for Cloud Applications Under Dynamic Workloads",
+    "journal": "IEEE Transactions on Services Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Quattrocchi",
+        "given": "Giovanni"
+      },
+      {
+        "family": "Incerto",
+        "given": "Emilio"
+      },
+      {
+        "family": "Pinciroli",
+        "given": "Riccardo"
+      },
+      {
+        "family": "Trubiani",
+        "given": "Catia"
+      },
+      {
+        "family": "Baresi",
+        "given": "Luciano"
+      }
+    ],
+    "year": 2024,
+    "volume": "17",
+    "issue": "3",
+    "page": "804-820",
+    "article-number": null
+  },
+  {
+    "query": "10.3390/app11093835",
+    "DOI": "10.3390/app11093835",
+    "title": "Deep Learning-Based Autoscaling Using Bidirectional Long Short-Term Memory for Kubernetes",
+    "journal": "Applied Sciences",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Dang-Quang",
+        "given": "Nhat-Minh"
+      },
+      {
+        "family": "Yoo",
+        "given": "Myungsik"
+      }
+    ],
+    "year": 2021,
+    "volume": "11",
+    "issue": "9",
+    "page": "3835",
+    "article-number": null
+  },
+  {
+    "query": "10.1109/access.2017.2657006",
+    "DOI": "10.1109/access.2017.2657006",
+    "title": "C2PS: A Digital Twin Architecture Reference Model for the Cloud-Based Cyber-Physical Systems",
+    "journal": "IEEE Access",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Alam",
+        "given": "Kazi Masudul"
+      },
+      {
+        "family": "El Saddik",
+        "given": "Abdulmotaleb"
+      }
+    ],
+    "year": 2017,
+    "volume": "5",
+    "issue": null,
+    "page": "2050-2062",
+    "article-number": null
+  },
+  {
+    "query": "10.1016/j.asoc.2025.113825",
+    "DOI": "10.1016/j.asoc.2025.113825",
+    "title": "Dual-splitting conformal prediction for multi-step time series forecasting",
+    "journal": "Applied Soft Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Yu",
+        "given": "Qingdi"
+      },
+      {
+        "family": "Cao",
+        "given": "Zhiwei"
+      },
+      {
+        "family": "Wang",
+        "given": "Ruihang"
+      },
+      {
+        "family": "Yang",
+        "given": "Zhen"
+      },
+      {
+        "family": "Deng",
+        "given": "Lijun"
+      },
+      {
+        "family": "Hu",
+        "given": "Min"
+      },
+      {
+        "family": "Luo",
+        "given": "Yong"
+      },
+      {
+        "family": "Zhou",
+        "given": "Xin"
+      }
+    ],
+    "year": 2025,
+    "volume": "184",
+    "issue": null,
+    "page": "113825",
+    "article-number": "113825"
+  },
+  {
+    "query": "10.1016/j.neucom.2024.128434",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "query": "10.1007/s10994-024-06722-9",
+    "DOI": "10.1007/s10994-024-06722-9",
+    "title": "Conformal multistep-ahead multivariate time-series forecasting",
+    "journal": "Machine Learning",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Schlembach",
+        "given": "Filip"
+      },
+      {
+        "family": "Smirnov",
+        "given": "Evgueni"
+      },
+      {
+        "family": "Koprinska",
+        "given": "Irena"
+      },
+      {
+        "family": "Winands",
+        "given": "Mark H. M."
+      }
+    ],
+    "year": 2025,
+    "volume": "114",
+    "issue": "7",
+    "page": null,
+    "article-number": "165"
+  },
+  {
+    "query": "10.1016/j.knosys.2024.112489",
+    "DOI": "10.1016/j.knosys.2024.112489",
+    "title": "Optimizing multi-time series forecasting for enhanced cloud resource utilization based on machine learning",
+    "journal": "Knowledge-Based Systems",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Smendowski",
+        "given": "Mateusz"
+      },
+      {
+        "family": "Nawrocki",
+        "given": "Piotr"
+      }
+    ],
+    "year": 2024,
+    "volume": "304",
+    "issue": null,
+    "page": "112489",
+    "article-number": "112489"
+  },
+  {
+    "query": "10.1186/s13677-023-00576-7",
+    "DOI": "10.1186/s13677-023-00576-7",
+    "title": "Time series forecasting model for non-stationary series pattern extraction using deep learning and GARCH modeling",
+    "journal": "Journal of Cloud Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Han",
+        "given": "Huimin"
+      },
+      {
+        "family": "Liu",
+        "given": "Zehua"
+      },
+      {
+        "family": "Barrios Barrios",
+        "given": "Mauricio"
+      },
+      {
+        "family": "Li",
+        "given": "Jiuhao"
+      },
+      {
+        "family": "Zeng",
+        "given": "Zhixiong"
+      },
+      {
+        "family": "Sarhan",
+        "given": "Nadia"
+      },
+      {
+        "family": "Awwad",
+        "given": "Emad Mahrous"
+      }
+    ],
+    "year": 2024,
+    "volume": "13",
+    "issue": "1",
+    "page": null,
+    "article-number": "2"
+  },
+  {
+    "query": "10.1016/j.cosrev.2025.100791",
+    "DOI": "10.1016/j.cosrev.2025.100791",
+    "title": "Autoscaling techniques in cloud-native computing: A comprehensive survey",
+    "journal": "Computer Science Review",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Jeong",
+        "given": "Byeonghui"
+      },
+      {
+        "family": "Jeong",
+        "given": "Young-Sik"
+      }
+    ],
+    "year": 2025,
+    "volume": "58",
+    "issue": null,
+    "page": "100791",
+    "article-number": "100791"
+  },
+  {
+    "query": "10.1109/tcc.2023.3292378",
+    "DOI": "10.1109/tcc.2023.3292378",
+    "title": "Proactive Resource Autoscaling Scheme Based on SCINet for High-Performance Cloud Computing",
+    "journal": "IEEE Transactions on Cloud Computing",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Jeong",
+        "given": "Byeonghui"
+      },
+      {
+        "family": "Jeon",
+        "given": "Jueun"
+      },
+      {
+        "family": "Jeong",
+        "given": "Young-Sik"
+      }
+    ],
+    "year": 2023,
+    "volume": "11",
+    "issue": "4",
+    "page": "3497-3509",
+    "article-number": null
+  },
+  {
+    "query": "10.1007/s10115-016-0922-3",
+    "DOI": "10.1007/s10115-016-0922-3",
+    "title": "Cloud resource provisioning: survey, status and future research directions",
+    "journal": "Knowledge and Information Systems",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Singh",
+        "given": "Sukhpal"
+      },
+      {
+        "family": "Chana",
+        "given": "Inderveer"
+      }
+    ],
+    "year": 2016,
+    "volume": "49",
+    "issue": "3",
+    "page": "1005-1069",
+    "article-number": null
+  },
+  {
+    "query": "10.1002/spe.3135",
+    "DOI": "10.1002/spe.3135",
+    "title": "A review of microservices autoscaling with formal verification perspective",
+    "journal": "Software: Practice and Experience",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Jawaddi",
+        "given": "Siti Nuraishah Agos"
+      },
+      {
+        "family": "Johari",
+        "given": "Muhammad Hamizan"
+      },
+      {
+        "family": "Ismail",
+        "given": "Azlan"
+      }
+    ],
+    "year": 2022,
+    "volume": "52",
+    "issue": "11",
+    "page": "2476-2495",
+    "article-number": null
+  },
+  {
+    "query": "10.1016/j.sysarc.2024.103120",
+    "DOI": "10.1016/j.sysarc.2024.103120",
+    "title": "A comprehensive survey of digital twins: Applications, technologies and security challenges",
+    "journal": "Journal of Systems Architecture",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Jeremiah",
+        "given": "Sekione Reward"
+      },
+      {
+        "family": "El Azzaoui",
+        "given": "Abir"
+      },
+      {
+        "family": "Xiong",
+        "given": "Neal N."
+      },
+      {
+        "family": "Park",
+        "given": "Jong Hyuk"
+      }
+    ],
+    "year": 2024,
+    "volume": "151",
+    "issue": null,
+    "page": "103120",
+    "article-number": "103120"
+  },
+  {
+    "query": "10.1016/j.future.2025.107833",
+    "DOI": "10.1016/j.future.2025.107833",
+    "title": "Enhancing the output of time series forecasting algorithms for cloud resource provisioning",
+    "journal": "Future Generation Computer Systems",
+    "type": "journal-article",
+    "authors": [
+      {
+        "family": "Agulló",
+        "given": "Ferran"
+      },
+      {
+        "family": "Gutierrez-Torre",
+        "given": "Alberto"
+      },
+      {
+        "family": "Torres",
+        "given": "Jordi"
+      },
+      {
+        "family": "Berral",
+        "given": "Josep Ll."
+      }
+    ],
+    "year": 2025,
+    "volume": "170",
+    "issue": null,
+    "page": "107833",
+    "article-number": "107833"
+  }
+]

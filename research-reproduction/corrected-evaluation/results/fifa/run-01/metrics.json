@@ -1,0 +1,73 @@
+{
+  "dataset": "fifa",
+  "run_id": "run-01",
+  "method": "causal_rolling_one_minute_train_only_scaling",
+  "seed": 42,
+  "MSE": 3.3495559688673984e-05,
+  "RMSE": 0.005787534854208135,
+  "MAE": 0.0030522744310158764,
+  "R2": 0.9977524436124781,
+  "raw_count_metrics": {
+    "MSE": 793112.2545476689,
+    "RMSE": 890.5685007609852,
+    "MAE": 469.67483262143,
+    "R2": 0.9977524436124781
+  },
+  "prophet_only_metrics": {
+    "MSE": 0.01459360037816544,
+    "RMSE": 0.12080397500978782,
+    "MAE": 0.05885150191016923,
+    "R2": 0.020767527046883116
+  },
+  "last_observation_metrics": {
+    "MSE": 2.4570429553338388e-05,
+    "RMSE": 0.004956856821952636,
+    "MAE": 0.002432182219771401,
+    "R2": 0.9983513209989611
+  },
+  "n_rows": 125300,
+  "outer_train_rows": 87710,
+  "outer_test_rows": 37590,
+  "test_scored": 37590,
+  "test_gap_targets_excluded": 0,
+  "fit_pairs": 70161,
+  "validation_pairs": 17541,
+  "scale_last_row": 70168,
+  "neural_validation_first_target": 70169,
+  "history": {
+    "loss": [
+      0.00011840944353025407,
+      2.5147923224722035e-05,
+      2.5008039301610552e-05,
+      2.4888307962100953e-05,
+      2.478182977938559e-05,
+      2.4687560653546825e-05
+    ],
+    "val_loss": [
+      8.654387056594715e-05,
+      8.70716103236191e-05,
+      8.896633516997099e-05,
+      9.231701551470906e-05,
+      9.692209278000519e-05,
+      0.00010136433411389589
+    ]
+  },
+  "epochs_completed": 6,
+  "best_validation_epoch": 1,
+  "raw_scaler": {
+    "min": [
+      1.0
+    ],
+    "max": [
+      153878.0
+    ]
+  },
+  "residual_scaler": null,
+  "prophet_all_rows_batch_prediction_ms": 16314.50009999935,
+  "lstm_test_batch_prediction_ms": 2069.041200000356,
+  "timing_not_comparable_to_paper": true,
+  "data_sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be",
+  "script_sha256": "53d814773c2763528a345ea425cf3df3427b3368274a60600b2a5a9e63b8905c",
+  "validation_scope": "conditional neural validation within outer Prophet training; not independent full-pipeline validation",
+  "normalization_comparison": "FIFA corrected scaler fitted on early training prefix; raw-count and common-author-scale scores required for direct comparison"
+}

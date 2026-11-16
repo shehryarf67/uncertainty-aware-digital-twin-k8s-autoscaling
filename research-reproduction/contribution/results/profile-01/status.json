@@ -1,0 +1,5 @@
+{
+  "status": "completed",
+  "profile_blocks": 30,
+  "scope": "separate CPU service, five-second offered load and fixed three-second drain per cycle"
+}

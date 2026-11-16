@@ -1,0 +1,115 @@
+{
+  "commit": "354f0042ae7d5812dc7a44335a56b4992e853483",
+  "repository_clean": true,
+  "datasets": {
+    "nasa": {
+      "file": "baseline-original/datasets/nasa.csv",
+      "sha256": "c7aaad88ea28924a259feab54386258cfc846833ce2b682b6901e5d51735539b",
+      "n_rows": 81396,
+      "total_requests": 3461612,
+      "first": "1995-07-01 00:00:00",
+      "last": "1995-08-31 23:59:00",
+      "zero_rows": 0,
+      "duplicate_timestamps": 0,
+      "missing_minutes": 7884,
+      "sorted": true,
+      "minimum_count": 1,
+      "maximum_count": 405,
+      "prophet_train_rows": 56977,
+      "test_rows": 24419,
+      "last_train_timestamp": "1995-08-14 23:59:00",
+      "first_test_timestamp": "1995-08-15 00:00:00",
+      "lstm_train_pairs": 56976,
+      "lstm_test_pairs": 24419,
+      "lstm_fit_pairs": 45580,
+      "lstm_validation_pairs": 11396
+    },
+    "fifa": {
+      "file": "baseline-original/datasets/fifa.csv",
+      "sha256": "5f4f1a85aae9b657215f53d09eb3d422ee27357ede7fc1df5bb55323546a80be",
+      "n_rows": 125300,
+      "total_requests": 1352804107,
+      "first": "1998-04-30 21:30:00",
+      "last": "1998-07-26 21:59:00",
+      "zero_rows": 0,
+      "duplicate_timestamps": 0,
+      "missing_minutes": 10,
+      "sorted": true,
+      "minimum_count": 1,
+      "maximum_count": 229426,
+      "prophet_train_rows": 87710,
+      "test_rows": 37590,
+      "last_train_timestamp": "1998-06-30 19:29:00",
+      "first_test_timestamp": "1998-06-30 19:30:00",
+      "lstm_train_pairs": 87709,
+      "lstm_test_pairs": 37590,
+      "lstm_fit_pairs": 70167,
+      "lstm_validation_pairs": 17542
+    }
+  },
+  "notebooks": {
+    "nasa": {
+      "file": "Hybrid Model - NASA - Prophet LSTM.ipynb",
+      "sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4",
+      "selected_source_cells_zero_based": {
+        "1": "!pip install prophet\n!pip install scikit-learn\n!pip install tensorflow\n!pip install setuptools\n!pip install keras-tuner",
+        "2": "import pandas as pd\nfrom prophet import Prophet\nfrom sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score\nfrom sklearn.preprocessing import MinMaxScaler\nfrom sklearn.model_selection import train_test_split\nimport tensorflow as tf\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import LSTM, Dense\nfrom tensorflow.keras.callbacks import EarlyStopping\nimport keras_tuner as kt\nimport numpy as np\nimport time\nimport matplotlib.pyplot as plt\nfrom datetime import datetime\nfrom prophet.serialize import model_to_json, model_from_json",
+        "5": "np.random.seed(42)\ntf.random.set_seed(42)",
+        "10": "train_df_nasa, test_df_nasa = train_test_split(df_nasa, test_size=0.3, random_state=42, shuffle=False)\n\nprint(f'NASA DATASET: Train Set: {train_df_nasa.shape} | Test Set: {test_df_nasa.shape}')",
+        "16": "model_one = Prophet(\n    growth='linear',\n    changepoint_prior_scale=5.1,\n    yearly_seasonality=False,\n    weekly_seasonality=20,\n    daily_seasonality=50,\n    seasonality_prior_scale=30\n)\nmodel_one.fit(train_df_nasa)",
+        "19": "forecast_test_df_nasa_analysis = test_df_nasa.copy()\nforecast_test_df_nasa_analysis = forecast_test_df_nasa_analysis.merge(forecast_test_df_nasa[['ds', 'yhat']], on='ds', how='left')\n\nmse = mean_squared_error(forecast_test_df_nasa_analysis['y'], forecast_test_df_nasa_analysis['yhat'])\nrmse = np.sqrt(mse)\nmae = mean_absolute_error(forecast_test_df_nasa_analysis['y'], forecast_test_df_nasa_analysis['yhat'])\nr2 = r2_score(forecast_test_df_nasa_analysis['y'], forecast_test_df_nasa_analysis['yhat'])\nmodel_one_time = (end_time - start_time) * 1000\n\nprint('=== Facebook Prophet Model Metrics ===')\nprint(f'MSE: {mse}')\nprint(f'RMSE: {rmse}')\nprint(f'MAE: {mae}')\nprint(f'R\u00b2: {r2}')\nprint(f'Prediction Time: {model_one_time}ms')",
+        "28": "scaler = MinMaxScaler(feature_range=(0, 1))\nscaled_df_nasa = scaler.fit_transform(df_nasa_residual[['residual']])",
+        "29": "def create_dataset(dataset, look_back):\n    X, y = [], []\n    for i in range(len(dataset) - look_back):\n        a = dataset[i:(i + look_back), 0]\n        X.append(a)\n        y.append(dataset[i + look_back, 0])\n    return np.array(X), np.array(y)",
+        "30": "look_back = 1\nX_nasa, y_nasa = create_dataset(scaled_df_nasa, look_back)",
+        "31": "X_train_nasa, X_test_nasa, y_train_nasa, y_test_nasa = train_test_split(X_nasa, y_nasa, test_size=0.3, random_state=42, shuffle=False)\n\nX_train_nasa = np.reshape(X_train_nasa, (X_train_nasa.shape[0], X_train_nasa.shape[1], 1))\nX_test_nasa = np.reshape(X_test_nasa, (X_test_nasa.shape[0], X_test_nasa.shape[1], 1))\n\nprint(f'NASA DATASET: Train Set: {X_train_nasa.shape} | Test Set: {X_test_nasa.shape}')",
+        "35": "early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)",
+        "37": "def build_model(hp):\n    model = Sequential()\n    model.add(LSTM(units=hp.Int('units', min_value=32, max_value=512, step=32), return_sequences=True, input_shape=(look_back, 1)))\n    model.add(LSTM(units=hp.Int('units', min_value=32, max_value=512, step=32), return_sequences=False))\n    model.add(Dense(1))\n    \n    model.compile(optimizer=hp.Choice('optimizer', values=['adam', 'rmsprop']), loss='mean_squared_error')\n    return model",
+        "42": "if not HYPERPARAMETER_TUNING:\n    model_two = Sequential()\n    model_two.add(LSTM(50, return_sequences=True, input_shape=(look_back, 1)))\n    model_two.add(LSTM(50, return_sequences=False))\n    model_two.add(Dense(1))\n    model_two.compile(optimizer='adam', loss='mean_squared_error')",
+        "46": "model_two.fit(X_train_nasa, y_train_nasa, epochs=20, batch_size=16, validation_split=0.2, callbacks=[early_stopping], verbose=1)",
+        "50": "mse = mean_squared_error(y_test_nasa_org[0], nasa_test_predict)\nrmse = np.sqrt(mse)\nmae = mean_absolute_error(y_test_nasa_org[0], nasa_test_predict)\nr2 = r2_score(y_test_nasa_org[0], nasa_test_predict)\nmodel_two_time = (end_time - start_time) * 1000\n\nprint('=== LSTM Residual Analysis Model Metrics ===')\nprint(f'MSE: {mse}')\nprint(f'RMSE: {rmse}')\nprint(f'MAE: {mae}')\nprint(f'R2: {r2}')\nprint(f'Prediction Time: {model_two_time}ms')",
+        "52": "nasa_combine_predict = np.concatenate((nasa_train_predict, nasa_test_predict))\n\nfinal_df_nasa = df_nasa_residual.copy()\n\nfinal_df_nasa['residual_predict'] = np.nan\nfinal_df_nasa['residual_predict'].iloc[0:len(nasa_combine_predict)] = nasa_combine_predict[:, 0]\nprint(f'NASA DATASET: Total Output: {final_df_nasa.shape[0]} | Loss: {final_df_nasa['residual_predict'].isna().sum()}')\n\nfinal_df_nasa['residual_predict'] = final_df_nasa['residual_predict'].fillna(final_df_nasa['residual'])\n\nfinal_df_nasa['y_predicted'] = final_df_nasa['yhat'] + final_df_nasa['residual_predict']\n\nfinal_df_nasa.head()",
+        "55": "mse = mean_squared_error(final_df_nasa_analysis['y'], final_df_nasa_analysis['y_predicted'])\nrmse = np.sqrt(mse)\nmae = mean_absolute_error(final_df_nasa_analysis['y'], final_df_nasa_analysis['y_predicted'])\nr2 = r2_score(final_df_nasa_analysis['y'], final_df_nasa_analysis['y_predicted'])\n\nprint('=== Hybrid Model Metrics ===')\nprint(f'MSE: {mse:.3f}')\nprint(f'RMSE: {rmse:.3f}')\nprint(f'MAE: {mae:.3f}')\nprint(f'R\u00b2: {r2:.3f}')\nprint(f'Prediction Time: {model_one_time + model_two_time}ms')"
+      }
+    },
+    "fifa": {
+      "file": "Hybrid Model - FIFA - Prophet LSTM.ipynb",
+      "sha256": "ebb862ba5a092ede38cb0353a8e2472b7688fb2665974cc9e46f2afd34d552e5",
+      "selected_source_cells_zero_based": {
+        "1": "!pip install prophet\n!pip install scikit-learn\n!pip install tensorflow\n!pip install setuptools",
+        "2": "import pandas as pd\nfrom prophet import Prophet\nfrom sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score\nfrom sklearn.preprocessing import MinMaxScaler\nfrom sklearn.model_selection import train_test_split\nimport tensorflow as tf\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import LSTM, Dense\nfrom tensorflow.keras.callbacks import EarlyStopping\nimport keras_tuner as kt\nimport numpy as np\nimport time\nimport matplotlib.pyplot as plt\nfrom datetime import datetime\nfrom prophet.serialize import model_to_json, model_from_json",
+        "5": "np.random.seed(42)\ntf.random.set_seed(42)",
+        "10": "scaler = MinMaxScaler(feature_range=(0, 1))\ndf_fifa['y'] = scaler.fit_transform(df_fifa[['y_us']])",
+        "11": "train_df_fifa, test_df_fifa = train_test_split(df_fifa, test_size=0.3, random_state=42, shuffle=False)\n\nprint(f'FIFA DATASET: Train Set: {train_df_fifa.shape} | Test Set: {test_df_fifa.shape}')",
+        "17": "model_one = Prophet(\n    growth='flat',\n    changepoint_prior_scale=5.1,\n    yearly_seasonality=False,\n    weekly_seasonality=20,\n    daily_seasonality=50,\n    seasonality_prior_scale=30\n)\nmodel_one.fit(train_df_fifa)",
+        "20": "forecast_test_df_fifa_analysis = test_df_fifa.copy()\nforecast_test_df_fifa_analysis = forecast_test_df_fifa_analysis.merge(forecast_test_df_fifa[['ds', 'yhat']], on='ds', how='left')\n\nmse = mean_squared_error(forecast_test_df_fifa_analysis['y'], forecast_test_df_fifa_analysis['yhat'])\nrmse = np.sqrt(mse)\nmae = mean_absolute_error(forecast_test_df_fifa_analysis['y'], forecast_test_df_fifa_analysis['yhat'])\nr2 = r2_score(forecast_test_df_fifa_analysis['y'], forecast_test_df_fifa_analysis['yhat'])\nmodel_one_time = (end_time - start_time) * 1000\n\nprint('=== Facebook Prophet Model Metrics ===')\nprint(f'MSE: {mse}')\nprint(f'RMSE: {rmse}')\nprint(f'MAE: {mae}')\nprint(f'R\u00b2: {r2}')\nprint(f'Prediction Time: {model_one_time}ms')",
+        "29": "def create_dataset(dataset, look_back):\n    X, y = [], []\n    dataset = np.array(dataset)\n    \n    for i in range(len(dataset) - look_back):\n        a = dataset[i:(i + look_back), 0]\n        X.append(a)\n        y.append(dataset[i + look_back, 0])\n    return np.array(X), np.array(y)",
+        "30": "look_back = 1\nX_fifa, y_fifa = create_dataset(df_fifa_residual[['residual']], look_back)",
+        "31": "X_train_fifa, X_test_fifa, y_train_fifa, y_test_fifa = train_test_split(X_fifa, y_fifa, test_size=0.3, random_state=42, shuffle=False)\n\nX_train_fifa = np.reshape(X_train_fifa, (X_train_fifa.shape[0], X_train_fifa.shape[1], 1))\nX_test_fifa = np.reshape(X_test_fifa, (X_test_fifa.shape[0], X_test_fifa.shape[1], 1))\n\nprint(f'FIFA DATASET: Train Set: {X_train_fifa.shape} | Test Set: {X_test_fifa.shape}')",
+        "35": "early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)",
+        "37": "def build_model(hp):\n    model = Sequential()\n    model.add(LSTM(units=hp.Int('units', min_value=32, max_value=512, step=32), return_sequences=True, input_shape=(look_back, 1)))\n    model.add(LSTM(units=hp.Int('units', min_value=32, max_value=512, step=32), return_sequences=False))\n    model.add(Dense(1))\n    \n    model.compile(optimizer=hp.Choice('optimizer', values=['adam', 'rmsprop']), loss='mean_squared_error')\n    return model",
+        "42": "if not HYPERPARAMETER_TUNING:\n    model_two = Sequential()\n    model_two.add(LSTM(50, return_sequences=True, input_shape=(look_back, 1)))\n    model_two.add(LSTM(50, return_sequences=False))\n    model_two.add(Dense(1))\n    model_two.compile(optimizer='adam', loss='mean_squared_error')",
+        "46": "model_two.fit(X_train_fifa, y_train_fifa, epochs=20, batch_size=16, validation_split=0.2, callbacks=[early_stopping], verbose=1)",
+        "50": "mse = mean_squared_error(y_test_fifa, fifa_test_predict)\nrmse = np.sqrt(mse)\nmae = mean_absolute_error(y_test_fifa, fifa_test_predict)\nr2 = r2_score(y_test_fifa, fifa_test_predict)\nmodel_two_time = (end_time - start_time) * 1000\n\nprint('=== LSTM Residual Analysis Model Metrics ===')\nprint(f'MSE: {mse}')\nprint(f'RMSE: {rmse}')\nprint(f'MAE: {mae}')\nprint(f'R2: {r2}')\nprint(f'Prediction Time: {model_two_time}ms')",
+        "52": "fifa_combine_predict = np.concatenate((fifa_train_predict, fifa_test_predict))\n\nfinal_df_fifa = df_fifa_residual.copy()\n\nfinal_df_fifa['residual_predict'] = np.nan\nfinal_df_fifa['residual_predict'].iloc[0:len(fifa_combine_predict)] = fifa_combine_predict[:, 0]\nprint(f'FIFA DATASET: Total Output: {final_df_fifa.shape[0]} | Loss: {final_df_fifa['residual_predict'].isna().sum()}')\n\nfinal_df_fifa['residual_predict'] = final_df_fifa['residual_predict'].fillna(final_df_fifa['residual'])\n\nfinal_df_fifa['y_predicted'] = final_df_fifa['yhat'] + final_df_fifa['residual_predict']\n\nfinal_df_fifa.head()",
+        "55": "mse = mean_squared_error(final_df_fifa_analysis['y'], final_df_fifa_analysis['y_predicted'])\nrmse = np.sqrt(mse)\nmae = mean_absolute_error(final_df_fifa_analysis['y'], final_df_fifa_analysis['y_predicted'])\nr2 = r2_score(final_df_fifa_analysis['y'], final_df_fifa_analysis['y_predicted'])\n\nprint('=== Hybrid Model Metrics ===')\nprint(f'MSE: {mse:.6f}')\nprint(f'RMSE: {rmse:.6f}')\nprint(f'MAE: {mae:.6f}')\nprint(f'R\u00b2: {r2:.6f}')\nprint(f'Prediction Time: {model_one_time + model_two_time}ms')"
+      }
+    }
+  },
+  "paper": "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2025.1509165/full",
+  "published_prophet_lstm": {
+    "nasa": {
+      "MSE": 63.836,
+      "RMSE": 7.99,
+      "MAE": 6.164,
+      "R2": 0.9,
+      "TPT_ms": 3492.0
+    },
+    "fifa": {
+      "MSE": 1.1e-05,
+      "RMSE": 0.003358,
+      "MAE": 0.000675,
+      "R2": 0.998318,
+      "TPT_ms": 3971.0
+    }
+  }
+}

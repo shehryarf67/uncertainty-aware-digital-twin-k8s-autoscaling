@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "seed": 202,
+  "controller": "point",
+  "protocol": "five-second traffic plus fixed three-second drain; randomized controller order; two warm-up cycles",
+  "order": [
+    "twin_only",
+    "point",
+    "workload_only",
+    "cpu_hpa",
+    "full"
+  ],
+  "elapsed_seconds": 130.14929531200005,
+  "p95_ms": 2035.5432526001323,
+  "p99_ms": 2095.871626579956,
+  "effective_p99_ms": 2095.871626579956,
+  "cpu_ms": 43.984365,
+  "failed": 56,
+  "slo_violation_fraction": 0.4328571428571429,
+  "requests": 1400,
+  "sampled_desired_pod_minutes": 7.0689726621166304,
+  "max_schedule_delay_ms": 39.39579599273202,
+  "phase_valid": true
+}

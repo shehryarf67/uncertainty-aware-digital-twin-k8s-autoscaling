@@ -1,0 +1,2570 @@
+{
+  "summary": {
+    "seed": 0,
+    "regime": "smooth",
+    "controller": "no_emergency",
+    "requests": 8076,
+    "violation_fraction": 0.0,
+    "p99_ms": 179.10717843609802,
+    "mean_desired_replicas": 13.0625,
+    "mean_ready_replicas": 12.71875,
+    "slo_met": true,
+    "arrivals_cpu_sha256": "6ce5ab369a45bb5e392c16422e2f72aec9599fcc2af8e23de0c2092eea552571"
+  },
+  "observations": [
+    {
+      "cycle": 0,
+      "desired": 8,
+      "ready": 8,
+      "target": 11,
+      "sample": {
+        "rps": 10.5,
+        "requests": 82,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 151.78419012263018,
+        "cpu_ms": 45.86375282307024,
+        "cpu_p90_ms": 64.39266601371747,
+        "desired": 8,
+        "ready": 8,
+        "clock_seconds": 8
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 21.5,
+        "upper_rps": 21.5,
+        "demand_margin": 0.0,
+        "cpu_estimate_ms": 64.39266601371747,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 2,
+        "estimated_startup_seconds": 8.0,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.19570199999918714
+      }
+    },
+    {
+      "cycle": 1,
+      "desired": 11,
+      "ready": 8,
+      "target": 11,
+      "sample": {
+        "rps": 10.0,
+        "requests": 80,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 188.18660682465796,
+        "cpu_ms": 43.21011367946276,
+        "cpu_p90_ms": 60.667065246026276,
+        "desired": 11,
+        "ready": 8,
+        "clock_seconds": 16
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 10.5,
+        "upper_rps": 10.5,
+        "demand_margin": 0.0,
+        "cpu_estimate_ms": 64.39266601371747,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 2,
+        "estimated_startup_seconds": 8.0,
+        "predicted_p99_ms": 162.15392288376407,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10498400000358288
+      }
+    },
+    {
+      "cycle": 2,
+      "desired": 11,
+      "ready": 11,
+      "target": 11,
+      "sample": {
+        "rps": 12.5,
+        "requests": 99,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 163.1095256779443,
+        "cpu_ms": 45.18015563977241,
+        "cpu_p90_ms": 66.96348314803846,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 24
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 20.0,
+        "upper_rps": 20.0,
+        "demand_margin": 0.0,
+        "cpu_estimate_ms": 66.96348314803846,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 12.0,
+        "predicted_p99_ms": 202.6172683202085,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09314199999721495
+      }
+    },
+    {
+      "cycle": 3,
+      "desired": 11,
+      "ready": 11,
+      "target": 11,
+      "sample": {
+        "rps": 13.75,
+        "requests": 113,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 158.13942060359793,
+        "cpu_ms": 44.04483276762919,
+        "cpu_p90_ms": 66.0395952970543,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 32
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 17.5,
+        "upper_rps": 20.75,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 66.96348314803846,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 12.0,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          false
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09720900000331767
+      }
+    },
+    {
+      "cycle": 4,
+      "desired": 11,
+      "ready": 11,
+      "target": 12,
+      "sample": {
+        "rps": 15.5,
+        "requests": 123,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 170.8657647249937,
+        "cpu_ms": 42.08496803802929,
+        "cpu_p90_ms": 57.039116051111755,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 40
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 20.75,
+        "upper_rps": 24.0,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 66.96348314803846,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 12.0,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.0925189999989584
+      }
+    },
+    {
+      "cycle": 5,
+      "desired": 12,
+      "ready": 11,
+      "target": 12,
+      "sample": {
+        "rps": 15.75,
+        "requests": 127,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 158.7517502494924,
+        "cpu_ms": 44.13294819139569,
+        "cpu_p90_ms": 63.546444884044384,
+        "desired": 12,
+        "ready": 11,
+        "clock_seconds": 48
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 16.5,
+        "upper_rps": 19.75,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 66.96348314803846,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 12.0,
+        "predicted_p99_ms": 201.39341958689093,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09440800000248828
+      }
+    },
+    {
+      "cycle": 6,
+      "desired": 12,
+      "ready": 12,
+      "target": 12,
+      "sample": {
+        "rps": 16.0,
+        "requests": 124,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 166.1809167736511,
+        "cpu_ms": 46.910089347990294,
+        "cpu_p90_ms": 66.16676699272075,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 56
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 16.75,
+        "upper_rps": 20.0,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 66.16676699272075,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 14.0,
+        "predicted_p99_ms": 201.40054698533388,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09401399999831028
+      }
+    },
+    {
+      "cycle": 7,
+      "desired": 12,
+      "ready": 12,
+      "target": 11,
+      "sample": {
+        "rps": 15.125,
+        "requests": 125,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 168.72471746820545,
+        "cpu_ms": 44.110705205829305,
+        "cpu_p90_ms": 60.32254421946962,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 64
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 16.0,
+        "upper_rps": 19.25,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 66.16676699272075,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 14.0,
+        "predicted_p99_ms": 201.9852575031972,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10034400000336063
+      }
+    },
+    {
+      "cycle": 8,
+      "desired": 11,
+      "ready": 11,
+      "target": 10,
+      "sample": {
+        "rps": 14.0,
+        "requests": 111,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 159.613992905483,
+        "cpu_ms": 41.30340772353561,
+        "cpu_p90_ms": 66.09541182547851,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 72
+      },
+      "decision": {
+        "target": 10,
+        "point_rps": 16.0,
+        "upper_rps": 19.25,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 66.16676699272075,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 14.0,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09696499999733987
+      }
+    },
+    {
+      "cycle": 9,
+      "desired": 10,
+      "ready": 10,
+      "target": 12,
+      "sample": {
+        "rps": 15.125,
+        "requests": 120,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 176.24896997546313,
+        "cpu_ms": 42.595127624813315,
+        "cpu_p90_ms": 71.8379012372014,
+        "desired": 10,
+        "ready": 10,
+        "clock_seconds": 80
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 18.5,
+        "upper_rps": 21.75,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 71.8379012372014,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 14.0,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.08644399999724328
+      }
+    },
+    {
+      "cycle": 10,
+      "desired": 12,
+      "ready": 10,
+      "target": 12,
+      "sample": {
+        "rps": 15.875,
+        "requests": 126,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 161.62112531871912,
+        "cpu_ms": 44.82226924881698,
+        "cpu_p90_ms": 63.192205742763335,
+        "desired": 12,
+        "ready": 10,
+        "clock_seconds": 88
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 18.125,
+        "upper_rps": 21.375,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 71.8379012372014,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 14.0,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09386600000027556
+      }
+    },
+    {
+      "cycle": 11,
+      "desired": 12,
+      "ready": 12,
+      "target": 12,
+      "sample": {
+        "rps": 15.0,
+        "requests": 121,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 161.9720214896526,
+        "cpu_ms": 43.61007263317288,
+        "cpu_p90_ms": 64.76995741117204,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 96
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 15.875,
+        "upper_rps": 19.125,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 71.8379012372014,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.0,
+        "predicted_p99_ms": 201.84738168472632,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.0985980000010045
+      }
+    },
+    {
+      "cycle": 12,
+      "desired": 12,
+      "ready": 12,
+      "target": 12,
+      "sample": {
+        "rps": 13.375,
+        "requests": 108,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 169.4755020331468,
+        "cpu_ms": 43.27999546194145,
+        "cpu_p90_ms": 63.704397225348906,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 104
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 15.875,
+        "upper_rps": 19.125,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 71.8379012372014,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.0,
+        "predicted_p99_ms": 201.84738168472632,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.13146100000227534
+      }
+    },
+    {
+      "cycle": 13,
+      "desired": 12,
+      "ready": 12,
+      "target": 11,
+      "sample": {
+        "rps": 13.75,
+        "requests": 111,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 173.33948731182437,
+        "cpu_ms": 46.541851848882715,
+        "cpu_p90_ms": 71.02339390307372,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 112
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 15.0,
+        "upper_rps": 18.25,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 71.02339390307372,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.0,
+        "predicted_p99_ms": 202.20184248451264,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.11218499999898768
+      }
+    },
+    {
+      "cycle": 14,
+      "desired": 11,
+      "ready": 11,
+      "target": 10,
+      "sample": {
+        "rps": 11.75,
+        "requests": 93,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 194.37059438170735,
+        "cpu_ms": 46.24584463915553,
+        "cpu_p90_ms": 73.33641334368463,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 120
+      },
+      "decision": {
+        "target": 10,
+        "point_rps": 13.75,
+        "upper_rps": 17.0,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 73.33641334368463,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.0,
+        "predicted_p99_ms": 202.92692625540252,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10440399999822603
+      }
+    },
+    {
+      "cycle": 15,
+      "desired": 10,
+      "ready": 10,
+      "target": 12,
+      "sample": {
+        "rps": 13.75,
+        "requests": 109,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 156.4715042316948,
+        "cpu_ms": 44.60820746905266,
+        "cpu_p90_ms": 62.65475475021784,
+        "desired": 10,
+        "ready": 10,
+        "clock_seconds": 128
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 19.75,
+        "upper_rps": 23.0,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 73.33641334368463,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.0,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.0954770000021199
+      }
+    },
+    {
+      "cycle": 16,
+      "desired": 12,
+      "ready": 10,
+      "target": 12,
+      "sample": {
+        "rps": 14.25,
+        "requests": 115,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 158.8418002282338,
+        "cpu_ms": 45.18836970029921,
+        "cpu_p90_ms": 62.11454549961859,
+        "desired": 12,
+        "ready": 10,
+        "clock_seconds": 136
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 15.75,
+        "upper_rps": 19.0,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 73.33641334368463,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.0,
+        "predicted_p99_ms": 202.01963088882067,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.0976490000041963
+      }
+    },
+    {
+      "cycle": 17,
+      "desired": 12,
+      "ready": 12,
+      "target": 12,
+      "sample": {
+        "rps": 12.375,
+        "requests": 98,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 173.16217527447841,
+        "cpu_ms": 45.473291408166176,
+        "cpu_p90_ms": 65.36238557504136,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 144
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 14.25,
+        "upper_rps": 17.5,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 73.33641334368463,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.5,
+        "predicted_p99_ms": 201.04752871034015,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10077799999663739
+      }
+    },
+    {
+      "cycle": 18,
+      "desired": 12,
+      "ready": 12,
+      "target": 13,
+      "sample": {
+        "rps": 14.625,
+        "requests": 118,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 166.87941481722132,
+        "cpu_ms": 45.39247038656184,
+        "cpu_p90_ms": 69.5616824242183,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 152
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 21.375,
+        "upper_rps": 24.625,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.5616824242183,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.5,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10507300000028863
+      }
+    },
+    {
+      "cycle": 19,
+      "desired": 13,
+      "ready": 12,
+      "target": 13,
+      "sample": {
+        "rps": 11.75,
+        "requests": 92,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 164.3689349318055,
+        "cpu_ms": 46.56425368120188,
+        "cpu_p90_ms": 67.82903494342406,
+        "desired": 13,
+        "ready": 12,
+        "clock_seconds": 160
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 14.625,
+        "upper_rps": 17.875,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.5616824242183,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.5,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.20895299999779127
+      }
+    },
+    {
+      "cycle": 20,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 10.875,
+        "requests": 90,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 177.9757460785248,
+        "cpu_ms": 43.93289082477699,
+        "cpu_p90_ms": 67.80590642294788,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 168
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 14.625,
+        "upper_rps": 17.875,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.5616824242183,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.75,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.20228199999650087
+      }
+    },
+    {
+      "cycle": 21,
+      "desired": 13,
+      "ready": 13,
+      "target": 14,
+      "sample": {
+        "rps": 14.625,
+        "requests": 115,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 180.6450159880422,
+        "cpu_ms": 48.271571406045666,
+        "cpu_p90_ms": 66.36256195296245,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 176
+      },
+      "decision": {
+        "target": 14,
+        "point_rps": 25.875,
+        "upper_rps": 29.125,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.5616824242183,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.75,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1530870000010509
+      }
+    },
+    {
+      "cycle": 22,
+      "desired": 14,
+      "ready": 13,
+      "target": 14,
+      "sample": {
+        "rps": 12.875,
+        "requests": 104,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 175.61482487788106,
+        "cpu_ms": 46.17881445156032,
+        "cpu_p90_ms": 66.17916983506171,
+        "desired": 14,
+        "ready": 13,
+        "clock_seconds": 184
+      },
+      "decision": {
+        "target": 14,
+        "point_rps": 14.625,
+        "upper_rps": 17.875,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 67.82903494342406,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.75,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.11773899999667492
+      }
+    },
+    {
+      "cycle": 23,
+      "desired": 14,
+      "ready": 14,
+      "target": 14,
+      "sample": {
+        "rps": 12.625,
+        "requests": 102,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 179.79780748661648,
+        "cpu_ms": 41.8033291462781,
+        "cpu_p90_ms": 69.19009467667226,
+        "desired": 14,
+        "ready": 14,
+        "clock_seconds": 192
+      },
+      "decision": {
+        "target": 14,
+        "point_rps": 14.625,
+        "upper_rps": 17.875,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.19009467667226,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.12124999999940655
+      }
+    },
+    {
+      "cycle": 24,
+      "desired": 14,
+      "ready": 14,
+      "target": 13,
+      "sample": {
+        "rps": 11.875,
+        "requests": 95,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 175.80799980637386,
+        "cpu_ms": 44.59633421940752,
+        "cpu_p90_ms": 59.48615858426165,
+        "desired": 14,
+        "ready": 14,
+        "clock_seconds": 200
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 12.875,
+        "upper_rps": 16.125,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.19009467667226,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10146599999671935
+      }
+    },
+    {
+      "cycle": 25,
+      "desired": 13,
+      "ready": 13,
+      "target": 12,
+      "sample": {
+        "rps": 11.375,
+        "requests": 89,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 172.13789424299623,
+        "cpu_ms": 43.80093363406976,
+        "cpu_p90_ms": 67.96045862862555,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 208
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 12.625,
+        "upper_rps": 15.875,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.19009467667226,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09593400000085239
+      }
+    },
+    {
+      "cycle": 26,
+      "desired": 12,
+      "ready": 12,
+      "target": 11,
+      "sample": {
+        "rps": 12.75,
+        "requests": 104,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 176.56394702527052,
+        "cpu_ms": 45.11692261169135,
+        "cpu_p90_ms": 65.99904378501505,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 216
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 16.875,
+        "upper_rps": 20.125,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.19009467667226,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.12371500000085689
+      }
+    },
+    {
+      "cycle": 27,
+      "desired": 11,
+      "ready": 11,
+      "target": 11,
+      "sample": {
+        "rps": 13.375,
+        "requests": 106,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 220.4027162900052,
+        "cpu_ms": 45.54744947241499,
+        "cpu_p90_ms": 75.4906027960939,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 224
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 15.25,
+        "upper_rps": 18.5,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 75.4906027960939,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.09864600000497603
+      }
+    },
+    {
+      "cycle": 28,
+      "desired": 11,
+      "ready": 11,
+      "target": 11,
+      "sample": {
+        "rps": 13.375,
+        "requests": 106,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 168.99633988702442,
+        "cpu_ms": 46.913006450513755,
+        "cpu_p90_ms": 65.6897253438574,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 232
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 13.375,
+        "upper_rps": 16.625,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 75.4906027960939,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 201.80518681916536,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.21870000000490109
+      }
+    },
+    {
+      "cycle": 29,
+      "desired": 11,
+      "ready": 11,
+      "target": 12,
+      "sample": {
+        "rps": 14.75,
+        "requests": 119,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 172.71768142628304,
+        "cpu_ms": 45.48521975421075,
+        "cpu_p90_ms": 70.11661079116332,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 240
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 18.875,
+        "upper_rps": 22.125,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 75.4906027960939,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1791350000033276
+      }
+    },
+    {
+      "cycle": 30,
+      "desired": 12,
+      "ready": 11,
+      "target": 12,
+      "sample": {
+        "rps": 15.875,
+        "requests": 127,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 159.52031939968208,
+        "cpu_ms": 45.88663051103092,
+        "cpu_p90_ms": 66.75184867216166,
+        "desired": 12,
+        "ready": 11,
+        "clock_seconds": 248
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 19.25,
+        "upper_rps": 22.5,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 75.4906027960939,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.14798400000159972
+      }
+    },
+    {
+      "cycle": 31,
+      "desired": 12,
+      "ready": 12,
+      "target": 12,
+      "sample": {
+        "rps": 14.625,
+        "requests": 117,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 184.2748361868007,
+        "cpu_ms": 45.267220071324815,
+        "cpu_p90_ms": 67.91232434160648,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 256
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 15.875,
+        "upper_rps": 19.125,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 70.11661079116332,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9375,
+        "predicted_p99_ms": 201.55647306266147,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.11691800000335206
+      }
+    },
+    {
+      "cycle": 32,
+      "desired": 12,
+      "ready": 12,
+      "target": 16,
+      "sample": {
+        "rps": 18.375,
+        "requests": 145,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 193.08343071585682,
+        "cpu_ms": 47.10407192755031,
+        "cpu_p90_ms": 69.87595338066333,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 264
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 29.625,
+        "upper_rps": 32.875,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 70.11661079116332,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10701400000101557
+      }
+    },
+    {
+      "cycle": 33,
+      "desired": 16,
+      "ready": 12,
+      "target": 16,
+      "sample": {
+        "rps": 21.125,
+        "requests": 169,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 173.679263669386,
+        "cpu_ms": 43.99241455956348,
+        "cpu_p90_ms": 65.10954707465106,
+        "desired": 16,
+        "ready": 12,
+        "clock_seconds": 272
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 29.375,
+        "upper_rps": 32.625,
+        "demand_margin": 3.25,
+        "cpu_estimate_ms": 69.87595338066333,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1254400000050282
+      }
+    },
+    {
+      "cycle": 34,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 20.625,
+        "requests": 163,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 170.65294910672782,
+        "cpu_ms": 43.990210039498024,
+        "cpu_p90_ms": 66.67673833792308,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 280
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 21.125,
+        "upper_rps": 26.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.87595338066333,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.96875,
+        "predicted_p99_ms": 201.92102718817617,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          false
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1559709999980896
+      }
+    },
+    {
+      "cycle": 35,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 23.25,
+        "requests": 188,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 182.62736985038825,
+        "cpu_ms": 47.363698469131585,
+        "cpu_p90_ms": 64.77260945289389,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 288
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 31.125,
+        "upper_rps": 36.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.87595338066333,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.96875,
+        "predicted_p99_ms": 378.47905250499355,
+        "supported": true,
+        "feasible": false,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1215730000012627
+      }
+    },
+    {
+      "cycle": 36,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 22.875,
+        "requests": 185,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 178.52378863422587,
+        "cpu_ms": 48.734795760218745,
+        "cpu_p90_ms": 66.53717848673628,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 296
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 23.25,
+        "upper_rps": 28.5,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 66.67673833792308,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.96875,
+        "predicted_p99_ms": 202.3008520240047,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.11759499999897116
+      }
+    },
+    {
+      "cycle": 37,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 23.75,
+        "requests": 189,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 172.55249377508903,
+        "cpu_ms": 47.106560528263714,
+        "cpu_p90_ms": 68.68506660807026,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 304
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 26.375,
+        "upper_rps": 31.625,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.68506660807026,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.96875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.13417299999929355
+      }
+    },
+    {
+      "cycle": 38,
+      "desired": 16,
+      "ready": 16,
+      "target": 15,
+      "sample": {
+        "rps": 22.625,
+        "requests": 180,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 191.30377201969984,
+        "cpu_ms": 46.200500455100055,
+        "cpu_p90_ms": 65.12764813815969,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 312
+      },
+      "decision": {
+        "target": 15,
+        "point_rps": 23.75,
+        "upper_rps": 29.0,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.68506660807026,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.96875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10360000000275704
+      }
+    },
+    {
+      "cycle": 39,
+      "desired": 15,
+      "ready": 15,
+      "target": 16,
+      "sample": {
+        "rps": 25.5,
+        "requests": 206,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 155.04748112100287,
+        "cpu_ms": 45.409435319287915,
+        "cpu_p90_ms": 63.51920121998287,
+        "desired": 15,
+        "ready": 15,
+        "clock_seconds": 320
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 34.125,
+        "upper_rps": 39.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.68506660807026,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.96875,
+        "predicted_p99_ms": 378.47905250499355,
+        "supported": true,
+        "feasible": false,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1821789999993939
+      }
+    },
+    {
+      "cycle": 40,
+      "desired": 16,
+      "ready": 15,
+      "target": 16,
+      "sample": {
+        "rps": 24.125,
+        "requests": 192,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 189.03988906459963,
+        "cpu_ms": 44.111242274347525,
+        "cpu_p90_ms": 61.6532464612837,
+        "desired": 16,
+        "ready": 15,
+        "clock_seconds": 328
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 25.5,
+        "upper_rps": 30.75,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.68506660807026,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.96875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.16655600000348159
+      }
+    },
+    {
+      "cycle": 41,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 23.0,
+        "requests": 185,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 175.78840827644063,
+        "cpu_ms": 44.736085922671435,
+        "cpu_p90_ms": 68.80773950434083,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 336
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 25.5,
+        "upper_rps": 30.75,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.80773950434083,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.128936000002966
+      }
+    },
+    {
+      "cycle": 42,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 24.375,
+        "requests": 192,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 158.7788981765302,
+        "cpu_ms": 44.95766572844059,
+        "cpu_p90_ms": 65.11411850931373,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 344
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 28.5,
+        "upper_rps": 33.75,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.80773950434083,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.12353999999703547
+      }
+    },
+    {
+      "cycle": 43,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 20.375,
+        "requests": 166,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 179.51531702678957,
+        "cpu_ms": 45.995123010224695,
+        "cpu_p90_ms": 66.38367159347584,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 352
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 24.375,
+        "upper_rps": 29.625,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.80773950434083,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.13441299999783496
+      }
+    },
+    {
+      "cycle": 44,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 22.0,
+        "requests": 174,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 177.5748690732121,
+        "cpu_ms": 47.01934917949416,
+        "cpu_p90_ms": 67.88660336017564,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 360
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 26.875,
+        "upper_rps": 32.125,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.80773950434083,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.12401100000403176
+      }
+    },
+    {
+      "cycle": 45,
+      "desired": 16,
+      "ready": 16,
+      "target": 15,
+      "sample": {
+        "rps": 19.5,
+        "requests": 157,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 181.571194443105,
+        "cpu_ms": 45.584888349609066,
+        "cpu_p90_ms": 67.52547952956742,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 368
+      },
+      "decision": {
+        "target": 15,
+        "point_rps": 22.0,
+        "upper_rps": 27.25,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 67.88660336017564,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 202.78434359856794,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.10658699999765986
+      }
+    },
+    {
+      "cycle": 46,
+      "desired": 15,
+      "ready": 15,
+      "target": 14,
+      "sample": {
+        "rps": 20.125,
+        "requests": 160,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 166.50569757790433,
+        "cpu_ms": 46.74478462053449,
+        "cpu_p90_ms": 69.44356106909146,
+        "desired": 15,
+        "ready": 15,
+        "clock_seconds": 376
+      },
+      "decision": {
+        "target": 14,
+        "point_rps": 22.0,
+        "upper_rps": 27.25,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.44356106909146,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.11991800000288322
+      }
+    },
+    {
+      "cycle": 47,
+      "desired": 14,
+      "ready": 14,
+      "target": 13,
+      "sample": {
+        "rps": 18.375,
+        "requests": 150,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 186.3765865481553,
+        "cpu_ms": 46.38750562688394,
+        "cpu_p90_ms": 65.56575185656799,
+        "desired": 14,
+        "ready": 14,
+        "clock_seconds": 384
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 20.125,
+        "upper_rps": 25.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.44356106909146,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.11356999999634354
+      }
+    },
+    {
+      "cycle": 48,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 16.375,
+        "requests": 130,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 140.89998565577844,
+        "cpu_ms": 42.46686814437422,
+        "cpu_p90_ms": 60.85939491489379,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 392
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 20.125,
+        "upper_rps": 25.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.44356106909146,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.172888000001592
+      }
+    },
+    {
+      "cycle": 49,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 15.0,
+        "requests": 117,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 178.31618035494324,
+        "cpu_ms": 47.79257400982253,
+        "cpu_p90_ms": 70.56446361487016,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 400
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 18.375,
+        "upper_rps": 23.625,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 70.56446361487016,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.16909400000031383
+      }
+    },
+    {
+      "cycle": 50,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 15.125,
+        "requests": 125,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 158.688683400992,
+        "cpu_ms": 42.065298662475676,
+        "cpu_p90_ms": 62.662224581111495,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 408
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 16.375,
+        "upper_rps": 21.625,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 70.56446361487016,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 202.153805409169,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.15405399999934843
+      }
+    },
+    {
+      "cycle": 51,
+      "desired": 13,
+      "ready": 13,
+      "target": 12,
+      "sample": {
+        "rps": 12.375,
+        "requests": 97,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 142.37427010482162,
+        "cpu_ms": 42.74108147693362,
+        "cpu_p90_ms": 62.731825339607745,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 416
+      },
+      "decision": {
+        "target": 12,
+        "point_rps": 15.125,
+        "upper_rps": 20.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 70.56446361487016,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 202.41162870280453,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.13390600000207087
+      }
+    },
+    {
+      "cycle": 52,
+      "desired": 12,
+      "ready": 12,
+      "target": 11,
+      "sample": {
+        "rps": 13.0,
+        "requests": 106,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 193.8139934625355,
+        "cpu_ms": 47.78739173902164,
+        "cpu_p90_ms": 65.95880190717168,
+        "desired": 12,
+        "ready": 12,
+        "clock_seconds": 424
+      },
+      "decision": {
+        "target": 11,
+        "point_rps": 15.125,
+        "upper_rps": 20.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 70.56446361487016,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1322840000028691
+      }
+    },
+    {
+      "cycle": 53,
+      "desired": 11,
+      "ready": 11,
+      "target": 10,
+      "sample": {
+        "rps": 10.875,
+        "requests": 84,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 182.75037181199536,
+        "cpu_ms": 46.701310266925645,
+        "cpu_p90_ms": 69.3767746224001,
+        "desired": 11,
+        "ready": 11,
+        "clock_seconds": 432
+      },
+      "decision": {
+        "target": 10,
+        "point_rps": 13.0,
+        "upper_rps": 18.25,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.3767746224001,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.11955599999424749
+      }
+    },
+    {
+      "cycle": 54,
+      "desired": 10,
+      "ready": 10,
+      "target": 13,
+      "sample": {
+        "rps": 13.5,
+        "requests": 108,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 190.02647508363575,
+        "cpu_ms": 46.21412638001917,
+        "cpu_p90_ms": 64.15253809251209,
+        "desired": 10,
+        "ready": 10,
+        "clock_seconds": 440
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 21.375,
+        "upper_rps": 26.625,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.3767746224001,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1109069999998269
+      }
+    },
+    {
+      "cycle": 55,
+      "desired": 13,
+      "ready": 10,
+      "target": 13,
+      "sample": {
+        "rps": 10.0,
+        "requests": 82,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 182.35618690269433,
+        "cpu_ms": 48.78005572892319,
+        "cpu_p90_ms": 68.29278048124715,
+        "desired": 13,
+        "ready": 10,
+        "clock_seconds": 448
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 13.5,
+        "upper_rps": 18.75,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.3767746224001,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.984375,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.1327060000022584
+      }
+    },
+    {
+      "cycle": 56,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 11.5,
+        "requests": 89,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 158.07498812877154,
+        "cpu_ms": 49.24824684737509,
+        "cpu_p90_ms": 64.06094215151595,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 456
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 16.0,
+        "upper_rps": 21.25,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.3767746224001,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9921875,
+        "predicted_p99_ms": 201.7320798006313,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.17739400000493788
+      }
+    },
+    {
+      "cycle": 57,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 13.875,
+        "requests": 112,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 172.2018273655658,
+        "cpu_ms": 46.384798992042306,
+        "cpu_p90_ms": 68.80924333390848,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 464
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 21.0,
+        "upper_rps": 26.25,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 68.80924333390848,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9921875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.14112899999929596
+      }
+    },
+    {
+      "cycle": 58,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 14.0,
+        "requests": 114,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 181.6510353572903,
+        "cpu_ms": 47.4352003167557,
+        "cpu_p90_ms": 71.95586920025316,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 472
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 14.375,
+        "upper_rps": 19.625,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 71.95586920025316,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9921875,
+        "predicted_p99_ms": 201.2253365148434,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.13058900000118
+      }
+    },
+    {
+      "cycle": 59,
+      "desired": 13,
+      "ready": 13,
+      "target": 13,
+      "sample": {
+        "rps": 14.125,
+        "requests": 111,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 175.0563445520221,
+        "cpu_ms": 44.09339134465478,
+        "cpu_p90_ms": 63.11170102395136,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 480
+      },
+      "decision": {
+        "target": 13,
+        "point_rps": 14.5,
+        "upper_rps": 19.75,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 71.95586920025316,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9921875,
+        "predicted_p99_ms": 201.29870594087382,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.15835699999655617
+      }
+    },
+    {
+      "cycle": 60,
+      "desired": 13,
+      "ready": 13,
+      "target": 16,
+      "sample": {
+        "rps": 17.125,
+        "requests": 139,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 166.11348267018568,
+        "cpu_ms": 46.0284275096207,
+        "cpu_p90_ms": 65.81772668064112,
+        "desired": 13,
+        "ready": 13,
+        "clock_seconds": 488
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 26.125,
+        "upper_rps": 31.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 71.95586920025316,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9921875,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.15344099999481386
+      }
+    },
+    {
+      "cycle": 61,
+      "desired": 16,
+      "ready": 13,
+      "target": 16,
+      "sample": {
+        "rps": 14.75,
+        "requests": 118,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 163.92634449338388,
+        "cpu_ms": 46.0972159634469,
+        "cpu_p90_ms": 66.84539346712857,
+        "desired": 16,
+        "ready": 13,
+        "clock_seconds": 496
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 17.125,
+        "upper_rps": 22.375,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 71.95586920025316,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.9921875,
+        "predicted_p99_ms": 200.52767282001923,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.13535400000108666
+      }
+    },
+    {
+      "cycle": 62,
+      "desired": 16,
+      "ready": 16,
+      "target": 16,
+      "sample": {
+        "rps": 17.0,
+        "requests": 137,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 168.19045351972355,
+        "cpu_ms": 46.60691565003209,
+        "cpu_p90_ms": 69.3590428884438,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 504
+      },
+      "decision": {
+        "target": 16,
+        "point_rps": 23.75,
+        "upper_rps": 29.0,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.3590428884438,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.99609375,
+        "predicted_p99_ms": 203.0085039000101,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.13506700000220917
+      }
+    },
+    {
+      "cycle": 63,
+      "desired": 16,
+      "ready": 16,
+      "target": 15,
+      "sample": {
+        "rps": 17.125,
+        "requests": 134,
+        "slo_bad_count": 0,
+        "slo_violation_fraction": 0.0,
+        "effective_p99_ms": 166.55105419123853,
+        "cpu_ms": 46.20312048489186,
+        "cpu_p90_ms": 66.85245016584871,
+        "desired": 16,
+        "ready": 16,
+        "clock_seconds": 512
+      },
+      "decision": {
+        "target": 15,
+        "point_rps": 17.5,
+        "upper_rps": 22.75,
+        "demand_margin": 5.25,
+        "cpu_estimate_ms": 69.3590428884438,
+        "safe_cpu_work_ms_per_second": 170.11560333333335,
+        "risk_capacity_factor": 1.0,
+        "reserve": 8,
+        "planning_horizon": 3,
+        "estimated_startup_seconds": 15.99609375,
+        "predicted_p99_ms": 200.8614880714329,
+        "supported": true,
+        "feasible": true,
+        "demand_coverage_updates": [
+          true
+        ],
+        "cumulative_violation_fraction": 0.0,
+        "budget_hold": false,
+        "emergency": false,
+        "elapsed_ms": 0.17067400000314592
+      }
+    }
+  ]
+}

@@ -1,81 +1,31 @@
-# Uncertainty-Aware Digital Twin for Kubernetes Autoscaling
+# Digital-Twin-Guided Kubernetes Autoscaling: Research Artifact
 
-This repository contains the implementation, experimental setup, and reproducibility materials for our Cloud Computing research project:
+This repository contains the Prophet–LSTM baseline reproduction and the later measured autoscaling study. The article is `research-reproduction/revision-20261114/paper/main_article.tex` (self-contained, two-column LaTeX). Numerical results come from saved real Kubernetes requests or explicitly identified simulations.
 
-**An Uncertainty-Aware Digital Twin for SLO-Constrained Predictive Autoscaling in Kubernetes**
+The measured system is a single-node K3s cluster on Ubuntu WSL2 with a CPU-bound test service; the real workload is generated traffic. The study does not claim a production-cloud deployment. Five primary repetitions per workload and three exploratory follow-up repetitions do not certify future SLO compliance. In the reserve-matched follow-up, native HPA matched the guarded controller's observed compliance using fewer desired pod-minutes. Do not interpret the main HPA comparison alone as evidence of a predictive-logic advantage.
 
-## Research Area
+## Evidence
 
-Digital Twins and Cloud Computing
+- `research-reproduction/revision-20261114/results/live/`: 75 valid primary comparisons plus a retained timing-invalid attempt, with per-request data and replica/decision observations.
+- `research-reproduction/revision-20261114/reserve-followup/`: 18 reserve-matched live comparisons, protocol and analysis.
+- `research-reproduction/revision-20261114/results/twin-validation/`: 18 independent response blocks.
+- `research-reproduction/revision-20261114/results/simulation/`: 1,000 queueing-plant rollouts, not live Kubernetes runs.
+- `research-reproduction/baseline-original/`, `baseline-experiments/`, `corrected-evaluation/`, `results/`, and `contribution/`: baseline and earlier work. The original author project and dataset provenance are documented in `research-reproduction/README-forecasting-baseline.md`.
 
-## Research Question
+The original Prophet–LSTM project is https://github.com/PasanBhanu/time-series-forcasting-with-facebook-prophet-lstm-hybrid-model, revision `354f0042ae7d5812dc7a44335a56b4992e853483`; the baseline reproduces released code behavior, while the corrected evaluation is separately labelled. Source datasets and derived traces have their original provenance and access conditions; see the baseline README before redistribution or reuse.
 
-Can an uncertainty-aware Digital Twin reduce SLO violations and resource over-provisioning compared with reactive and conventional predictive Kubernetes autoscaling under dynamic workloads?
+## Replay the audits
 
-## Project Overview
+Use Python 3.12 and the versions in `research-reproduction/contribution/requirements-linux-working.txt`, plus the environment inventory in `research-reproduction/revision-20261114/environment.json`. Work from `research-reproduction/revision-20261114`:
 
-Kubernetes commonly relies on reactive autoscaling mechanisms such as the Horizontal Pod Autoscaler (HPA), which respond to resource utilization after workload changes have already occurred. Predictive autoscaling can improve responsiveness by forecasting future demand, but its effectiveness depends heavily on the accuracy of workload predictions.
-
-This research proposes an uncertainty-aware Digital Twin that models the state and behaviour of a Kubernetes-hosted application and evaluates possible scaling decisions before they are applied to the real system. The goal is to determine whether Digital Twin-guided scaling can improve service-level objective compliance while reducing unnecessary resource provisioning under dynamic and unpredictable workloads.
-
-## Objectives
-
-- Design a Digital Twin representation of a Kubernetes-hosted application and its resource state.
-- Develop an uncertainty-aware predictive autoscaling mechanism using the Digital Twin.
-- Compare the proposed approach with Kubernetes HPA and a conventional predictive autoscaler.
-- Evaluate the approaches using performance, resource-efficiency, and scaling-stability metrics.
-
-## Proposed Experimental Environment
-
-The study is expected to use:
-
-- Kubernetes
-- Docker
-- Prometheus
-- Python
-- Locust or an equivalent workload-generation tool
-- A workload prediction model
-- A Digital Twin-based what-if evaluation component
-
-The exact implementation and experimental configuration may be refined as the research progresses.
-
-## Planned Evaluation Metrics
-
-The evaluation may include:
-
-- P95 and P99 response latency
-- SLO violation rate
-- CPU and memory utilization
-- Resource consumption / pod-minutes
-- Scaling response time
-- Number of scaling actions
-- Scaling oscillations
-- Workload prediction error
-- Digital Twin decision overhead
-
-## Repository Structure
-
-The repository will be expanded during the project and is expected to contain:
-
-```text
-.
-├── README.md
-├── src/
-├── experiments/
-├── configs/
-├── workloads/
-├── results/
-├── scripts/
-├── docs/
-└── requirements.txt
+```sh
+python analyze_followup.py
+python verify_simulation.py
+python analyze.py
 ```
 
-## Reproducibility
+These commands recompute the reported statistics from preserved outputs; they do not rerun the live experiments. The simulation serializer was repaired after its first attempt, and the verification records this serialization-only change. The original failed attempt remains preserved. Run `simulate.py` only in a fresh copy or after moving its existing output aside: it intentionally refuses to overwrite `results/simulation/`.
 
-All implementation code, experiment configurations, workload-generation scripts, and result-generation instructions required to reproduce the reported experiments will be added to this repository as the project progresses.
+To generate fresh Kubernetes observations, follow `revision-20261114/README.txt`, provision an isolated cluster, and adapt the documented local proxy and infrastructure paths. Those steps were measured on the stated WSL/K3s environment; portability to other clusters is not established. Use a fresh results directory to preserve existing runs. Reproduction may differ with hardware and scheduling.
 
-## Academic Project
-
-This research is being conducted as part of the **Cloud Computing 100-Day Research Assignment, 2026**.
-
-The repository will be maintained throughout the research period in accordance with the course reproducibility requirements.
+The LaTeX file can be compiled using a TeX distribution with `pgfplots`, `tikz`, `booktabs`, `xurl`, and standard LaTeX packages. Earlier notebooks and models retain the upstream source provenance and any associated license restrictions; no new blanket license is asserted for upstream materials.

@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "dataset": "nasa",
+  "run_id": "run-02",
+  "started_utc": "2026-10-09T10:36:13.552792+00:00",
+  "original_notebook_sha256": "f162f4fb8676d2965d231be86d81e3c9a5de798e35112e3d202c3e341295c9f4",
+  "source_cells_unchanged": true,
+  "changes": [
+    "created images directory",
+    "read-only fit-history capture after author cell 46",
+    "appended export cells",
+    "CPU intra-op threads=4, inter-op=2"
+  ],
+  "elapsed_seconds": 184.90193223953247,
+  "current_cell": 61,
+  "current_source": "\n# Reproduction instrumentation: export existing notebook state without retraining.\nimport json as _json\nfrom pathlib import Path as _Path\nimport platform as _platform\nimport importlib.metadata as _me",
+  "latest_epoch_message": "Epoch 6/20\n"
+}

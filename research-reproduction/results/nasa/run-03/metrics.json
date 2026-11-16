@@ -1,0 +1,65 @@
+{
+  "dataset": "nasa",
+  "run_id": "run-03",
+  "method": "authors_released_alignment_and_preprocessing",
+  "MSE": 64.283639450923,
+  "RMSE": 8.017707867646651,
+  "MAE": 6.2028217962148435,
+  "R2": 0.8994433403251884,
+  "TPT_ms": 4709.527254104614,
+  "prophet_prediction_ms": 3951.0092735290527,
+  "lstm_prediction_ms": 758.5179805755615,
+  "epochs_completed": 6,
+  "best_validation_epoch": 1,
+  "history": {
+    "loss": [
+      0.0022159810177981853,
+      0.001542394864372909,
+      0.0015382145065814257,
+      0.0015332605689764023,
+      0.0015288172289729118,
+      0.0015251915901899338
+    ],
+    "val_loss": [
+      0.0012348565505817533,
+      0.0012369775213301182,
+      0.0012461149599403143,
+      0.001256058574654162,
+      0.001263625337742269,
+      0.0012683423701673746
+    ]
+  },
+  "n_rows": 81396,
+  "n_train_prophet": 56977,
+  "n_test_scored": 24419,
+  "n_train_lstm": 56976,
+  "n_test_lstm": 24419,
+  "look_back": 1,
+  "growth": "linear",
+  "scaler": {
+    "min": [
+      -119.68262029950036
+    ],
+    "max": [
+      282.3398378966701
+    ]
+  },
+  "versions": {
+    "tensorflow": "2.17.0",
+    "keras": "3.4.1",
+    "prophet": "1.1.5",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "scikit-learn": "1.5.1",
+    "keras-tuner": "1.4.7",
+    "cmdstanpy": "1.2.4"
+  },
+  "python": "3.12.14",
+  "tensorflow_devices": [
+    "PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')"
+  ],
+  "author_numpy_seed": 42,
+  "author_tensorflow_seed": 42,
+  "python_random_seed": "not explicitly set by author notebook",
+  "final_row_truth_fallback": true
+}

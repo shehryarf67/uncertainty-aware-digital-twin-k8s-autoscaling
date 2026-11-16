@@ -1,0 +1,58 @@
+PRIMARY-SOURCE REFERENCE REVIEW — 28 October 2026
+
+The manuscript references were checked against publisher, official project,
+NeurIPS/JMLR or arXiv pages. Preprints are identified as preprints; publisher
+acceptance is not inferred from an arXiv identifier.
+
+Baseline: Guruge and Priyadarshana (2025), Frontiers in Computer Science,
+article 1509165. The prior baseline source audit and preserved original PDF
+provide the detailed paper/code comparison.
+https://doi.org/10.3389/fcomp.2025.1509165
+
+Prophet: Taylor and Letham, Forecasting at Scale, The American Statistician
+72(1), 37–45. DOI metadata uses the 2018 issue and 2017 online DOI.
+https://doi.org/10.1080/00031305.2017.1380080
+
+LSTM: Hochreiter and Schmidhuber, Neural Computation 9(8), 1735–1780 (1997).
+https://doi.org/10.1162/neco.1997.9.8.1735
+
+ACI: Gibbs and Candès, NeurIPS 34, 1660–1672 (2021).
+https://papers.neurips.cc/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html
+Online inference: Gibbs and Candès, JMLR 25(162), 1–36 (2024).
+https://jmlr.org/papers/v25/22-1218.html
+The rolling/clipped implementation here does not inherit their formal results.
+
+BACC: Fan Liu, Behrooz Farkiani, Guanqi Li, Patrick Crowley.
+https://arxiv.org/abs/2606.20575v2
+https://arxiv.org/html/2606.20575v2
+The version-2 full text dated 13 October 2026 includes request-latency as well
+as CPU objectives. The abstract page still emphasizes CPU. The full text is
+the basis of the manuscript's description. Service-risk profiling, calibrated
+forecasts and budget feedback overlap substantially with the broad proposal.
+Our frozen effective-P99 curve plus separate residual margin is a tested
+engineering choice, not proof of a new general architecture. No BACC performance
+comparison is claimed without running its system.
+
+KARMA: Julien Soulé, Jean-Paul Jamont, Michel Occello, Louis-Marie Traonouez,
+Paul Théron. Abstract/full author version describes a cluster-trace Twin,
+simulation-trained agents and transfer to a cluster.
+https://arxiv.org/abs/2505.21559v1
+
+SLO-Scaler: Shuo Wang, Xiaoxuan Sun, Shao-yu Huang, Bencheng Su, Shuo Xu,
+Netra Awate. Description in our manuscript is limited to the primary abstract's
+Bayesian prediction and dependency-aware scaling claims. Its full implementation
+was not reproduced, and its numerical results are not copied into our tables.
+https://arxiv.org/abs/2608.18390v1
+
+InferScale: Wen Huang, author version posted 25 October 2026. Its arXiv record
+reports an IEEE CLOUD publication, but the manuscript cites the verified arXiv
+author version rather than asserting independently checked publisher metadata.
+https://arxiv.org/abs/2610.34006v1
+https://arxiv.org/html/2610.34006v1
+
+Official operational references:
+https://kubernetes.io/docs/concepts/workloads/autoscaling/horizontal-pod-autoscale/
+https://keda.sh/docs/2.18/scalers/external/
+
+No blanket novelty, theoretical coverage, superiority over these systems, or
+production reliability claim is supported by this literature review.

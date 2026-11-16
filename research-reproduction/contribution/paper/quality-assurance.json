@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "pdf_pages": 10,
+  "all_final_pages_visually_reviewed": true,
+  "overleaf_errors": 0,
+  "overleaf_warnings": 0,
+  "tables": 6,
+  "embedded_vector_figures": 2,
+  "embedded_references": 11,
+  "root_main_file": "main_article_v1a_change_this.tex",
+  "only_one_root_tex": true,
+  "self_contained_tex": true,
+  "old_overleaf_files_preserved": 8,
+  "original_baseline_files_unchanged": 253,
+  "real_kubernetes_runs": 15,
+  "real_measured_requests": 21000,
+  "simulation_runs": 350,
+  "manuscript_reports_negative_and_noncompliant_outcomes": true,
+  "experimental_k3s_and_loopback_proxy_stopped": true,
+  "pdf_sha256": "a35817b03f96d159a4f3cbc45a55073b3e50af501c978c3d022185c3ec7715f5",
+  "tex_sha256": "bc3b8e7d1f6f1f9f54c3ba5368e53c57462b83d1d715ef4856717b1deb9e9a5e"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "future_prefix_invariance": true,
+  "delayed_horizon_scoring": true,
+  "reserve_and_maximum_limits": true,
+  "pending_capacity_not_cancelled": true,
+  "emergency_scale_up": true,
+  "reserve_ablation_changes_policy": true,
+  "budget_guard": true
+}

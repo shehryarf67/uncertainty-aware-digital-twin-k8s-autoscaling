@@ -1,0 +1,170 @@
+{
+  "frozen_utc": "2026-11-14T12:10:16.463514+00:00",
+  "scope": "Five paired repetitions per policy and scenario; measured local Kubernetes pilot, not universal certification",
+  "seeds": [
+    404,
+    505,
+    606,
+    707,
+    808
+  ],
+  "controllers": [
+    "guarded",
+    "legacy",
+    "no_reserve",
+    "cpu_hpa",
+    "static"
+  ],
+  "replica_limit": 16,
+  "initial_replicas": 8,
+  "static_initial_replicas": 16,
+  "period_seconds": 8,
+  "slo": {
+    "status": 200,
+    "latency_ms": 500,
+    "minimum_request_compliance": 0.99
+  },
+  "development_only": [
+    "development-capacity-01",
+    "development-capacity-02",
+    "development-capacity-03"
+  ],
+  "scenarios": {
+    "legacy_batch": {
+      "active_seconds": 5,
+      "rates": [
+        5,
+        5,
+        5,
+        5,
+        10,
+        15,
+        20,
+        25,
+        45,
+        45,
+        15,
+        10,
+        25,
+        30,
+        15,
+        5
+      ],
+      "units": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.8,
+        1.8,
+        1.8,
+        1.8
+      ],
+      "purpose": "Previously examined pattern, for controlled comparison; not unseen workload"
+    },
+    "abrupt_batch": {
+      "active_seconds": 5,
+      "rates": [
+        5,
+        5,
+        5,
+        5,
+        40,
+        40,
+        40,
+        8,
+        8,
+        8,
+        28,
+        28,
+        28,
+        5,
+        5,
+        5
+      ],
+      "units": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.6,
+        1.6,
+        1.6,
+        1,
+        1,
+        1
+      ],
+      "purpose": "New abrupt steps and changed work cost, fixed before final testing"
+    },
+    "continuous": {
+      "active_seconds": 8,
+      "rates": [
+        6,
+        6,
+        9,
+        15,
+        22,
+        32,
+        40,
+        18,
+        8,
+        5,
+        25,
+        30,
+        18,
+        8,
+        15,
+        5
+      ],
+      "units": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1.6,
+        1.6,
+        1.6,
+        1.6,
+        1.6,
+        1.6
+      ],
+      "purpose": "New uninterrupted traffic with oscillation and service-cost shift"
+    }
+  },
+  "ordering": "per-seed randomized scenario and policy order",
+  "invalid_attempt_policy": "Keep every attempt; rerun timing/count-invalid attempts at most once; SLO failure is always a valid outcome and never triggers a rerun",
+  "timing_validity": {
+    "max_dispatch_delay_ms": 500,
+    "max_sampler_gap_seconds": 3,
+    "max_decision_lateness_seconds": 1
+  },
+  "analysis": "Per-trial violations and allocation; paired seed bootstrap intervals; policy-by-workload compliance counts; no tuning on final results",
+  "source_sha256": {
+    "C:\\Users\\sofia\\.codex\\.chatgpt-projects\\g-p-67a332acf1fc8191bddbeac79c7b1526\\research-reproduction\\revision-20261114\\controller_v2.py": "b09ec39a367d071bee11511725be5313f9df651a80db77f30504731625582741",
+    "C:\\Users\\sofia\\.codex\\.chatgpt-projects\\g-p-67a332acf1fc8191bddbeac79c7b1526\\research-reproduction\\revision-20261114\\experiments.py": "78985f7e40fb6f0da9fc39b813a84bb13f4ea57c8faed728c88c4fb6204bd3b4",
+    "C:\\Users\\sofia\\.codex\\.chatgpt-projects\\g-p-67a332acf1fc8191bddbeac79c7b1526\\research-reproduction\\contribution\\controller.py": "2eed0e30e528d07dee08287aec04baa799839be2cded745267814881b7e8dac0",
+    "C:\\Users\\sofia\\.codex\\.chatgpt-projects\\g-p-67a332acf1fc8191bddbeac79c7b1526\\research-reproduction\\revision-20261114\\development-capacity-01\\summary.json": "b404389ea71e7a95ce22799bd6569013d11f7564bec1f93dcf082839f491966a",
+    "C:\\Users\\sofia\\.codex\\.chatgpt-projects\\g-p-67a332acf1fc8191bddbeac79c7b1526\\research-reproduction\\revision-20261114\\development-capacity-02\\summary.json": "7ef1c8e442cf051e5aa7353711331f6f86234d6c30ffa937226967c66ace6bd9",
+    "C:\\Users\\sofia\\.codex\\.chatgpt-projects\\g-p-67a332acf1fc8191bddbeac79c7b1526\\research-reproduction\\revision-20261114\\development-capacity-03\\summary.json": "75fe6e8fa3b28f38f842f3977ce9427c4bacd2a64ef97dc59aebf9e5ab15cd1b"
+  }
+}

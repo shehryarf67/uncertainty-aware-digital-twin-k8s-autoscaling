@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "dataset": "fifa",
+  "run_id": "run-01",
+  "started_utc": "2026-10-09T11:25:12.509131+00:00",
+  "stage": "completed",
+  "elapsed_seconds": 100.75332660000004
+}

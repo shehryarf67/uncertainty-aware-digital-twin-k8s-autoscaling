@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "dataset": "fifa",
+      "run_id": "run-01",
+      "score_recomputation": true,
+      "saved_model_inference_matches": true,
+      "one_minute_origins": true,
+      "training_prefix_scaler_extrema": true,
+      "future_observation_perturbation_does_not_change_origin_input": true,
+      "scored_targets": 37590,
+      "excluded_gap_targets": 0
+    },
+    {
+      "dataset": "nasa",
+      "run_id": "run-02",
+      "score_recomputation": true,
+      "saved_model_inference_matches": true,
+      "one_minute_origins": true,
+      "training_prefix_scaler_extrema": true,
+      "future_observation_perturbation_does_not_change_origin_input": true,
+      "scored_targets": 24390,
+      "excluded_gap_targets": 29
+    }
+  ],
+  "scope": "fixed trained model rolling inputs; no claim of recursive multi-step forecasting"
+}

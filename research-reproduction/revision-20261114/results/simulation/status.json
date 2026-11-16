@@ -1,0 +1,25 @@
+{
+  "status": "completed",
+  "trials": 1000,
+  "seeds": 25,
+  "regimes": [
+    "smooth",
+    "burst",
+    "service_drift",
+    "slow_readiness",
+    "observation_delay"
+  ],
+  "controllers": [
+    "guarded",
+    "no_reserve",
+    "no_emergency",
+    "no_horizon",
+    "legacy",
+    "cpu_proxy",
+    "static16",
+    "static8"
+  ],
+  "plant": "Independent Poisson/lognormal multi-server queue; central dispatch; does not generate labels from the fitted response Twin",
+  "observation_delay": "All demand/response/CPU feedback delayed; replica state current",
+  "ablations": "Single frozen-source assignment removed for emergency or planning-horizon ablation"
+}

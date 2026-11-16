@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "future_prefix_invariance": true,
+  "delayed_two_step_score_alignment": true,
+  "twin_monotonicity": true,
+  "replica_bounds": true,
+  "negative_margin_clipped_to_zero": true
+}

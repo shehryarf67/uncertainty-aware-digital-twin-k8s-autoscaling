@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "baseline_git_clean": true,
+  "package_inventory_unchanged": true,
+  "completed_runs_checked": 4,
+  "runs": [
+    {
+      "dataset": "fifa",
+      "run_id": "run-01",
+      "independently_recomputed_metrics": {
+        "MSE": 1.1527457610912474e-05,
+        "RMSE": 0.003395210981796636,
+        "MAE": 0.0006571724928722299,
+        "R2": 0.9982805444604701
+      },
+      "score_matches_export": true,
+      "all_original_source_cells_identical": true,
+      "all_code_cells_executed_without_error": true,
+      "test_sample_count": 37590,
+      "final_row_truth_fallback_confirmed": true,
+      "n_saved_charts": 7,
+      "model_files": [
+        "fbprophet-fifa-20240911_180633.json",
+        "fbprophet-fifa-20261009_154130.json",
+        "fbprophet-nasa-20240911_175323.json",
+        "lstm-fifa-20240911_180633.keras",
+        "lstm-fifa-20261009_154130.keras",
+        "lstm-nasa-20240911_175323.keras"
+      ]
+    },
+    {
+      "dataset": "fifa",
+      "run_id": "run-02",
+      "independently_recomputed_metrics": {
+        "MSE": 1.1315053799799974e-05,
+        "RMSE": 0.0033637856352330144,
+        "MAE": 0.0006491471509421904,
+        "R2": 0.9983122269807588
+      },
+      "score_matches_export": true,
+      "all_original_source_cells_identical": true,
+      "all_code_cells_executed_without_error": true,
+      "test_sample_count": 37590,
+      "final_row_truth_fallback_confirmed": true,
+      "n_saved_charts": 7,
+      "model_files": [
+        "fbprophet-fifa-20240911_180633.json",
+        "fbprophet-fifa-20261009_154624.json",
+        "fbprophet-nasa-20240911_175323.json",
+        "lstm-fifa-20240911_180633.keras",
+        "lstm-fifa-20261009_154624.keras",
+        "lstm-nasa-20240911_175323.keras"
+      ]
+    },
+    {
+      "dataset": "nasa",
+      "run_id": "run-02",
+      "independently_recomputed_metrics": {
+        "MSE": 64.40961446583071,
+        "RMSE": 8.025560071785065,
+        "MAE": 6.206519944111213,
+        "R2": 0.8992462819941759
+      },
+      "score_matches_export": true,
+      "all_original_source_cells_identical": true,
+      "all_code_cells_executed_without_error": true,
+      "test_sample_count": 24419,
+      "final_row_truth_fallback_confirmed": true,
+      "n_saved_charts": 7,
+      "model_files": [
+        "fbprophet-fifa-20240911_180633.json",
+        "fbprophet-nasa-20240911_175323.json",
+        "fbprophet-nasa-20261009_153915.json",
+        "lstm-fifa-20240911_180633.keras",
+        "lstm-nasa-20240911_175323.keras",
+        "lstm-nasa-20261009_153915.keras"
+      ]
+    },
+    {
+      "dataset": "nasa",
+      "run_id": "run-03",
+      "independently_recomputed_metrics": {
+        "MSE": 64.283639450923,
+        "RMSE": 8.017707867646651,
+        "MAE": 6.2028217962148435,
+        "R2": 0.8994433403251884
+      },
+      "score_matches_export": true,
+      "all_original_source_cells_identical": true,
+      "all_code_cells_executed_without_error": true,
+      "test_sample_count": 24419,
+      "final_row_truth_fallback_confirmed": true,
+      "n_saved_charts": 7,
+      "model_files": [
+        "fbprophet-fifa-20240911_180633.json",
+        "fbprophet-nasa-20240911_175323.json",
+        "fbprophet-nasa-20261009_154438.json",
+        "lstm-fifa-20240911_180633.keras",
+        "lstm-nasa-20240911_175323.keras",
+        "lstm-nasa-20261009_154438.keras"
+      ]
+    }
+  ]
+}

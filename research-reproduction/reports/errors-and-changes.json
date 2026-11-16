@@ -1,0 +1,38 @@
+{
+  "numerical_author_cells_modified": 0,
+  "minimal_preparations": [
+    "created missing images directory",
+    "explicit virtual-environment Jupyter kernel",
+    "CPU intra-op=4, inter-op=2, OMP=4"
+  ],
+  "instrumentation": [
+    "read-only training history capture immediately after fit",
+    "final exports of existing state"
+  ],
+  "errors": [
+    {
+      "run": "nasa/run-01",
+      "scope": "added reproduction exporter only",
+      "error": "KeyError: loss",
+      "all_original_author_cells_completed": true,
+      "author_final_metric_output": "=== Hybrid Model Metrics ===\nMSE: 64.194\nRMSE: 8.012\nMAE: 6.191\nR\u00b2: 0.900\nPrediction Time: 5043.768405914307ms\n",
+      "cause": "model History was reset by later prediction; reading it at final export yielded an empty history",
+      "repair": "capture a copy immediately after original fit cell 46",
+      "failed_attempt_preserved": true,
+      "included_in_completed_run_aggregate": false
+    }
+  ],
+  "nonblocking_warnings": [
+    "pandas deprecated fillna(method=ffill)",
+    "pandas chained assignment / future Copy-on-Write behavior",
+    "optional Prophet Plotly import unavailable",
+    "TensorFlow oneDNN numerical round-off notice"
+  ],
+  "unverified_explanations": [
+    "historical TensorFlow/framework version differences",
+    "original hardware contribution to latency difference",
+    "specific cause of each accuracy difference",
+    "cause of inconsistent published FIFA comparator entries"
+  ],
+  "corrected_evaluation_implemented": false
+}
