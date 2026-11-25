@@ -1,0 +1,24 @@
+{
+  "primary": {
+    "trials": 75,
+    "requests": 120275,
+    "invalid_attempts_retained": 1,
+    "request_metrics_recomputed": true
+  },
+  "reserve_matched": {
+    "trials": 18,
+    "requests": 28866,
+    "invalid_attempts_retained": 0,
+    "request_metrics_recomputed": true
+  },
+  "simulation_rows": 1000,
+  "displayed_ablation_equality_verified": true,
+  "all_table_cells_equations_plot_coordinates_and_bibliography_preserved": true,
+  "citations_resolve": 33,
+  "source_sha256": "63cd444d07f36d22ccff420ac65bc0eb526403bde322f098ae148e274b20cde6",
+  "pdf_sha256": "9b5e09636e07f155d5c80f560d1d88962e1050c9cf94ce45d4209db10909ee75",
+  "pages": 10,
+  "overleaf_compile_errors": 0,
+  "overleaf_compile_warnings": 0,
+  "scope": "Editorial revision; no experiments rerun; no AI detector score measured"
+}

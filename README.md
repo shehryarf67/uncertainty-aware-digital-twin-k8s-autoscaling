@@ -37,3 +37,5 @@ The earlier KEDA/HPA integration code, manifests, and measured request traces ar
 
 
 Latest manuscript: [PDF](research-reproduction/revision-20261114/paper/research-article.pdf) and [single TeX source](research-reproduction/revision-20261114/paper/main.tex), synchronized with Overleaf on 25 November 2026. The Guo citation uses the final 2020 volume, issue and pages.
+
+The 25 November prose revision is now the current manuscript (10 pages). See [revision notes](research-reproduction/revision-20261114/paper/REVISION-20261125.md) and [evidence audit](research-reproduction/revision-20261114/paper/revision-audit-20261125.json). Numerical table cells, equations, plot coordinates and bibliography were preserved; no experimental code or measurements changed. No AI detection score is claimed.
