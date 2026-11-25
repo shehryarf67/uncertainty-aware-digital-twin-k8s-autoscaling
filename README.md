@@ -1,6 +1,6 @@
 # Digital-Twin-Guided Kubernetes Autoscaling: Research Artifact
 
-This repository contains the Prophet–LSTM baseline reproduction and the later measured autoscaling study. The article is `research-reproduction/revision-20261114/paper/main_article.tex` (self-contained, two-column LaTeX). Numerical results come from saved real Kubernetes requests or explicitly identified simulations.
+This repository contains the Prophet–LSTM baseline reproduction and the later measured autoscaling study. The article is `research-reproduction/revision-20261114/paper/main.tex` (self-contained, two-column LaTeX). Numerical results come from saved real Kubernetes requests or explicitly identified simulations.
 
 The measured system is a single-node K3s cluster on Ubuntu WSL2 with a CPU-bound test service; the real workload is generated traffic. The study does not claim a production-cloud deployment. Five primary repetitions per workload and three exploratory follow-up repetitions do not certify future SLO compliance. In the reserve-matched follow-up, native HPA matched the guarded controller's observed compliance using fewer desired pod-minutes. Do not interpret the main HPA comparison alone as evidence of a predictive-logic advantage.
 
@@ -30,8 +30,10 @@ To generate fresh Kubernetes observations, follow `revision-20261114/README.txt`
 
 The LaTeX file can be compiled using a TeX distribution with `pgfplots`, `tikz`, `booktabs`, `xurl`, and standard LaTeX packages. Earlier notebooks and models retain the upstream source provenance and any associated license restrictions; no new blanket license is asserted for upstream materials.
 
-The historical draft generator build_paper.py is retained for provenance and writes an earlier article draft; do not run it over the current main_article.tex. Run it in a disposable copy if needed. The upstream baseline is a source snapshot; embedded Git metadata is intentionally omitted.
+The historical draft generator build_paper.py is retained for provenance and writes an earlier article draft; do not run it over the current main.tex. Run it in a disposable copy if needed. The upstream baseline is a source snapshot; embedded Git metadata is intentionally omitted.
 
 
 The earlier KEDA/HPA integration code, manifests, and measured request traces are in research-reproduction/kubernetes-autoscaling/. Build outputs and environment secrets are excluded; see source-provenance.json for the original scaler and application repositories.
 
+
+Latest manuscript: [PDF](research-reproduction/revision-20261114/paper/research-article.pdf) and [single TeX source](research-reproduction/revision-20261114/paper/main.tex), synchronized with Overleaf on 25 November 2026. The Guo citation uses the final 2020 volume, issue and pages.
