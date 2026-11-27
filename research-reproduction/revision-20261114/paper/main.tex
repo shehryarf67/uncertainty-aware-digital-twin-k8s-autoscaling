@@ -1,7 +1,7 @@
 \documentclass[10pt,twocolumn,a4paper]{article}
 \usepackage[margin=18mm,columnsep=6mm]{geometry}
 \usepackage{amsmath,amssymb,booktabs,microtype,graphicx,tikz,pgfplots}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,hyperfootnotes=false]{hyperref}
 \usepackage{xurl,placeins}
 \pgfplotsset{compat=1.18}
 \setlength{\emergencystretch}{1em}
@@ -9,19 +9,25 @@
 \renewcommand{\dbltopfraction}{.9}
 \renewcommand{\textfraction}{.1}
 \title{Digital-Twin-Guided Predictive Autoscaling:\\Capacity Calibration, Ready Reserves and Repeated Kubernetes Evaluation}
-\author{Shehryar Faisal \and Abdul Mahid \and Basharat Hussain}
+\author{Shehryar Faisal, Abdul Mahid, Basharat Hussain, and Muhammad Islam}
 \date{November 2026}
 \renewcommand{\dbltopfraction}{0.95}
 \renewcommand{\dblfloatpagefraction}{0.85}
 \renewcommand{\textfraction}{0.05}
 \begin{document}
-\twocolumn[\begin{@twocolumnfalse}\maketitle
-\begin{abstract}
+\maketitle
+\begingroup
+\makeatletter\let\@makefnmark\@empty\makeatother
+\footnotetext{Shehryar Faisal and Abdul Mahid are affiliated with the National University of Computer and Emerging Sciences (NUCES), Islamabad 44000, Pakistan.\par
+Basharat Hussain is with the Department of Computer Science, National University of Computer and Emerging Sciences (NUCES), Islamabad 44000, Pakistan (email: \href{mailto:basharat.hussain@isb.nu.edu.pk}{basharat.hussain@isb.nu.edu.pk}).\par
+Muhammad Islam is with the College of Science and Engineering, James Cook University, Cairns, QLD, Australia (email: \href{mailto:muhammad.islam1@jcu.edu.au}{muhammad.islam1@jcu.edu.au}).}
+\endgroup
+\noindent\textbf{Abstract.}\quad
 We reproduced a published Prophet--LSTM forecaster, then tested how many ready replicas a service would need to meet a request latency objective. Our first controller often missed that objective. In some decisions, its latency-error margin alone exceeded the target, leaving no replica count that could satisfy the model. Fixed deployments also ran short of capacity during peak load. The revised controller uses a capacity threshold measured in load tests, recent CPU cost and an upper demand estimate to size the deployment. It keeps a reserve of ready replicas and delays scale-down after pressure.
 
-On a local K3s cluster, 75 primary trials produced 120275 measured requests. The revised controller met the objective of at least 99\% HTTP-200 responses within 500 ms in all 15 workload--seed cells; the original dual policy met it in none and CPU HPA in one. Mean trial violation rates were 0.00\%, 19.82\% and 31.65\%, respectively. Mean desired allocation was 27.99 pod-minutes for the revision and 34.18 for fixed sixteen-replica capacity. However, eighteen additional trials with the same minimum of eight replicas showed that native HPA also met the objective in all nine cells, using 17.09 mean pod-minutes against 28.07 for the revision. We also checked response predictions in eighteen live validation blocks and tested controller variants in 1,000 simulation rollouts. The live comparison supports the changes to our initial controller and leaves any advantage over HPA with the same reserve unproven. Code and experimental artifacts are available at \url{https://github.com/shehryarf67/uncertainty-aware-digital-twin-k8s-autoscaling}.
+On a local K3s cluster, 75 primary trials produced 120275 measured requests. The revised controller met the objective of at least 99\% HTTP-200 responses within 500 ms in all 15 workload--seed cells; the original dual policy met it in none and CPU HPA in one. Mean trial violation rates were 0.00\%, 19.82\% and 31.65\%, respectively. Mean desired allocation was 27.99 pod-minutes for the revision and 34.18 for fixed sixteen-replica capacity. However, eighteen additional trials with the same minimum of eight replicas showed that native HPA also met the objective in all nine cells, using 17.09 mean pod-minutes against 28.07 for the revision. We also checked response predictions in eighteen live validation blocks and tested controller variants in 1,000 simulation rollouts. The live comparison supports the changes to our initial controller and leaves any advantage over HPA with the same reserve unproven. Code and experimental artifacts are available at \href{https://github.com/shehryarf67/uncertainty-aware-digital-twin-k8s-autoscaling}{the GitHub repository}.
 
-\end{abstract}\vspace{4mm}\end{@twocolumnfalse}]
+\par
 
 
 \section{Introduction}
