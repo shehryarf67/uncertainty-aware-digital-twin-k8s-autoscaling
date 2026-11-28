@@ -50,7 +50,7 @@ Predictive container methods include bidirectional LSTM and attention-based GRU 
 
 Adaptive containers, bio-inspired control, online VM scaling, multi-resource prediction and dynamic-workload scaling address other parts of resource management \cite{j07,j10,j11,j14,j17}. Work on allocation transitions and formal verification further distinguishes making a scaling recommendation from executing or verifying it \cite{j12,j27}. Here we measure actual request outcomes and sample desired and ready replicas separately to examine the consequences of execution delay.
 
-Digital-twin models describe ongoing synchronization of a system with its virtual representation \cite{j19,j28}. The fitted curve here is a conditional response map from CPU work per replica to tail latency. The contribution is an evaluation of how an empirical work threshold and ready reserves interact with actuation delay and HPA configuration. Conformal multi-step forecasting studies formal interval constructions \cite{j20,j21}. We report empirical coverage for the live demand rule under the tested workloads.
+Digital-twin models describe ongoing synchronization of a system with its virtual representation \cite{j19,j28}. The fitted curve here is a conditional response map from CPU work per replica to tail latency. The contribution is an evaluation of how an empirical work threshold and ready reserves interact with actuation delay and HPA configuration. Conformal multi-step forecasting studies formal interval constructions \cite{j20,j21}. The live demand rule is evaluated separately from the historical bounds.
 
 \section{Baseline Validation}
 Let $y_t$ be workload, $p_t$ a Prophet estimate and $r_t=y_t-p_t$ its residual. A causal one-minute hybrid predicts
@@ -189,6 +189,8 @@ WorldCup & 78.87 & 96.87 & 90.33\\
 \end{table}
 
 Table~\ref{tab:historical} evaluates demand upper bounds, not latency. Adaptive coverage is 90.02\% for NASA and 90.33\% for WorldCup against a nominal 90\%. The WorldCup static bound covers 96.87\%, indicating a more conservative bound on this suffix. These corrections leave the saved point forecasts unchanged, so they do not improve point RMSE or establish request-level compliance.
+
+Separately, in the 15 primary guarded Kubernetes trials, the live upper bound covered 150 of 195 matured forecasts (76.9\%): 50/65 in previous batch, 55/65 in abrupt batch, and 45/65 in continuous traffic. A forecast is covered when its bound reaches the largest observed request rate over its horizon. The SLO instead counts HTTP-200 responses within 500 ms. Guarded control met that SLO in all 15 trials despite misses in forecast coverage.
 \subsection{Development Capacity Checks}
 
 \begin{table*}[t]\centering\small\setlength{\tabcolsep}{3pt}
