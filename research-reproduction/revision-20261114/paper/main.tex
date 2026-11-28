@@ -8,7 +8,7 @@
 \newsavebox{\databox}
 \renewcommand{\dbltopfraction}{.9}
 \renewcommand{\textfraction}{.1}
-\title{Digital-Twin-Guided Predictive Autoscaling:\\Capacity Calibration, Ready Reserves and Repeated Kubernetes Evaluation}
+\title{Capacity-Calibrated, Readiness-Aware Kubernetes Autoscaling:\\A Matched Evaluation of Replica Reserves}
 \author{Shehryar Faisal, Abdul Mahid, Basharat Hussain, and Muhammad Islam}
 \date{November 2026}
 \renewcommand{\dbltopfraction}{0.95}
@@ -23,7 +23,7 @@ Basharat Hussain is with the Department of Computer Science, National University
 Muhammad Islam is with the College of Science and Engineering, James Cook University, Cairns, QLD, Australia (email: \href{mailto:muhammad.islam1@jcu.edu.au}{muhammad.islam1@jcu.edu.au}).}
 \endgroup
 \noindent\textbf{Abstract.}\quad
-We reproduced a published Prophet--LSTM forecaster, then tested how many ready replicas a service would need to meet a request latency objective. Our first controller often missed that objective. In some decisions, its latency-error margin alone exceeded the target, leaving no replica count that could satisfy the model. Fixed deployments also ran short of capacity during peak load. The revised controller uses a capacity threshold measured in load tests, recent CPU cost and an upper demand estimate to size the deployment. It keeps a reserve of ready replicas and delays scale-down after pressure.
+We evaluate a capacity-calibrated Kubernetes autoscaler that sizes deployments from observed demand, recent CPU cost, and a measured work threshold per ready replica. Deployment logs showed that the pilot's latency-error margin alone could exceed the SLO threshold, leaving no feasible replica count. Fixed deployments also ran short of capacity during peak load. The revised controller keeps spare replicas ready and delays scale-down after pressure. A separate Prophet--LSTM reproduction evaluates historical forecasts. The live controller uses a short-horizon rule based on recent request counts.
 
 On a local K3s cluster, 75 primary trials produced 120275 measured requests. The revised controller met the objective of at least 99\% HTTP-200 responses within 500 ms in all 15 workload--seed cells; the original dual policy met it in none and CPU HPA in one. Mean trial violation rates were 0.00\%, 19.82\% and 31.65\%, respectively. Mean desired allocation was 27.99 pod-minutes for the revision and 34.18 for fixed sixteen-replica capacity. However, eighteen additional trials with the same minimum of eight replicas showed that native HPA also met the objective in all nine cells, using 17.09 mean pod-minutes against 28.07 for the revision. We also checked response predictions in eighteen live validation blocks and tested controller variants in 1,000 simulation rollouts. The live comparison supports the changes to our initial controller and leaves any advantage over HPA with the same reserve unproven. Code and experimental artifacts are available at \href{https://github.com/shehryarf67/uncertainty-aware-digital-twin-k8s-autoscaling}{the GitHub repository}.
 
@@ -33,13 +33,13 @@ On a local K3s cluster, 75 primary trials produced 120275 measured requests. The
 \section{Introduction}
 A workload forecast estimates how many requests will arrive. An autoscaler must also decide how many replicas can serve those requests within the required response time, and when those replicas must be ready. These decisions depend on request cost and startup delay as well as demand. Studies of Kubernetes HPA operation and tuning show why resource settings matter when evaluating a scaling policy \cite{j01,j02}.
 
-We began with the Prophet--LSTM method of Guruge and Priyadarshana \cite{guruge}. Reproducing its released code and then evaluating a separate causal implementation gave us two different views of forecasting accuracy. Neither evaluation measured whether a running application could meet a request-latency objective. We therefore implemented a service-response model and tested the resulting scaling decisions on Kubernetes.
+The live study asks whether capacity calibration and readiness-aware scaling change the reliability and allocation trade-off, and how much of the observed difference persists when HPA has the same replica floor. We also reproduce the Prophet--LSTM method of Guruge and Priyadarshana \cite{guruge} as a separate trace study. Its forecasts are excluded from the live controller.
 
 The first controller exposed a problem in how prediction error was used. In twelve of 48 dual-policy decisions, the latency correction alone exceeded the 500-ms target. Adding capacity could not make any positive predicted latency satisfy that surrogate constraint. Development load tests also showed failures with fixed six-replica capacity at peak conditions on the host. These observations motivated changes to both sizing and the capacity limit.
 
 The revised implementation sizes replicas using a measured capacity envelope and recent request CPU cost. It keeps ready capacity available while additional pods start, and delays scale-down after observed pressure. We evaluate the combined revision against the original dual policy, a reserve ablation, native CPU HPA and fixed capacity. Raising the maximum from six to sixteen replicas changes the experimental conditions, so we rerun the original policy under the expanded limit instead of attributing the entire pilot-to-revision difference to the algorithm.
 
-We use the forecasting traces to ask how much the reported error changes when each prediction uses only observations available at its issue time. On the cluster, our outcomes are SLO compliance and desired pod-minutes. Comparing policies at the same minimum replica count and switching off individual controller rules helps us examine which parts of the design contributed to those outcomes.
+The primary HPA comparison evaluates each configuration as deployed. Because their replica floors differ, the contrast includes the effect of the reserve. The exploratory follow-up compares both policies at the same floor and measures their observed SLO compliance and desired pod-minutes.
 
 \section{Related Work}
 Guruge and Priyadarshana add an LSTM residual estimate to Prophet's trend and seasonal forecast \cite{guruge,prophet,lstm}. That architecture belongs to the trace experiments. On the cluster, a separate predictor works from recent request counts, so better trace RMSE would not in itself explain a live SLO result.
@@ -50,7 +50,7 @@ Predictive container methods include bidirectional LSTM and attention-based GRU 
 
 Adaptive containers, bio-inspired control, online VM scaling, multi-resource prediction and dynamic-workload scaling address other parts of resource management \cite{j07,j10,j11,j14,j17}. Work on allocation transitions and formal verification further distinguishes making a scaling recommendation from executing or verifying it \cite{j12,j27}. Here we measure actual request outcomes and sample desired and ready replicas separately to examine the consequences of execution delay.
 
-Digital-twin reference models and surveys describe broader synchronization between a system and its virtual representation \cite{j19,j28}. Our response model covers only a conditional relation between offered CPU work, replica count and tail latency. Likewise, conformal multi-step forecasting methods study prediction intervals under their own constructions and assumptions \cite{j20,j21}. Our forty-score correction has no inherited 99\% coverage theorem. The research question is therefore whether these specific implementation choices help in the recorded workload cells, with their resource costs and failure cases reported alongside successful outcomes.
+Digital-twin models describe ongoing synchronization of a system with its virtual representation \cite{j19,j28}. The fitted curve here is a conditional response map from CPU work per replica to tail latency. The contribution is an evaluation of how an empirical work threshold and ready reserves interact with actuation delay and HPA configuration. Conformal multi-step forecasting studies formal interval constructions \cite{j20,j21}. We report empirical coverage for the live demand rule under the tested workloads.
 
 \section{Baseline Validation}
 Let $y_t$ be workload, $p_t$ a Prophet estimate and $r_t=y_t-p_t$ its residual. A causal one-minute hybrid predicts
@@ -75,7 +75,7 @@ WorldCup & 0.003358 & 0.00337950 & 0.00388174\\
 \end{table}
 
 
-On common NASA targets, faithful mean RMSE is 8.01251. WorldCup causal raw-count RMSE is 890.5685, compared with persistence at 762.7463; NASA persistence is 16.3871. The causal WorldCup hybrid therefore has a higher raw-count RMSE than persistence in this evaluation. NASA shows the opposite ordering against persistence. Because alignment, scaling and gap handling were corrected together, the change from faithful to causal scores cannot be assigned to one correction. The saved predictions and model files allow both evaluations to be inspected.
+On common NASA targets, faithful mean RMSE is 8.01251. The causal hybrid has RMSE 14.2902, below persistence at 16.3871. On WorldCup the raw-count comparison reverses: 890.5685 for the causal hybrid and 762.7463 for persistence. A hybrid that helps on one trace can therefore add forecasting error on another. The correction changes alignment, scaling and gap handling together. The trace study cannot attribute the error change to a single correction or establish a benefit for the live controller.
 
 \section{Initial Controller Diagnosis}
 An earlier integration check connected the authors' Java 21/Spring Boot 3.4.2 application and forecasting scaler to KEDA 2.18, Prometheus 2.55.1 and local K3s. Scaler logic was preserved while compatible gRPC bindings were regenerated. Stable, increasing, spike and decreasing scenarios produced 6,870 measured requests per controller in scheduling-validated runs. Forecast KEDA and CPU HPA had zero HTTP failures and zero observations above 500 ms. Forecast scaling held three replicas; HPA moved from one to three. Sampled allocation was 23.286 versus 13.778 pod-minutes. The integration test confirmed that the scaler could issue decisions through KEDA and that the application served the offered traffic. Since both policies stayed within the latency threshold, it supplied little evidence about how either policy would behave near overload.
@@ -104,7 +104,7 @@ The screening step selects development conditions that passed both the request o
 \subsection{Demand and Cost Corrections}
 At each decision, the harness provides the observed arrival count, completed-response measurements, and desired and ready replica counts. Two five-RPS warm-up cycles initialize the rate history and provide an initial P90 CPU cost from successful responses. Thereafter, the controller keeps the latest four available CPU-P90 estimates and uses their maximum, $\bar c_t$. An estimate above the current maximum raises the sizing input immediately. Lower estimates reduce it only after the higher values leave the window.
 
-The controller starts from the largest rate in the latest three observations. It also projects the current rate forward by adding $h_t$ times the last nonnegative rate increase. The larger value becomes $\widehat\lambda_t$. When the $h_t$ observations for that forecast are available, the controller scores it as their maximum minus the forecast it issued. It keeps up to forty of those errors. At nominal 99\%, the rank used by the code selects the largest available error. The correction $q_t$ is that error if positive, and zero when the buffer is empty or its maximum is nonpositive. We evaluate coverage empirically. This rule does not provide an exact distribution-free 99\% guarantee.
+The controller takes the larger of the last three observed rates' maximum and the current rate plus $h_t$ times the latest nonnegative increase. It scores an issued forecast once all $h_t$ subsequent rates arrive, using their maximum minus the forecast. Matured scores enter a first-in, first-out buffer of at most 40. For $m>0$ scores, sort ascending and select rank $\min\{m,\lceil0.99(m+1)\rceil\}$ with one-based indexing. This selects the maximum for $m\leq40$. Duplicates occupy separate positions, and coverage counts a score equal to the issued margin as covered. The controller floors the selected score at zero and uses zero for an empty buffer. Coverage is assessed empirically.
 
 \subsection{Readiness, Pressure and Scale-Down}
 When a scale-up is issued, the controller stores its time and target. Once the observed ready count reaches that tracked target, it updates the startup estimate by averaging the previous estimate with the elapsed time, subject to an eight-second floor. The planning horizon is
@@ -117,7 +117,7 @@ The factor $\beta_t\in[0.5,1]$ reduces the usable capacity threshold after press
 
 Before removing a replica, the code checks two counters. It needs three consecutive recommendations below the current desired count and at least three clean observations. The current deployment must also have as many ready replicas as desired, with cumulative violations at or below 0.5\%. If those checks pass, the controller drops at most one replica at that decision.
 
-The controller logs the predicted P99 and a feasibility flag alongside the requested count. The flag checks the upper end of the measured work range, a predicted P99 of at most 500 ms, and whether the raw replica requirement fits under the limit. SLO compliance is calculated separately from observed requests using Equation~\ref{eq:slo}.
+The implementation first computes the raw requirement from Equation~\ref{eq:sizing}, clips it to the reserve and ceiling, and applies the pressure and scale-down rules to obtain a target. At that target, it divides upper demand times estimated CPU cost by the target count and evaluates the isotonic curve. The feasibility flag requires work at or below the largest profiled input, predicted P99 at most 500 ms, and the raw requirement within the ceiling. Both diagnostics are logged after target selection. Actual SLO compliance comes from measured requests.
 
 \begin{figure}[t]\centering
 \resizebox{\columnwidth}{!}{\begin{tikzpicture}[font=\footnotesize]
@@ -170,7 +170,7 @@ The simulation uses a separate queueing plant to generate response outcomes. Arr
 Twenty-five paired seeds, five regimes and eight policies give 1,000 rollouts of 64 eight-second cycles. Regimes cover smooth demand, bursts, a 1.8-fold service-cost shift, startup delay increased from eight to 24 seconds, and one-cycle observation delay. In the delay case, demand, response and CPU feedback are delayed while replica state remains current. Policies include the guarded revision, reserve ablation, original dual policy, CPU-reactive proxy, fixed eight and fixed sixteen replicas, and isolated emergency-response and horizon ablations. The latter change only the named assignment in the frozen controller method. The proxy is not native HPA. Shared arrival/service input hashes verify pairing across policies.
 
 \subsection{Analysis and Claim Scope}
-We first assess each trial against the request objective, then summarize compliance counts by workload. Violation percentages, P99 values and desired allocation are averaged across trials. Thus a reported mean P99 is the mean of trial P99s, not the P99 of all requests pooled together. For each workload and seed, we subtract the reference outcome from the guarded outcome. For each workload, percentile intervals for these differences use 10,000 bootstrap resamples of the five pairs \cite{bootstrap}. Individual requests are not treated as independent repetitions. With only five runs, an all-zero outcome yields a zero-width bootstrap interval without establishing zero future risk. Simulation intervals apply to the chosen plant and seeds.
+We assess the SLO per trial and average violation rates, trial P99s and desired pod-minutes across trials. For the primary cohort, we align policies by seed and enumerate all $5^5=3125$ ordered bootstrap resamples \cite{bootstrap}. We use the same resampling scheme for individual means and guarded-minus-reference differences, with linear interpolation at the 2.5th and 97.5th percentiles. An all-zero sample gives a degenerate interval. These intervals describe variability across the observed runs and cannot establish a rare-event failure rate. Simulation estimates apply to the specified plant and seeds.
 
 \section{Results}
 \subsection{Preserved Forecasting Evidence}
@@ -237,14 +237,14 @@ Previous batch & No reserve & 5/5 & 0.00 & [0.00, 0.00] & 128.79 & 25.87\\
 Previous batch & CPU HPA & 0/5 & 50.96 & [45.93, 58.54] & 2107.88 & 8.89\\
 Previous batch & Fixed sixteen & 5/5 & 0.00 & [0.00, 0.00] & 124.14 & 34.18\\
 Abrupt batch & Guarded Twin & 5/5 & 0.00 & [0.00, 0.00] & 192.91 & 28.77\\
-Abrupt batch & Original dual & 0/5 & 31.39 & [30.01, 32.56] & 2101.83 & 21.78\\
+Abrupt batch & Original dual & 0/5 & 31.39 & [30.01, 32.58] & 2101.83 & 21.78\\
 Abrupt batch & No reserve & 5/5 & 0.11 & [0.03, 0.18] & 294.23 & 28.42\\
 Abrupt batch & CPU HPA & 0/5 & 31.50 & [24.44, 38.56] & 1971.41 & 9.02\\
 Abrupt batch & Fixed sixteen & 5/5 & 0.00 & [0.00, 0.00] & 135.84 & 34.17\\
 Continuous & Guarded Twin & 5/5 & 0.00 & [0.00, 0.00] & 118.62 & 28.69\\
-Continuous & Original dual & 0/5 & 20.67 & [16.71, 23.49] & 2079.83 & 26.76\\
+Continuous & Original dual & 0/5 & 20.67 & [16.62, 23.31] & 2079.83 & 26.76\\
 Continuous & No reserve & 5/5 & 0.01 & [0.00, 0.03] & 126.35 & 28.95\\
-Continuous & CPU HPA & 1/5 & 12.48 & [3.23, 23.56] & 1236.34 & 11.71\\
+Continuous & CPU HPA & 1/5 & 12.48 & [3.23, 23.98] & 1236.34 & 11.71\\
 Continuous & Fixed sixteen & 5/5 & 0.00 & [0.00, 0.00] & 112.40 & 34.18\\
 \bottomrule\end{tabular}
 }
@@ -272,7 +272,7 @@ The 75 valid trials account for 120275 requests. The one excluded attempt was CP
 \begin{tabular}{llrrr}\toprule
 Workload & Reference & Bad-rate difference pp & Paired 95\% interval & Allocation change \%\\\midrule
 Previous batch & Original dual & -7.41 & [-11.84, -3.09] & 31.60\\
-Previous batch & CPU HPA & -50.96 & [-58.94, -45.93] & 198.48\\
+Previous batch & CPU HPA & -50.96 & [-58.54, -45.93] & 198.48\\
 Previous batch & Fixed sixteen & 0.00 & [0.00, 0.00] & -22.40\\
 Abrupt batch & Original dual & -31.39 & [-32.58, -30.01] & 32.10\\
 Abrupt batch & CPU HPA & -31.50 & [-38.56, -24.44] & 218.83\\
@@ -343,13 +343,13 @@ The 1000 rollouts supplement the preserved 350-rollout pilot. In Table~\ref{tab:
 \section{Discussion and Limitations}
 \textbf{Pilot and primary capacity settings.} The pilot starts at one replica and can request up to six. In the primary study the adaptive policies begin at eight ready replicas and can request sixteen. We therefore use the rerun of the original dual policy under the larger ceiling when comparing it with the revision. That comparison measures the combined effect of the revised profile and control rules. The reserve and simulation ablations address individual rules under their own conditions.
 
-\textbf{Interpreting the HPA comparison.} Native HPA could scale down to one in the primary study. When we gave it the same eight-replica floor as guarded control, both policies met the SLO in all nine matched cases. HPA averaged 17.09 desired pod-minutes and guarded control averaged 28.07. This is a direct comparison at the common floor on the three tested workloads. Because we specified the follow-up after seeing early primary outcomes and ran it with new seeds, it does not estimate the effect of changing the floor within the primary runs.
+\textbf{Interpreting the HPA comparison.} The primary HPA floor is one and the guarded floor is eight. In the exploratory follow-up, both had a floor of eight and met the SLO in all nine matched cases. HPA averaged 17.09 desired pod-minutes and guarded control averaged 28.07. Those workloads show no observed SLO gain to justify the extra allocation. The follow-up used three seeds per workload and was designed after early primary outcomes, so a prospective matched study with startup-delay variation remains necessary.
 
 \textbf{Role of the response model.} The sizing equation uses the capacity threshold. The isotonic model estimates tail latency at the proposed count for diagnostics. In the eighteen validation blocks, we measured the CPU cost in the block where we recorded latency. The 94.04-ms effective-P99 mean absolute error therefore describes conditional response estimation. To test counterfactual decisions, we would also need evidence about the latency reached at alternative replica counts when CPU cost must be estimated before acting.
 
-\textbf{Finite calibration and short trials.} The demand correction uses at most forty errors and caps its nominal-99\% rank at the largest observed score. It therefore has no exact distribution-free 99\% coverage guarantee. The capacity profile also consists of twenty short development blocks; their P99 estimates are especially uncertain at low request rates. The 200 CPU-ms/s cap, twenty-percent headroom, two extra replicas and pressure thresholds are engineering settings. Five primary repetitions per workload and three follow-up repetitions cannot establish a rare-event failure rate. Bootstrap intervals resample runs, and an interval of zero to zero only reflects the observed all-zero sample.
+\textbf{Finite calibration and short trials.} The capacity threshold comes from twenty short blocks with one measurement per condition. We cannot estimate independent repeat variability from that profile. The selected safe point, 20\% headroom and ceiling may be sensitive to load and measurement noise. Five primary repetitions and three follow-up repetitions per workload offer limited evidence about rare failures. The live demand correction does not carry an exact distribution-free 99\% guarantee.
 
-\textbf{Transfer to other deployments.} The Kubernetes measurements use generated traffic against one instrumented CPU endpoint on a shared laptop under WSL. HPA and the external controller retain different sensing and reconciliation timings. Two workload shapes contain drain intervals, while the third offers uninterrupted traffic. Longer runs, other services and other machines may change the balance between reserve cost and protection. Desired pod-minutes include requested capacity that is still pending, but exclude setup, warm-up and full-day idle allocation. They measure neither a cloud bill nor energy use. The simulator's central dispatcher and simplified CPU service omit routing and throttling effects present in Kubernetes, which limits transfer of its ablation findings.
+\textbf{Transfer to other deployments.} The live results cover one CPU-bound endpoint on a local single-host K3s deployment under WSL2. The workload suite does not test multiple nodes or network-dependent services. Desired pod-minutes measure requested capacity within the trial. The archive lacks systematic measurements of CPU throttling, node utilization and memory pressure across policies, so the allocation comparison cannot establish infrastructure efficiency. The simulator abstracts routing and throttling and the reported ablations show no compliance gain from the horizon or emergency rule at the displayed precision.
 
 The clearest remaining test is a live comparison across replica floors and startup delays, with the same initial conditions for both policies. That would show whether the extra capacity requested by the controller pays off when pods take longer to become ready.
 
@@ -363,6 +363,8 @@ Across 75 primary trials and 120275 requests, the capacity-calibrated revision m
 The public artifact contains the forecasting source snapshot and inputs, saved predictions, development profiles, live request traces, replica samples and frozen experiment protocols. The primary protocol records the seeds, workload schedules, controller settings and source hashes. The reserve-matched cohort has its own protocol because it was added later.
 
 From \texttt{revision-20261114/}, \texttt{analyze.py} recomputes primary request counts, HTTP failures, latency statistics and timing checks. \texttt{analyze\_followup.py} audits the separate reserve-matched cohort. \texttt{verify\_simulation.py} checks shared generated inputs and replays two selected rollouts. Its saved verification also checks the simulation serialization repair against the original script hash. These commands check the archived evidence. To collect new primary observations, run \texttt{experiments.py} on a configured cluster.
+
+The review artifact includes \texttt{Review/recompute\_primary\_intervals.ps1}, which reads the archived primary trial scores and regenerates the individual and paired intervals independently of the original analysis output.
 
 The recorded environment is local K3s under Ubuntu WSL2. Dependency versions, application resources and an image digest are retained in \texttt{environment.json} and the environment notes. Infrastructure paths and the local API proxy must be adapted on another machine. The allocation audit checks the integral of sampled replicas and bounds the final unarchived partial interval; it cannot independently recover that exact terminal clock. The historical \texttt{build\_paper.py} generates an earlier draft and should not overwrite the current manuscript.
 

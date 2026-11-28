@@ -1,0 +1,49 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath}
+\newcommand{\reply}[2]{\item \textbf{#1}\par\noindent #2}
+\title{Response to Reviewer 1}
+\author{Shehryar Faisal, Abdul Mahid, Basharat Hussain, and Muhammad Islam}
+\date{}
+\begin{document}
+\maketitle
+\noindent\textbf{Original manuscript.} Digital-Twin-Guided Predictive Autoscaling: Capacity Calibration, Ready Reserves and Repeated Kubernetes Evaluation.
+
+\noindent\textbf{Revised manuscript.} Capacity-Calibrated, Readiness-Aware Kubernetes Autoscaling: A Matched Evaluation of Replica Reserves.
+
+We appreciate the review's recognition of the transparent reporting, repeated trials, distinction between desired and ready replicas, and reproducibility artifacts. This revision updates the manuscript and recomputes the primary intervals from the archived trial scores. The responses identify requests that still require new measurements.
+
+\section*{Major concerns}
+\begin{enumerate}
+\reply{Separate the Prophet--LSTM reproduction from live autoscaling.}{Addressed in the title, abstract, Introduction and Baseline Validation. The NASA and WorldCup analysis is a separate trace study. The live controller uses recent request counts and CPU-cost observations. Integrating Prophet--LSTM would change the evaluated implementation and require a new live protocol.}
+\reply{Moderate the digital-twin terminology.}{Addressed in the title, Related Work and Controller Revision. The isotonic model is a conditional response map used for diagnostics. The empirical sizing threshold and control rules determine the replica target. Twin terminology remains where it names a historical implementation or policy label.}
+\reply{Explain the allocation disadvantage at matched reserves.}{Addressed in Discussion and Limitations. Both policies met the SLO in all nine matched cases. Native HPA averaged 17.09 desired pod-minutes and guarded control averaged 28.07. The current workloads show no observed SLO advantage that justifies the extra allocation. We report that resource disadvantage directly.}
+\reply{Capacity-match the primary HPA comparison.}{Partially addressed. Experimental Design and Discussion distinguish the primary comparison, with floors of one for HPA and eight for guarded control, from the exploratory comparison with a common floor of eight. The latter has three repetitions per workload and was defined after early outcomes. The archived primary runs cannot show how those trials would have behaved at matched floors. A prospective matched comparison is deferred.}
+\reply{Repeat calibration and estimate uncertainty.}{Deferred. The profile contains one short block per condition and cannot estimate independent repeat variability. Discussion now states the limitation. A new campaign should repeat longer blocks near the boundary in randomized order, estimate threshold variability and test headroom sensitivity on held-out runs.}
+\reply{Broaden external validity.}{Partially addressed by narrowing the claims in Discussion to one CPU-bound service on a single-host K3s installation under WSL2. Heterogeneous, network-dependent, multi-node and cloud deployments require new measurements.}
+\reply{Strengthen the emergency and horizon ablations.}{Partially addressed. Results and Discussion report identical violation rates at the displayed precision and draw no compliance benefit from these ablations. Slower readiness and abrupt changes in CPU work are candidate stressors for the horizon and emergency rules. New tests should record activations, recovery and allocation alongside violations.}
+\reply{Increase repetitions or qualify the statistical evidence.}{Addressed for the existing data in Analysis and Claim Scope. Trials are the unit of repetition, comparisons are aligned by seed, and a zero-width empirical interval cannot establish a rare-event failure rate. Additional independent trials are needed to support a stronger inference.}
+\reply{Distinguish conditional response validation from operational forecasting.}{Addressed in Controller Revision and Discussion. The validation uses CPU cost measured inside each block. An operational test would freeze the CPU-cost estimate before acting and score it against later observations during service-cost changes. The archive contains no such validation.}
+\end{enumerate}
+
+\section*{Specific issues requiring correction}
+\begin{enumerate}
+\reply{Recompute and reconcile confidence intervals.}{Addressed for the primary live, paired and reserve-ablation tables. We align the five runs per workload by seed, enumerate all \(5^5=3125\) ordered bootstrap resamples, and interpolate at the 2.5th and 97.5th percentiles. The previous-batch HPA interval is now \([45.93,58.54]\) percent and the guarded-minus-HPA interval is \([-58.54,-45.93]\) percentage points. The previous audit used separate random draws. The companion \texttt{recompute-primary-intervals.ps1} regenerates the revised intervals from archived request counts and violation counts. Trial counts and point estimates were retained.}
+\reply{Specify the 99\% demand correction.}{Addressed in Demand and Cost Corrections. A forecast is scored when its full horizon has matured. Scores enter a 40-item FIFO buffer. With \(m\) available scores, the ascending one-based rank is \(\min(m,\lceil0.99(m+1)\rceil)\). Ties occupy separate positions and equality counts as covered. The chosen score is floored at zero. The correction starts at zero.}
+\reply{Explain threshold, response curve and feasibility checks.}{Addressed in Controller Revision. The calibrated work threshold enters the raw replica calculation. The bounds and control rules determine the target. At that target, the isotonic curve supplies predicted P99. The feasibility flag checks the largest profiled work input, predicted P99 and the raw sizing ceiling. These diagnostics are logged after target selection.}
+\reply{Report throttling, node utilization and memory pressure.}{Deferred. The archive lacks systematic measurements of those metrics across policies. Discussion limits the resource claim to desired pod-minutes, which measure requested capacity. In a new matched study, these metrics should be collected with synchronized trial timestamps.}
+\reply{Interpret the NASA and WorldCup forecasting results.}{Addressed in Baseline Validation. Causal hybrid RMSE on NASA is 14.2902 versus 16.3871 for persistence. On WorldCup, raw-count RMSE is 890.5685 versus 762.7463. This motivates checking predictors against simple baselines on each workload before deployment. The live controller uses a distinct demand rule.}
+\reply{Strengthen the related-work synthesis and gap.}{Addressed in Introduction and Related Work. We situate the study around the effect of measured service capacity, ready reserves and actuation timing on comparisons with HPA. The contribution is the evaluated trade-off and documented failure mode. The cited literature already covers forecasting, cooldown and autoscaling mechanisms.}
+\end{enumerate}
+
+\section*{Required revisions and recommendation}
+\begin{enumerate}
+\reply{Reframe or integrate Prophet--LSTM.}{We chose reframing and preserved the forecasting reproduction as a separate study. See Major Concerns 1 and 2.}
+\reply{Strengthen reserve-matched testing, including live startup delays.}{Deferred to a new prospective campaign. Freeze common bounds, initial ready capacity, paired seeds, HPA settings and retry rules before collecting outcomes. Repeat under normal and deliberately slower readiness and add a sustained burst or CPU-cost shift. See Major Concerns 4 and 7.}
+\reply{Repeat capacity calibration and quantify uncertainty.}{Deferred pending independent calibration blocks and held-out checks. See Major Concern 5.}
+\reply{Reconcile the statistics and document thresholds.}{Addressed through the exact interval audit and the revised descriptions of the demand correction, sizing and diagnostic checks. See Specific Issues 1--3.}
+\reply{Moderate the digital-twin and predictive-performance claims.}{Addressed through the revised title, separation of historical forecasting, narrower scope and explicit reporting of the HPA allocation advantage at equal reserves.}
+\end{enumerate}
+
+We acknowledge the major-revision recommendation. A prospective matched comparison and independent capacity-calibration repeats remain the principal work needed to assess whether the controller offers an operational advantage over well-configured HPA.
+\end{document}

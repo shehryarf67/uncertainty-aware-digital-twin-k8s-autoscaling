@@ -13,12 +13,12 @@
   },
   "simulation_rows": 1000,
   "displayed_ablation_equality_verified": true,
-  "all_table_cells_equations_plot_coordinates_and_bibliography_preserved": true,
+  "all_table_cells_equations_plot_coordinates_and_bibliography_preserved": false,
   "citations_resolve": 33,
-  "source_sha256": "d5088e819750335b3c4eb0d7e1cc2e69c8814dae4873df7ed021acfa2bf54e78",
-  "pdf_sha256": "049f210dff712bf4791a1c045ac0d8443218b94a170a79110c5751c651068e39",
+  "source_sha256": "86970191b4b5449cff0af67e8ce7f3a6477f7ad87417234ba9ab83a4cadbf5db",
+  "pdf_sha256": "fedf54ae54cdae51d2ed554bb7ba787bae02a529ea53fddddafd9e11d94b4bd7",
   "pages": 10,
   "overleaf_compile_errors": 0,
   "overleaf_compile_warnings": 0,
-  "scope": "Editorial revision; no experiments rerun; no AI detector score measured"
+  "scope": "Reviewer 1 revision; primary interval endpoints recomputed; no new experimental trials"
 }
